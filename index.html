@@ -6,14 +6,17 @@
     <title>TOYONO 25th Anniversary Album 『A Delicadeza do Instante（瞬間の繊細さ）』</title>
     <style>
         :root {
-            --bg-color: #FAF8F5;
+            --bg-color: #FAF8F6;
             --card-bg: #FFFFFF;
-            --text-primary: #1A1A1A;
-            --text-secondary: #555555;
-            --accent-gold: #B8860B;
-            --accent-dark: #2C2A29;
-            --border-color: #EAE6DF;
-            --max-width: 860px;
+            --text-main: #222222;
+            --text-sub: #666666;
+            --accent-gold: #C59B27;
+            --accent-gold-dark: #9A771C;
+            --accent-dark: #1F1E1C;
+            --border-light: #EFECE6;
+            --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.08);
+            --max-width: 880px;
         }
 
         * {
@@ -23,81 +26,95 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Shippori Mincho", YuMincho, "Times New Roman", serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Shippori Mincho", YuMincho, "Times New Roman", Georgia, serif;
             background-color: var(--bg-color);
-            color: var(--text-primary);
+            color: var(--text-main);
             line-height: 1.9;
-            letter-spacing: 0.04em;
-            padding: 0;
-            margin: 0;
+            letter-spacing: 0.05em;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* ヒーローセクション */
+        /* ヘッダー・ヒーロー */
         .hero {
             text-align: center;
-            padding: 70px 20px 40px;
-            background: linear-gradient(180deg, #F3EFE9 0%, var(--bg-color) 100%);
+            padding: 80px 20px 60px;
+            background: linear-gradient(180deg, #F2EDE4 0%, var(--bg-color) 100%);
+            border-bottom: 1px solid var(--border-light);
         }
 
         .hero .badge {
             display: inline-block;
-            font-size: 0.85rem;
-            letter-spacing: 0.15em;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.25em;
             color: var(--accent-gold);
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             text-transform: uppercase;
         }
 
         .hero h1 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 400;
-            line-height: 1.4;
-            margin-bottom: 8px;
+            line-height: 1.35;
             color: var(--accent-dark);
+            margin-bottom: 12px;
         }
 
         .hero h1 span {
             display: block;
             font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-top: 6px;
+            color: var(--text-sub);
+            margin-top: 8px;
+            font-weight: 300;
         }
 
         .hero p.catch {
             font-size: 1.05rem;
-            color: var(--accent-gold);
-            margin-top: 20px;
-            font-weight: 500;
+            color: var(--accent-gold-dark);
+            margin-top: 24px;
+            font-weight: 400;
+            line-height: 1.8;
         }
 
-        /* コンテナ */
+        /* メインコンテナ */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: 0 20px 80px;
+            padding: 0 20px 100px;
         }
 
-        /* メインジャケット */
-        .main-jacket-wrapper {
+        /* メインジャケット表示 */
+        .main-jacket-container {
             text-align: center;
-            margin: 20px auto 40px;
+            margin: 40px auto 50px;
+        }
+
+        .main-jacket-frame {
+            display: inline-block;
+            position: relative;
+            padding: 12px;
+            background: #FFFFFF;
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            box-shadow: var(--shadow-card);
         }
 
         .main-jacket {
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             height: auto;
-            border-radius: 4px;
-            box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+            display: block;
+            border-radius: 2px;
         }
 
-        /* アクションボタン (リンクツリー風) */
+        /* アクションエリア（リンクボタン） */
         .action-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
             margin: 40px 0 60px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         .btn {
@@ -105,73 +122,77 @@
             align-items: center;
             justify-content: center;
             padding: 18px 24px;
-            border-radius: 50px;
+            border-radius: 4px;
             text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            font-size: 0.92rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         .btn-primary {
             background-color: var(--accent-dark);
             color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .btn-primary:hover {
             background-color: var(--accent-gold);
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 155, 39, 0.3);
         }
 
         .btn-secondary {
             background-color: #FFFFFF;
             color: var(--accent-dark);
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-soft);
         }
 
         .btn-secondary:hover {
             border-color: var(--accent-gold);
-            color: var(--accent-gold);
+            color: var(--accent-gold-dark);
             transform: translateY(-2px);
         }
 
-        /* セクション共通 */
+        /* 各セクション構造 */
         section {
             background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
+            padding: 48px;
+            border-radius: 8px;
             margin-bottom: 40px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-soft);
         }
 
         section h2 {
-            font-size: 1.35rem;
-            font-weight: 500;
+            font-size: 1.3rem;
+            font-weight: 400;
             color: var(--accent-dark);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-            margin-bottom: 24px;
-            letter-spacing: 0.08em;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 16px;
+            margin-bottom: 28px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        /* スペックテーブル */
+        /* スペック（リリース情報）テーブル */
         .spec-table {
             width: 100%;
             border-collapse: collapse;
         }
 
         .spec-table th, .spec-table td {
-            padding: 12px 0;
-            border-bottom: 1px dashed var(--border-color);
+            padding: 14px 0;
+            border-bottom: 1px dashed var(--border-light);
             text-align: left;
             font-size: 0.95rem;
         }
 
         .spec-table th {
-            width: 25%;
-            color: var(--text-secondary);
+            width: 28%;
+            color: var(--text-sub);
             font-weight: normal;
         }
 
@@ -181,57 +202,63 @@
         }
 
         .track-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #F5F3EF;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border-light);
             display: flex;
             align-items: baseline;
             font-size: 0.95rem;
         }
 
         .track-list .num {
-            width: 35px;
+            width: 40px;
             font-size: 0.85rem;
             color: var(--accent-gold);
             font-weight: 600;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        /* 7インチ・関連作品セクション */
+        /* 7インチアナログ紹介 */
         .vinyl-card {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             align-items: center;
-            background: #FAFAFA;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
+            background: #FAF9F7;
+            padding: 24px;
+            border-radius: 6px;
+            margin-top: 32px;
+            border: 1px solid var(--border-light);
         }
 
         .vinyl-card img {
             width: 140px;
             height: 140px;
             object-fit: cover;
-            border-radius: 4px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-radius: 3px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+            flex-shrink: 0;
         }
 
         .vinyl-info h4 {
             font-size: 1.05rem;
-            margin-bottom: 6px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--accent-dark);
         }
 
         .vinyl-info p {
             font-size: 0.88rem;
-            color: var(--text-secondary);
+            color: var(--text-sub);
+            line-height: 1.7;
         }
 
-        /* 動画埋め込み */
+        /* YouTube埋め込み枠 */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 8px;
-            margin-top: 15px;
+            border-radius: 6px;
+            background: #000000;
         }
 
         .video-wrapper iframe {
@@ -246,17 +273,20 @@
         /* フッター */
         footer {
             text-align: center;
-            padding: 40px 20px;
-            font-size: 0.85rem;
+            padding: 50px 20px;
+            font-size: 0.8rem;
             color: #888888;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-light);
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 0.1em;
         }
 
-        @media (max-width: 600px) {
-            section { padding: 25px 20px; }
-            .hero h1 { font-size: 1.75rem; }
+        @media (max-width: 680px) {
+            section { padding: 30px 20px; }
+            .hero h1 { font-size: 1.8rem; }
             .vinyl-card { flex-direction: column; text-align: center; }
             .vinyl-card img { width: 180px; height: 180px; }
+            .spec-table th { width: 35%; }
         }
     </style>
 </head>
@@ -272,10 +302,50 @@
     <div class="container">
 
         <!-- アルバムジャケット画像 -->
-        <div class="main-jacket-wrapper">
-            <img src="MDRN2026A.jpeg" alt="A Delicadeza do Instante ジャケット" class="main-jacket">
+        <div class="main-jacket-container">
+            <div class="main-jacket-frame">
+                <img src="MDRN2026A.jpeg" alt="A Delicadeza do Instante ジャケット" class="main-jacket">
+            </div>
         </div>
 
-        <!-- リンクツリー導線（実際のURLに書き換えてください） -->
+        <!-- アクションリンク -->
         <div class="action-grid">
-            <a href="https://www.filerecords.com/" class="btn btn-primary" target
+            <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）</a>
+            <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener">各配信サイトで聴く</a>
+            <a href="https://drive.google.com/drive/folders/1TYcyUrm2aclJpacOJ-n0CULhSnlbZugF?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">プレスリリース資料（Google Drive）</a>
+        </div>
+
+        <!-- アルバム詳細情報 -->
+        <section>
+            <h2>Release Information</h2>
+            <table class="spec-table">
+                <tr><th>発売日</th><td>2026年11月18日</td></tr>
+                <tr><th>タイトル</th><td>A Delicadeza do Instante 瞬間の繊細さ</td></tr>
+                <tr><th>アーティスト</th><td>TOYONO</td></tr>
+                <tr><th>品番</th><td>MDRN-2026</td></tr>
+                <tr><th>価格</th><td>定価 ¥3,000（税抜価格 ¥2,727）</td></tr>
+                <tr><th>仕様</th><td>CD / J-POP、ブラジル（全11曲 / ポルトガル語歌詞・対訳付）</td></tr>
+                <tr><th>発売元</th><td>modelo MODERNO / (株)ファイルレコード</td></tr>
+            </table>
+        </section>
+
+        <!-- ミュージックビデオ -->
+        <section>
+            <h2>Music Video</h2>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 20px;">先行シングル・ミュージックビデオ公開中</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="TOYONO Official Music Video" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- トラックリスト -->
+        <section>
+            <h2>Tracklist</h2>
+            <ul class="track-list">
+                <li><span class="num">01</span> Se Tiver Que Ser 予感</li>
+                <li><span class="num">02</span> Carta a um Irmão レター・トゥ・ア・ブラザー</li>
+                <li><span class="num">03</span> Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱</li>
+                <li><span class="num">04</span> Por Toda A Sua Vida その人生のすべてに</li>
+                <li><span class="num">05</span> Paraglider パラグライダー</li>
+                <li><span class="num">06</span> 卒業写真 feat. Roberto Menescal (jazz guitar)</li>
+                <li><span class="num">07</span> 夢の続き
