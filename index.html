@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- TOYONO 25th Anniversary Special Website -->
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -12,9 +11,7 @@
             --text-main: #1A1918;
             --text-sub: #55524E;
             --accent-gold: #B8860B;
-            --accent-gold-light: #FDFBF7;
             --border-color: #E2DDD5;
-            --shadow-jacket: 0 24px 60px rgba(0, 0, 0, 0.08);
             --max-width: 720px;
         }
 
@@ -25,12 +22,12 @@
         }
 
         body {
-            font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
+            font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.9;
             letter-spacing: 0.06em;
-            padding: 16px 12px 80px; /* 上部の余白を極限まで削減 */
+            padding: 12px 8px 80px;
             display: flex;
             justify-content: center;
         }
@@ -41,25 +38,25 @@
             text-align: center;
         }
 
-        /* Header / Title & Logo Area (余白を最小化) */
         header {
             position: relative;
             margin-bottom: 16px;
-            padding: 10px 10px 0;
+            padding: 8px 4px 0;
         }
 
         .top-logo {
             position: absolute;
-            top: 5px;
+            top: 0;
             right: 0;
-            max-width: 110px;
+            width: 100px;
             height: auto;
         }
 
         .title-image-container {
-            max-width: 500px;
+            width: 100%;
+            max-width: 480px;
             margin: 0 auto;
-            padding: 5px 0;
+            padding: 4px 0;
         }
 
         .title-image-container img {
@@ -68,48 +65,212 @@
             display: block;
         }
 
-        /* Jacket Card (画面いっぱいのインパクト) */
         .jacket-card {
             background: var(--card-bg);
-            padding: 16px;
-            border-radius: 10px;
-            box-shadow: var(--shadow-jacket);
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
             border: 1px solid var(--border-color);
-            margin: 0 auto 20px;
-            max-width: 100%; /* 画面幅いっぱいに拡大 */
-            text-align: center;
+            margin: 0 auto 16px;
+            width: 100%;
         }
 
         .jacket-card img.jacket-img {
             width: 100%;
             height: auto;
-            border-radius: 6px;
+            border-radius: 4px;
             display: block;
         }
 
-        /* Navigation Tabs (地味さを解消し、洗練されたリッチなデザインに) */
         .nav-tabs {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin: 0 auto 32px;
+            gap: 8px;
+            margin: 0 auto 28px;
             flex-wrap: wrap;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            max-width: 100%;
+            width: 100%;
         }
 
         .tab-btn {
             background: #FFFFFF;
             border: 1px solid var(--border-color);
-            padding: 12px 22px;
+            padding: 11px 18px;
             border-radius: 30px;
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             font-weight: 600;
             color: var(--text-sub);
             cursor: pointer;
             transition: all 0.3s ease;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.06em;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
 
-        .tab-
+        .tab-btn:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .tab-btn.active {
+            background: var(--text-main);
+            color: #FFFFFF;
+            border-color: var(--text-main);
+            box-shadow: 0 6px 16px rgba(26, 25, 24, 0.15);
+        }
+
+        .tab-panel {
+            display: none;
+            text-align: left;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .link-tree {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            text-align: center;
+            letter-spacing: 0.08em;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 32px 24px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        section h2 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+            letter-spacing: 0.1em;
+            text-align: center;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table th, .spec-table td {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.88rem;
+        }
+
+        .spec-table th {
+            width: 32%;
+            color: var(--text-sub);
+            font-weight: normal;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        blockquote {
+            margin: 16px 0;
+            padding: 18px 20px;
+            background: #F9F8F6;
+            border-left: 2px solid var(--accent-gold);
+            border-radius: 0 4px 4px 0;
+            font-size: 0.88rem;
+            line-height: 1.9;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            font-style: normal;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .track-list {
+            list-style: none;
+        }
+
+        .track-list li {
+            padding: 11px 0;
+            border-bottom: 1px solid #F8F7F5;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .track-list .num {
+            width: 32px;
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .vinyl-card {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            background:
