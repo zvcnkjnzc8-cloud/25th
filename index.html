@@ -13,7 +13,12 @@
             --accent-gold: #C59B27;
             --accent-gold-light: #DFBE5D;
             --border-color: #E6E1DA;
-            --max-width: 1120px; /* ← 横幅をゆったり広く調整 */
+            --max-width: 1120px;
+        }
+
+        /* ページ内ジャンプをなめらかにする */
+        html {
+            scroll-behavior: smooth;
         }
 
         * {
@@ -26,9 +31,9 @@
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.85; /* ← 全体の行間を少しコンパクトにしてスペース感を維持 */
+            line-height: 1.85;
             letter-spacing: 0.08em;
-            font-size: 1.02rem; /* ← ページ全体のフォントサイズを少し拡大 */
+            font-size: 1.02rem;
             padding: 36px 16px 120px;
             display: flex;
             justify-content: center;
@@ -69,7 +74,7 @@
             display: block;
         }
 
-        /* MAIN JACKET PICTURE（白枠をなくしてフラットに） */
+        /* MAIN JACKET PICTURE */
         .jacket-container {
             margin: 0 auto 36px;
             width: 100%;
@@ -94,7 +99,7 @@
             flex-direction: column;
             gap: 14px;
             max-width: 760px;
-            margin: 0 auto 48px auto;
+            margin: 0 auto 32px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
@@ -135,6 +140,35 @@
             color: var(--accent-gold);
             transform: translateY(-2px);
             box-shadow: 0 6px 24px rgba(0,0,0,0.04);
+        }
+
+        /* NAVIGATOR (PAGE JUMP BUTTONS) */
+        .page-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto 50px auto;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .nav-btn {
+            padding: 8px 14px;
+            background-color: var(--card-bg);
+            color: var(--text-sub);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.82rem;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+            border-color: var(--text-main);
         }
 
         /* CONTENT SECTIONS */
@@ -183,10 +217,9 @@
             line-height: 1.6;
         }
 
-        /* 本文（文字サイズを大きく、行間をコンパクトに最適化） */
         p {
-            font-size: 1.0rem; /* ← 本文サイズをしっかり読みやすく拡大 */
-            line-height: 1.85; /* ← 行間を少し詰めてスペース感を美しく維持 */
+            font-size: 1.0rem;
+            line-height: 1.85;
             margin-bottom: 20px;
             color: #2E2C29;
         }
@@ -358,6 +391,8 @@
             }
             .spec-table th, .credits-table th { width: 38%; }
             .vinyl-card { flex-direction: column; text-align: center; }
+            .page-nav { gap: 6px; }
+            .nav-btn { font-size: 0.78rem; padding: 6px 10px; }
         }
     </style>
 </head>
@@ -385,8 +420,20 @@
             <a href="https://drive.google.com/drive/folders/1TYcyUrm2aclJpacOJ-n0CULhSnlbZugF?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">📄 プレスリリース資料一式 (Google Drive)</a>
         </div>
 
+        <!-- PAGE NAVIGATION BUTTONS (目次ナビゲーション) -->
+        <nav class="page-nav">
+            <a href="#recommendations" class="nav-btn">01 Recommendations</a>
+            <a href="#producer1" class="nav-btn">02 Producer Note 1</a>
+            <a href="#producer2" class="nav-btn">03 Producer Note 2</a>
+            <a href="#prod-notes" class="nav-btn">04 Production Notes</a>
+            <a href="#tracklist" class="nav-btn">05 Tracklist</a>
+            <a href="#credits" class="nav-btn">06 Credits</a>
+            <a href="#spec" class="nav-btn">07 Spec & Profile</a>
+            <a href="#related" class="nav-btn">08 関連リリース & MV</a>
+        </nav>
+
         <!-- PAGE 2: ALBUM OVERVIEW & RECOMMENDATIONS -->
-        <section>
+        <section id="recommendations">
             <h2></h2>
             <p>
                 MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品。先行7インチで話題を呼んだ「夢の続き」や、ホベルト・メネスカルがジャズギターで参加した「卒業写真」に加え、日本のブラジル音楽の聖地・青山プラッサオンゼの二代目オーナー浅田クラウヂアさんを偲ぶ「幾星霜」など、TOYONOだからこそ表現可能な日本ブラジルの絆をリアルに結ぶ全11曲を収録。洋楽・邦楽の枠を越えて幅広い音楽ファンに届ける7thオリジナルアルバム。
@@ -420,7 +467,7 @@
         </section>
 
         <!-- PAGE 3: PRODUCER NOTE 1 -->
-        <section>
+        <section id="producer1">
             <h2>02 プロデューサー Guilherme Gê ギレェルミ・ジェより part1</h2>
             <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.0rem; margin-bottom: 12px;">
                 TOYONOと「A Delicadeza do Instante 瞬間の繊細さ」
@@ -453,7 +500,7 @@
         </section>
 
         <!-- PAGE 4: PRODUCER NOTE 2 -->
-        <section>
+        <section id="producer2">
             <h2>03 プロデューサー Guilherme Gê ギレェルミ・ジェより part2</h2>
             <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.0rem; margin-bottom: 12px;">
                 私と「A Delicadeza do Instante 瞬間の繊細さ」
@@ -480,7 +527,7 @@
         </section>
 
         <!-- PAGE 5 & 6: PRODUCTION NOTES & ALBUM TITLE -->
-        <section>
+        <section id="prod-notes">
             <h2>04 Production Notes</h2>
             
             <h3>現代リオの旗手 Guilherme Gê ギレェルミ・ジェ<br>ボサノヴァの偉人 Roberto Menescal ホベルト・メネスカル<br>マルコス・ヴァーリの兄、作詞家 Paulo Sérgio Valle パウロ・セルジオ・ヴァーリ</h3>
@@ -518,7 +565,7 @@
         </section>
 
         <!-- PAGE 7: TRACKLIST -->
-        <section>
+        <section id="tracklist">
             <h2>05 Tracklist</h2>
             <ul class="track-list">
                 <li><span class="num">01</span> Se Tiver Que Ser 予感 (Guilherme Gê / Paulo Sérgio Valle)</li>
@@ -536,7 +583,7 @@
         </section>
 
         <!-- PAGE 8: CREDITS -->
-        <section>
+        <section id="credits">
             <h2>06 Credits</h2>
             <table class="credits-table">
                 <tr>
@@ -590,7 +637,7 @@
         </section>
 
         <!-- PAGE 9: SPEC & ARTIST PROFILE -->
-        <section>
+        <section id="spec">
             <h2>07 Release Spec &amp; Profile</h2>
             <table class="spec-table" style="margin-bottom: 32px;">
                 <tr><th>Release Date</th><td>2026年11月18日</td></tr>
@@ -614,7 +661,7 @@
         </section>
 
         <!-- PAGE 10: RELATED RELEASE, SCHEDULE & MUSIC VIDEOS -->
-        <section>
+        <section id="related">
             <h2>08 関連リリース &amp; プロモーション情報</h2>
             
             <h3>7インチアナログ盤 『夢の続き / TOYONO』</h3>
