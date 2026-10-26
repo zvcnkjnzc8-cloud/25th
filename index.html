@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYONO 25th Anniversary Album 『A Delicadeza do Instante』</title>
+    <style>
+        /* Modern CSS Variables & Design System */
+        :root {
+            --bg-color: #FAF8F5;
+            --card-bg: #FFFFFF;
+            --text-main: #2C2A29;
+            --text-sub: #66625D;
+            --accent-gold: #B8860B;
+            --accent-gold-dark: #9A7008;
+            --accent-gold-light: #F4EEDD;
+            --border-color: #E8E3DA;
+            --shadow-soft: 0 12px 35px rgba(44, 42, 41, 0.06);
+            --shadow-hover: 0 16px 40px rgba(184, 134, 11, 0.15);
+            --max-width: 680px;
+            --radius-main: 20px;
+            --radius-button: 50px;
+        }
+
+        /* Reset & Base Styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Mincho ProN", "Shippori Mincho", "YuMincho", "Hiragino Sans", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            padding: 48px 16px 80px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Main Center Wrapper */
+        .page-wrapper {
+            width: 100%;
+            max-width: var(--max-width);
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            margin-bottom: 36px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.25em;
+            color: var(--accent-gold);
+            background-color: var(--accent-gold-light);
+            padding: 6px 16px;
+            border-radius: var(--radius-button);
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 500;
+            line-height: 1.25;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 1.15rem;
+            color: var(--text-sub);
+            margin-top: 6px;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+        }
+
+        .catch {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            margin-top: 18px;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        /* Album Cover Section */
+        .jacket-card {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: var(--radius-main);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+            margin: 0 auto 36px;
+            width: 100%;
+            max-width: 440px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .jacket-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .jacket-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            display: block;
+        }
+
+        /* Link Tree Style Buttons */
+        .link-tree {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 44px;
+        }
+
+        .btn {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 28px;
+            border-radius: var(--radius-button);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(184, 134, 11, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border-color: var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold-dark);
+            background-color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+        /* Card Sections */
+        section {
+            background: var(--card-bg);
+            padding: 38px 32px;
+            border-radius: var(--radius-main);
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+            text-align: left;
+        }
+
+        section h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 14px;
+            margin-bottom: 22px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Info Table */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table th, .spec-table td {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.92rem;
+        }
+
+        .spec-table tr:last-child th,
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .spec-table th {
+            width: 30%;
+            color: var(--text-sub);
+            font-weight: normal;
+        }
+
+        /* Quotes & Testimonials */
+        blockquote {
+            margin: 20px 0;
+            padding: 20px 22px;
+            background: #FAF9F6;
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 0 12px 12px 0;
+            font-size: 0.93rem;
+            line-height: 1.85;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            font-style: normal;
+            font-weight: 600;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+        }
+
+        /* Tracklist */
+        .track-list {
+            list-style: none;
+        }
+
+        .track-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--bg-color);
+            font-size: 0.92rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .track-list li:last-child {
+            border-bottom: none;
+        }
+
+        .track-list .num {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+            width: 36px;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* 7-Inch Single Card */
+        .vinyl-card {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: #FAF9F6;
+            padding: 20px;
+            border-radius: 14px;
+            margin-top: 26px;
+            border: 1px solid var(--border-color);
+        }
+
+        .vinyl-card img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            flex-shrink: 0;
+        }
+
+        .vinyl-info h4 {
+            font-size: 0.98rem;
+            margin-bottom: 6px;
+            color: var(--text-main);
+        }
+
+        .vinyl-info p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 48px;
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            letter-spacing: 0.08em;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            body { padding: 32px 14px 60px; }
+            section { padding: 28px 20px; }
+            h1 { font-size: 1.85rem; }
+            .vinyl-card { flex-direction: column; text-align: center; }
+            .spec-table th { width: 36%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <!-- Header / Hero Section -->
+        <header>
+            <span class="badge">TOYONO 25th Anniversary Album</span>
+            <h1>A Delicadeza do Instante<span>瞬間の繊細さ</span></h1>
+            <p class="catch">ブラジル・レジェンド未発表曲<br>いまTOYONOの歌声で、世界に初めて刻まれる瞬間</p>
+        </header>
+
+        <!-- Main Album Art -->
+        <div class="jacket-card">
+            <img src="MDRN2026A.png" alt="A Delicadeza do Instante - TOYONO ジャケット" onerror="this.src='https://placehold.co/800x800/FAF8F5/B8860B?text=A+Delicadeza+do+Instante'">
+        </div>
+
+        <!-- Action Links (Link-Tree Style) -->
+        <div class="link-tree">
+            <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">CDを購入する（ファイルレコード）</a>
+            <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">各配信サイトで聴く</a>
+            <a href="https://drive.google.com/drive/folders/1TYcyUrm2aclJpacOJ-n0CULhSnlbZugF?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">📄 プレスリリース資料一式 (Google Drive)</a>
+        </div>
+
+        <!-- Section 1: Release Information -->
+        <section>
+            <h2>Release Information</h2>
+            <table class="spec-table">
+                <tr><th>発売日</th><td>2026年11月18日</td></tr>
+                <tr><th>タイトル</th><td>A Delicadeza do Instante 瞬間の繊細さ</td></tr>
+                <tr><th>アーティスト</th><td>TOYONO</td></tr>
+                <tr><th>品番</th><td>MDRN-2026</td></tr>
+                <tr><th>価格</th><td>定価 ¥3,000（税抜価格 ¥2,727）</td></tr>
+                <tr><th>仕様</th><td>CD / J-POP、ブラジル（全11曲 / ポルトガル語歌詞・対訳付）</td></tr>
+                <tr><th>発売元</th><td>modelo MODERNO / (株)ファイルレコード</td></tr>
+            </table>
+        </section>
+
+        <!-- Section 2: Recommendations & Praise -->
+        <section>
+            <h2>Recommendations & Praise</h2>
+            <blockquote>
+                「一聴してその予想を遥かに上回る傑作が産まれていたことに、それはそれは嬉しい驚きでいっぱいになった。オーセンティック＆コンテンポラリー、実に見事なミクスチャーブラジルサウンド。」
+                <cite>—— 沼澤尚（ドラマー）</cite>
+            </blockquote>
+            <blockquote>
+                「TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。ステレオタイプの“日本のシンガーが歌うブラジル音楽”という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた作品。」
+                <cite>—— マルコス・スザーノ（パーカッショニスト）</cite>
+            </blockquote>
+        </section>
+
+        <!-- Section 3: About & Production Notes -->
+        <section>
+            <h2>About & Production Notes</h2>
+            <p style="margin-bottom: 16px; font-size: 0.93rem;">
+                MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品。
+            </p>
+            <p style="margin-bottom: 20px; font-size: 0.93rem;">
+                現代リオの旗手ギリェルミ・ジェ、ボサノヴァの偉人ホベルト・メネスカル、作詞家パウロ・セルジオ・ヴァーリという世代とスタイルを越えたブラジルのレジェンド達による未発表曲群を収録。
+            </p>
+            <p style="font-size: 0.85rem; color: var(--text-sub); line-height: 1.8; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
+                Total Produced by TOYONO<br>
+                All Sound Produced & Arranged by Guilherme Gê (Rio de Janeiro)<br>
+                Supervisor & Percussion: Marcos Suzano<br>
+                Featured Artists: Leila Pinheiro, Roberto Menescal, Carlos Malta, and more.
+            </p>
+        </section>
+
+        <!-- Section 4: Tracklist -->
+        <section>
+            <h2>Tracklist</h2>
+            <ul class="track-list">
+                <li><span class="num">01</span> Se Tiver Que Ser 予感</li>
+                <li><span class="num">02</span> Carta a um Irmão レター・トゥ・ア・ブラザー</li>
+                <li><span class="num">03</span> Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱</li>
+                <li><span class="num">04</span> Por Toda A Sua Vida その人生のすべてに</li>
+                <li><span class="num">05</span> Paraglider パラグライダー</li>
+                <li><span class="num">06</span> 卒業写真 feat. Roberto Menescal (jazz guitar) ※カヴァー</li>
+                <li><span class="num">07</span> 夢の続き ※カヴァー</li>
+                <li><span class="num">08</span> Foi Demais 最愛</li>
+                <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー</li>
+                <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês</li>
+                <li><span class="num">11</span> 夢の続き AKAKAGE's Back to 90's remix (Bonus Track)</li>
+            </ul>
+
+            <!-- 7-Inch Single Highlight -->
+            <div class="vinyl-card">
+                <img src="YUME1.jpeg" alt="夢の続き 7インチアナログジャケット" onerror="this.src='https://placehold.co/400x400/FAF8F5/B8860B?text=7inch+Vinyl'">
+                <div class="vinyl-info">
+                    <h4>先行7インチシングル『夢の続き』</h4>
+                    <p>話題を呼んだ竹内まりやの名曲カバーを7インチ・アナログ盤で先行リリース。本アルバムにはBonus TrackとしてAKAKAGE's Remixも収録。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 TOYONO / modelo MODERNO. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+### What was done:
+- **Clean Standalone HTML:** Ensured no external system markers or citation brackets remain that could cause syntax parsing issues.
+- **Modern Linktree-Style Layout:** Centered single-column layout inspired by elite music showcase sites, rendered in natural warm beige (`#FAF8F5`) and warm off-white card backgrounds (`#FFFFFF`) with gold accenting (`#B8860B`).
+- **Resilient Image Handling:** Built-in automatic placeholder fallbacks using HTML `onerror` so the page renders gracefully even if image paths are resolving.
+
+<FollowUp>
+Please copy the code into your `index.html` file and commit it on GitHub. Let me know if you would like any further style refinements or additional sections added!
+</FollowUp>
+
+<ElicitationsGroup>
+</ElicitationsGroup>
