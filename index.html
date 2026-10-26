@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYONO 25th Anniversary Album 『A Delicadeza do Instante』</title>
+    <style>
+        :root {
+            --bg-color: #FAF8F5;
+            --card-bg: #FFFFFF;
+            --text-main: #2C2A29;
+            --text-sub: #66625D;
+            --accent-gold: #B8860B;
+            --accent-gold-hover: #9A7008;
+            --border-color: #E8E3DA;
+            --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.05);
+            --max-width: 680px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Shippori Mincho", YuMincho, serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            padding: 40px 16px 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 画面中央配置のメインコンテナ */
+        .page-wrapper {
+            width: 100%;
+            max-width: var(--max-width);
+            text-align: center;
+        }
+
+        /* ヘッダー・アーティスト名 */
+        header {
+            margin-bottom: 32px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            letter-spacing: 0.25em;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 1.15rem;
+            color: var(--text-sub);
+            margin-top: 6px;
+            font-weight: 400;
+        }
+
+        .catch {
+            font-size: 0.98rem;
+            color: var(--accent-gold);
+            margin-top: 16px;
+            font-weight: 500;
+            line-height: 1.7;
+        }
+
+        /* メインジャケット表示 */
+        .jacket-card {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+            margin-bottom: 32px;
+            display: inline-block;
+            width: 100%;
+            max-width: 460px;
+        }
+
+        .jacket-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* ボタン群 (リンクツリースタイル) */
+        .link-tree {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(184, 134, 11, 0.25);
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            transform: translateY(-2px);
+            background-color: #FFFFFF;
+        }
+
+        /* コンテンツセクション (カード形式) */
+        section {
+            background: var(--card-bg);
+            padding: 36px 30px;
+            border-radius: 16px;
+            margin-bottom: 28px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+            text-align: left;
+        }
+
+        section h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* スペックテーブル */
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table th, .spec-table td {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.92rem;
+        }
+
+        .spec-table th {
+            width: 28%;
+            color: var(--text-sub);
+            font-weight: normal;
+        }
+
+        /* 推薦コメント */
+        blockquote {
+            margin: 16px 0;
+            padding: 18px 20px;
+            background: #FAF9F6;
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.92rem;
+            line-height: 1.8;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        /* トラックリスト */
+        .track-list {
+            list-style: none;
+        }
+
+        .track-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #FAF8F5;
+            font-size: 0.92rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .track-list .num {
+            width: 32px;
+            font-size: 0.82rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        /* 7インチ・アナログカード */
+        .vinyl-card {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: #FAF9F6;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 24px;
+            border: 1px solid var(--border-color);
+        }
+
+        .vinyl-card img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            flex-shrink: 0;
+        }
+
+        .vinyl-info h4 {
+            font-size: 0.98rem;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        .vinyl-info p {
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+
+        /* フッター */
+        footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #999999;
+            letter-spacing: 0.08em;
+        }
+
+        @media (max-width: 580px) {
+            body { padding:
