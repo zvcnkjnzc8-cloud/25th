@@ -13,7 +13,7 @@
             --accent-gold: #C59B27;
             --accent-gold-light: #DFBE5D;
             --border-color: #E6E1DA;
-            --max-width: 1050px;
+            --max-width: 1120px; /* ← 横幅をゆったり広く調整 */
         }
 
         * {
@@ -26,8 +26,9 @@
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 2.1;
+            line-height: 1.85; /* ← 全体の行間を少しコンパクトにしてスペース感を維持 */
             letter-spacing: 0.08em;
+            font-size: 1.02rem; /* ← ページ全体のフォントサイズを少し拡大 */
             padding: 36px 16px 120px;
             display: flex;
             justify-content: center;
@@ -57,7 +58,7 @@
 
         .title-image-container {
             width: 100%;
-            max-width: 480px;
+            max-width: 520px;
             margin: 0 auto;
             padding: 12px 0;
         }
@@ -92,7 +93,8 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
-            margin-bottom: 48px;
+            max-width: 760px;
+            margin: 0 auto 48px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
@@ -103,7 +105,7 @@
             padding: 18px 24px;
             border-radius: 6px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.92rem;
             font-weight: 500;
             transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
             box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -138,7 +140,7 @@
         /* CONTENT SECTIONS */
         section {
             background: var(--card-bg);
-            padding: 52px 42px;
+            padding: 52px 48px;
             border-radius: 12px;
             margin-bottom: 36px;
             border: 1px solid var(--border-color);
@@ -147,7 +149,7 @@
         }
 
         section h2 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             font-weight: 500;
             color: var(--text-main);
             border-bottom: 1px solid var(--border-color);
@@ -171,7 +173,7 @@
         }
 
         section h3 {
-            font-size: 0.96rem;
+            font-size: 1.0rem;
             font-weight: 600;
             color: var(--accent-gold);
             margin: 36px 0 16px;
@@ -181,10 +183,10 @@
             line-height: 1.6;
         }
 
-        /* 本文（文字サイズを少し大きく、行間をコンパクトに調整） */
+        /* 本文（文字サイズを大きく、行間をコンパクトに最適化） */
         p {
-            font-size: 0.94rem;
-            line-height: 1.95;
+            font-size: 1.0rem; /* ← 本文サイズをしっかり読みやすく拡大 */
+            line-height: 1.85; /* ← 行間を少し詰めてスペース感を美しく維持 */
             margin-bottom: 20px;
             color: #2E2C29;
         }
@@ -195,15 +197,15 @@
             background: #FAF8F5;
             border-left: 3px solid var(--accent-gold);
             border-radius: 0 6px 6px 0;
-            font-size: 0.89rem;
-            line-height: 2.1;
+            font-size: 0.95rem;
+            line-height: 1.9;
             color: #383532;
         }
 
         blockquote cite {
             display: block;
             margin-top: 14px;
-            font-size: 0.82rem;
+            font-size: 0.85rem;
             color: var(--text-sub);
             font-style: normal;
             font-weight: 600;
@@ -221,7 +223,7 @@
         .spec-table th, .spec-table td, .credits-table th, .credits-table td {
             padding: 14px 0;
             border-bottom: 1px dashed var(--border-color);
-            font-size: 0.88rem;
+            font-size: 0.93rem;
             vertical-align: top;
         }
 
@@ -244,7 +246,7 @@
         .track-list li {
             padding: 14px 0;
             border-bottom: 1px solid #F4F1EA;
-            font-size: 0.89rem;
+            font-size: 0.94rem;
             display: flex;
             align-items: baseline;
             transition: background 0.2s ease;
@@ -259,7 +261,7 @@
 
         .track-list .num {
             width: 38px;
-            font-size: 0.82rem;
+            font-size: 0.86rem;
             color: var(--accent-gold);
             font-weight: 600;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -268,7 +270,7 @@
         .schedule-list li {
             padding: 12px 0;
             border-bottom: 1px dashed var(--border-color);
-            font-size: 0.88rem;
+            font-size: 0.93rem;
         }
 
         .schedule-list strong {
@@ -332,7 +334,7 @@
 
         footer {
             margin-top: 56px;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: #88827B;
             letter-spacing: 0.1em;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -340,12 +342,12 @@
 
         /* スマホ表示時の微調整 */
         @media (max-width: 600px) {
-            body { padding: 20px 10px 80px; }
+            body { padding: 20px 10px 80px; font-size: 0.96rem; }
             section { padding: 32px 20px; }
             
             p {
                 font-size: 0.96rem;
-                line-height: 1.85;
+                line-height: 1.8;
             }
 
             .top-logo {
@@ -394,7 +396,7 @@
             
             <h3>沼澤尚 Takashi Numazawa (ドラマー)</h3>
             <blockquote>
-                <strong style="display: block; font-size: 0.98rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.7;">
+                <strong style="display: block; font-size: 1.02rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.7;">
                     一聴してその予想を遥かに上回る傑作が産まれていたことに<br>
                     それはそれは嬉しい驚きでいっぱいになった。
                 </strong>
@@ -406,7 +408,7 @@
 
             <h3>マルコス・スザーノ Marcos Suzano (パーカッショニスト)</h3>
             <blockquote>
-                <strong style="display: block; font-size: 0.98rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.7;">
+                <strong style="display: block; font-size: 1.02rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.7;">
                     このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り実に心地よい場所に響いている。感情豊かな表現力で歌い上げられておりその多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている！！！！
                 </strong>
                 ギリェルミ・ジェがプロデュースしたTOYONOのアルバム『A Delicadeza do Instante』は、本当に素晴らしい作品だ。丁寧に作り込まれたサウンドによってアルバム全曲通しての調和が見事で、ステレオタイプの”日本のシンガーが歌うブラジル音楽"という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた、力強いブラジリダーヂ溢れる作品に仕上がっている。歌詞も非常に素晴らしく、参加しているミュージシャンたちの演奏も極上だ。<br><br>
@@ -420,7 +422,7 @@
         <!-- PAGE 3: PRODUCER NOTE 1 -->
         <section>
             <h2>02 プロデューサー Guilherme Gê ギレェルミ・ジェより part1</h2>
-            <p style="font-weight: 600; color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 12px;">
+            <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.0rem; margin-bottom: 12px;">
                 TOYONOと「A Delicadeza do Instante 瞬間の繊細さ」
             </p>
             <p>
@@ -453,7 +455,7 @@
         <!-- PAGE 4: PRODUCER NOTE 2 -->
         <section>
             <h2>03 プロデューサー Guilherme Gê ギレェルミ・ジェより part2</h2>
-            <p style="font-weight: 600; color: var(--accent-gold); font-size: 0.95rem; margin-bottom: 12px;">
+            <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.0rem; margin-bottom: 12px;">
                 私と「A Delicadeza do Instante 瞬間の繊細さ」
             </p>
             <p>
@@ -619,8 +621,8 @@
             <div class="vinyl-card">
                 <img src="YUME1.jpeg" alt="夢の続き 7インチアナログジャケット" onerror="this.style.display='none';">
                 <div style="text-align: left;">
-                    <strong style="display:block; font-size: 0.92rem; margin-bottom: 4px; color: var(--text-main);">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)</strong>
-                    <p style="font-size: 0.82rem; color: var(--text-sub); line-height: 1.7;">
+                    <strong style="display:block; font-size: 0.95rem; margin-bottom: 4px; color: var(--text-main);">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)</strong>
+                    <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.7;">
                         • <strong>発売日</strong>：2026年5月23日 会場先行発売 / 5月27日 全国一般発売<br>
                         • <strong>Side A</strong>：「夢の続き」（竹内まりや） AKAKAGE's Back to 90's remix<br>
                         • <strong>Side AA</strong>：「夢の続き」（竹内まりや） TOYONOアルバムバージョン
@@ -632,7 +634,7 @@
             <ul class="schedule-list">
                 <li><strong>2026年10月4日(日)</strong>：発売日情報解禁（ラジオ番組「TOYONO moda brasil」にて）</li>
                 <li><strong>2026年10月21日(水)</strong>：アルバムリード曲先行配信開始 &amp; MV一般公開<br>
-                    <span style="font-size: 0.82rem; color: var(--text-sub); display: block; padding-left: 14px; margin-top: 4px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー</span>
+                    <span style="font-size: 0.86rem; color: var(--text-sub); display: block; padding-left: 14px; margin-top: 4px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー</span>
                 </li>
                 <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開</li>
                 <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売</li>
@@ -641,10 +643,10 @@
             <h3 style="margin-top: 40px;">Music Video &amp; ライブ映像</h3>
             
             <div class="mv-block">
-                <p style="font-weight: 600; font-size: 0.92rem; color: var(--text-main); margin-bottom: 6px;">
+                <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
                     M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱
                 </p>
-                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 12px;">
+                <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
                     リオデジャネイロにて制作。TOYONO、レイラ・ピニェイロ、ギリェルミ・ジェ出演<br>
                     Direção: Guilherme Gê / Edição: João Oliveira / Assistente de Edição: Márcio Belao
                 </p>
@@ -654,10 +656,10 @@
             </div>
 
             <div class="mv-block">
-                <p style="font-weight: 600; font-size: 0.92rem; color: var(--text-main); margin-bottom: 6px;">
+                <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
                     M2. Carta a um Irmão レター・トゥ・ア・ブラザー
                 </p>
-                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 12px;">
+                <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
                     ニューヨークにて制作。新進気鋭の映像作家・パルクール選手であり、TOYONOの従姉妹の娘でもあるSeneca Schwartz (セネカ・シュワルツ)が出演・制作。
                 </p>
                 <div class="video-container">
@@ -666,10 +668,10 @@
             </div>
 
             <div class="mv-block">
-                <p style="font-weight: 600; font-size: 0.92rem; color: var(--text-main); margin-bottom: 6px;">
+                <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
                     M4. &amp; M10. Por Toda A Sua Vida / 幾星霜（ライブ映像）
                 </p>
-                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 12px;">
+                <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
                     2026.05.23 TOYONO 25周年記念公演 feat.マルコス・スザーノ@TOKYO FM Hall ライブ映像
                 </p>
                 <div class="video-container">
