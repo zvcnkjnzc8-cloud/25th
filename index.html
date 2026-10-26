@@ -13,7 +13,7 @@
             --text-sub: #66625D;
             --accent-gold: #B8860B;
             --border-color: #E8E3DA;
-            --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.05);
+            --shadow-soft: 0 12px 35px rgba(44, 42, 41, 0.04);
             --max-width: 680px;
         }
 
@@ -24,12 +24,12 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Shippori Mincho", YuMincho, serif;
+            font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "YuMincho", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.8;
-            letter-spacing: 0.04em;
-            padding: 30px 16px 80px;
+            line-height: 1.9;
+            letter-spacing: 0.06em;
+            padding: 40px 16px 80px;
             display: flex;
             justify-content: center;
         }
@@ -41,60 +41,64 @@
         }
 
         header {
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
 
         .badge {
             display: inline-block;
-            font-size: 0.78rem;
-            letter-spacing: 0.15em;
+            font-size: 0.75rem;
+            letter-spacing: 0.25em;
             color: var(--accent-gold);
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
         }
 
         h1 {
-            font-size: 2.1rem;
+            font-size: 2rem;
             font-weight: 500;
-            line-height: 1.3;
+            line-height: 1.4;
             color: var(--text-main);
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         h1 span {
             display: block;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-sub);
-            margin-top: 4px;
+            margin-top: 6px;
             font-weight: 400;
+            letter-spacing: 0.08em;
         }
 
         .catch {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             color: var(--accent-gold);
-            margin-top: 12px;
+            margin-top: 16px;
             font-weight: 500;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .nav-tabs {
             display: flex;
             justify-content: center;
             gap: 8px;
-            margin: 20px 0 28px;
+            margin: 24px 0 32px;
             flex-wrap: wrap;
         }
 
         .tab-btn {
             background: #FFFFFF;
             border: 1px solid var(--border-color);
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            padding: 9px 18px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 500;
             color: var(--text-main);
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.3s ease;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 0.05em;
         }
 
         .tab-btn.active, .tab-btn:hover {
@@ -114,27 +118,27 @@
 
         .jacket-card {
             background: var(--card-bg);
-            padding: 16px;
-            border-radius: 16px;
+            padding: 20px;
+            border-radius: 12px;
             box-shadow: var(--shadow-soft);
             border: 1px solid var(--border-color);
-            margin: 0 auto 28px;
-            max-width: 440px;
+            margin: 0 auto 32px;
+            max-width: 420px;
             text-align: center;
         }
 
         .jacket-card img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 6px;
             display: block;
         }
 
         .link-tree {
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 32px;
+            gap: 14px;
+            margin-bottom: 36px;
         }
 
         .btn {
@@ -144,11 +148,12 @@
             padding: 16px 20px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 0.92rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 15px rgba(44, 42, 41, 0.02);
             text-align: center;
+            letter-spacing: 0.05em;
         }
 
         .btn-primary {
@@ -173,21 +178,21 @@
 
         section {
             background: var(--card-bg);
-            padding: 32px 26px;
-            border-radius: 16px;
-            margin-bottom: 24px;
+            padding: 36px 30px;
+            border-radius: 12px;
+            margin-bottom: 28px;
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-soft);
         }
 
         section h2 {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: var(--text-main);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            margin-bottom: 18px;
-            letter-spacing: 0.05em;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            letter-spacing: 0.1em;
             text-align: center;
         }
 
@@ -197,34 +202,35 @@
         }
 
         .spec-table th, .spec-table td {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px dashed var(--border-color);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
         }
 
         .spec-table th {
-            width: 30%;
+            width: 32%;
             color: var(--text-sub);
             font-weight: normal;
         }
 
         blockquote {
-            margin: 14px 0;
-            padding: 16px 18px;
+            margin: 16px 0;
+            padding: 18px 20px;
             background: #FAF9F6;
-            border-left: 3px solid var(--accent-gold);
-            border-radius: 0 8px 8px 0;
-            font-size: 0.9rem;
-            line-height: 1.8;
+            border-left: 2px solid var(--accent-gold);
+            border-radius: 0 6px 6px 0;
+            font-size: 0.88rem;
+            line-height: 1.9;
         }
 
         blockquote cite {
             display: block;
-            margin-top: 8px;
-            font-size: 0.82rem;
+            margin-top: 10px;
+            font-size: 0.8rem;
             color: var(--text-sub);
             font-style: normal;
             font-weight: 600;
+            letter-spacing: 0.05em;
         }
 
         .track-list {
@@ -232,15 +238,15 @@
         }
 
         .track-list li {
-            padding: 10px 0;
+            padding: 11px 0;
             border-bottom: 1px solid #FAF8F5;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             display: flex;
             align-items: baseline;
         }
 
         .track-list .num {
-            width: 30px;
+            width: 32px;
             font-size: 0.8rem;
             color: var(--accent-gold);
             font-weight: 600;
@@ -251,8 +257,8 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border-radius: 8px;
+            margin-bottom: 24px;
             background: #000;
         }
 
@@ -267,34 +273,35 @@
 
         .vinyl-card {
             display: flex;
-            gap: 16px;
+            gap: 18px;
             align-items: center;
             background: #FAF9F6;
-            padding: 16px;
-            border-radius: 12px;
-            margin-top: 20px;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 24px;
             border: 1px solid var(--border-color);
         }
 
         .vinyl-card img {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             object-fit: cover;
             border-radius: 6px;
             flex-shrink: 0;
         }
 
         footer {
-            margin-top: 36px;
-            font-size: 0.78rem;
+            margin-top: 40px;
+            font-size: 0.75rem;
             color: #999999;
+            letter-spacing: 0.05em;
         }
 
         @media (max-width: 580px) {
-            body { padding: 20px 12px 60px; }
+            body { padding: 24px 12px 60px; }
             section { padding: 24px 18px; }
             .vinyl-card { flex-direction: column; text-align: center; }
-            .spec-table th { width: 35%; }
+            .spec-table th { width: 38%; }
         }
     </style>
 </head>
@@ -308,4 +315,83 @@
             <p class="catch">ブラジル・レジェンド未発表曲<br>いまTOYONOの歌声で、世界に初めて刻まれる瞬間</p>
         </header>
 
-        <div
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab(event, 'home')">Home</button>
+            <button class="tab-btn" onclick="showTab(event, 'press')">Press & Comments</button>
+            <button class="tab-btn" onclick="showTab(event, 'mv')">Music Video</button>
+            <button class="tab-btn" onclick="showTab(event, 'tracks')">Tracklist</button>
+            <button class="tab-btn" onclick="showTab(event, 'info')">Information</button>
+        </div>
+
+        <div id="home" class="tab-panel active">
+            <div class="jacket-card">
+                <img src="MDRN2026A.png" alt="A Delicadeza do Instante ジャケット">
+            </div>
+
+            <div class="link-tree">
+                <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）</a>
+                <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener">各配信サイトで聴く</a>
+                <a href="https://drive.google.com/drive/folders/1TYcyUrm2aclJpacOJ-n0CULhSnlbZugF?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">📄 プレスリリース資料一式 (Google Drive)</a>
+            </div>
+
+            <section>
+                <h2>Album Overview</h2>
+                <p style="font-size: 0.9rem; line-height: 1.9;">
+                    MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品。
+                </p>
+            </section>
+        </div>
+
+        <div id="press" class="tab-panel">
+            <section>
+                <h2>Recommendations & Praise</h2>
+                <blockquote>
+                    「一聴してその予想を遥かに上回る傑作が産まれていたことに、それはそれは嬉しい驚きでいっぱいになった。オーセンティック＆コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンド。」
+                    <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)</cite>
+                </blockquote>
+                <blockquote>
+                    「TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。ステレオタイプの“日本のシンガーが歌うブラジル音楽”という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた作品。」
+                    <cite>—— マルコス・スザーノ Marcos Suzano (パーカッショニスト)</cite>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>Producer's Note (Guilherme Gê)</h2>
+                <p style="font-size: 0.88rem; line-height: 1.9; margin-bottom: 16px;">
+                    <strong>「TOYONOと A Delicadeza do Instante」</strong><br>
+                    TOYONOがポルトガル語で歌うのを聞くとき、そこには格別の魅力が宿っています。彼女は単に外国のレパートリーをなぞるのではなく、異国の言語の中に自分ならではの歌声を見出した表現者です。
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.9;">
+                    <strong>「アルバムタイトルに込められた想い」</strong><br>
+                    フェルナンド・ペソアの詩より：「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」
+                </p>
+            </section>
+
+            <section>
+                <h2>Production Notes</h2>
+                <p style="font-size: 0.88rem; line-height: 1.9;">
+                    「4. Por Toda A Sua Vida」の日本語歌詞バージョン「10. 幾星霜」は、青山プラッサオンゼの二代目オーナー浅田クラウヂアさんに捧げられた楽曲です。
+                </p>
+            </section>
+        </div>
+
+        <div id="mv" class="tab-panel">
+            <section>
+                <h2>Music Video</h2>
+                <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">Carta a um Irmão レター・トゥ・ア・ブラザー</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="Carta a um Irmão MV" allowfullscreen></iframe>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">Coisas da Paixão feat. Leila Pinheiro</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="Coisas da Paixão MV" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+
+        <div id="tracks" class="tab-panel">
+            <section>
+                <h2>Tracklist</h2>
+                <ul class="track-list">
+                    <li>
