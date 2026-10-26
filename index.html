@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOYONO 25th Anniversary Album 『A Delicadeza do Instante』</title>
+    <style>
+        :root {
+            --bg-color: #FAF8F5;
+            --card-bg: #FFFFFF;
+            --text-main: #2C2A29;
+            --text-sub: #66625D;
+            --accent-gold: #B8860B;
+            --border-color: #E8E3DA;
+            --shadow-soft: 0 12px 30px rgba(0, 0, 0, 0.05);
+            --max-width: 680px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Shippori Mincho", YuMincho, serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            padding: 30px 16px 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: var(--max-width);
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 24px;
+        }
+
+        .badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            letter-spacing: 0.25em;
+            color: var(--accent-gold);
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 2.1rem;
+            font-weight: 500;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-bottom: 6px;
+        }
+
+        h1 span {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--text-sub);
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        .catch {
+            font-size: 0.95rem;
+            color: var(--accent-gold);
+            margin-top: 12px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* ナビゲーションタブ */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0 28px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: #FFFFFF;
+            border: 1px solid var(--border-color);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--text-main);
+            color: #FFFFFF;
+            border-color: var(--text-main);
+        }
+
+        /* パネル切り替え */
+        .tab-panel {
+            display: none;
+            text-align: left;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        .jacket-card {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+            margin: 0 auto 28px;
+            max-width: 440px;
+            text-align: center;
+        }
+
+        .jacket-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .link-tree {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-gold);
+        }
+
+        .btn-secondary {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 32px 26px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
+        }
+
+        section h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 18px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table th, .spec-table td {
+            padding: 10px 0;
+            border-bottom: 1px dashed var(--border-color);
+            font-size: 0.9rem;
+        }
+
+        .spec-table th {
+            width: 30%;
+            color: var(--text-sub);
+            font-weight: normal;
+        }
+
+        blockquote {
+            margin: 14px 0;
+            padding: 16px 18px;
+            background: #FAF9F6;
+            border-left: 3px solid var(--accent-gold);
+            border-radius: 0 8px 8px 0;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.82rem;
+            color: var(--text-sub);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .track-list {
+            list-style: none;
+        }
+
+        .track-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #FAF8F5;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .track-list .num {
+            width: 30px;
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .vinyl-card {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            background: #FAF9F6;
+            padding: 16px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .vinyl-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        footer {
+            margin-top: 36px;
+            font-size: 0.78rem;
+            color: #999999;
+        }
+
+        @media (max-width: 580px) {
+            body { padding: 20px 12px 60px; }
+            section { padding: 24px 18px; }
+            .vinyl-card { flex-direction: column; text-align: center; }
+            .spec-table th { width: 35%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+
+        <header>
+            <span class="badge">TOYONO 25th Anniversary Album</span>
+            <h1>A Delicadeza do Instante<span>瞬間の繊細さ</span></h1>
+            <p class="catch">ブラジル・レジェンド未発表曲<br>いまTOYONOの歌声で、世界に初めて刻まれる瞬間[cite: 5]</p>
+        </header>
+
+        <!-- タブボタン -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab('home')">ホーム</button>
+            <button class="tab-btn" onclick="showTab('press')">プレスリリース・推薦文</button>
+            <button class="tab-btn" onclick="showTab('mv')">MV</button>
+            <button class="tab-btn" onclick="showTab('tracks')">トラックリスト</button>
+            <button class="tab-btn" onclick="showTab('info')">詳細情報</button>
+        </div>
+
+        <!-- 1. ホームタブ -->
+        <div id="home" class="tab-panel active">
+            <div class="jacket-card">
+                <img src="MDRN2026A.png" alt="A Delicadeza do Instante ジャケット">
+            </div>
+
+            <div class="link-tree">
+                <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）[cite: 13]</a>
+                <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener">各配信サイトで聴く</a>
+                <a href="https://drive.google.com/drive/folders/1TYcyUrm2aclJpacOJ-n0CULhSnlbZugF?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">📄 プレスリリース資料一式 (Google Drive)[cite: 13]</a>
+            </div>
+
+            <section>
+                <h2>作品概要</h2>
+                <p style="font-size: 0.92rem; line-height: 1.8;">
+                    MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品[cite: 9]。
+                </p>
+            </section>
+        </div>
+
+        <!-- 2. プレスリリース・推薦文タブ -->
+        <div id="press" class="tab-panel">
+            <section>
+                <h2>推薦文 (Recommendations)</h2>
+                <blockquote>
+                    「一聴してその予想を遥かに上回る傑作が産まれていたことに、それはそれは嬉しい驚きでいっぱいになった。オーセンティック＆コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンド。」
+                    <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)[cite: 6]</cite>
+                </blockquote>
+                <blockquote>
+                    「TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。ステレオタイプの“日本のシンガーが歌うブラジル音楽”という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた作品。」
+                    <cite>—— マルコス・スザーノ Marcos Suzano (パーカッショニスト)[cite: 6]</cite>
+                </blockquote>
+            </section>
+
+            <section>
+                <h2>プロデューサー寄稿 (Guilherme Gê)</h2>
+                <p style="font-size: 0.9rem; line-height: 1.8; margin-bottom: 14px;">
+                    <strong>「TOYONOと A Delicadeza do Instante」</strong><br>
+                    TOYONOがポルトガル語で歌うのを聞くとき、そこには格別の魅力が宿っています[cite: 7]。彼女は単に外国のレパートリーをなぞるのではなく、異国の言語の中に自分ならではの歌声を見出した表現者です[cite: 7]。
+                </p>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    <strong>「アルバムタイトルに込められた想い」</strong><br>
+                    フェルナンド・ペソアの詩より：「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」[cite: 10]
+                </p>
+            </section>
+
+            <section>
+                <h2>Production Notes</h2>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    「4. Por Toda A Sua Vida」の日本語歌詞バージョン「10. 幾星霜」は、青山プラッサオンゼの二代目オーナー浅田クラウヂアさんに捧げられた楽曲です[cite: 9]。
+                </p>
+            </section>
+        </div>
+
+        <!-- 3. ミュージックビデオタブ -->
+        <div id="mv" class="tab-panel">
+            <section>
+                <h2>Music Video</h2>
+                <p style="font-size: 0.88rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">Carta a um Irmão レター・トゥ・ア・ブラザー[cite: 11]</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="Carta a um Irmão MV" allowfullscreen></iframe>
+                </div>
+
+                <p style="font-size: 0.88rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">Coisas da Paixão feat. Leila Pinheiro[cite: 11]</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="Coisas da Paixão MV" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+
+        <!-- 4. トラックリストタブ -->
+        <div id="tracks" class="tab-panel">
+            <section>
+                <h2>Tracklist</h2>
+                <ul class="track-list">
+                    <li><span class="num">01</span> Se Tiver Que Ser 予感[cite: 11]</li>
+                    <li><span class="num">02</span> Carta a um Irmão レター・トゥ・ア・ブラザー[cite: 11]</li>
+                    <li><span class="num">03</span> Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱[cite: 11]</li>
+                    <li><span class="num">04</span> Por Toda A Sua Vida その人生のすべてに[cite: 11]</li>
+                    <li><span class="num">05</span> Paraglider パラグライダー[cite: 11]</li>
+                    <li><span class="num">06</span> 卒業写真 feat. Roberto Menescal (jazz guitar) ※カヴァー[cite: 11]</li>
+                    <li><span class="num">07</span> 夢の続き ※カヴァー[cite: 11]</li>
+                    <li><span class="num">08</span> Foi Demais 最愛[cite: 11]</li>
+                    <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー[cite: 11]</li>
+                    <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês[cite: 11]</li>
+                    <li><span class="num">11</span> 夢の続き AKAKAGE's Back to 90's remix (Bonus Track)[cite: 11]</li>
+                </ul>
+
+                <div class="vinyl-card">
+                    <img src="YUME1.jpeg" alt="夢の続き 7インチアナログジャケット">
+                    <div style="text-align: left;">
+                        <strong style="display:block; font-size: 0.95rem; margin-bottom: 4px;">先行7インチシングル『夢の続き』</strong>
+                        <p style="font-size: 0.82rem; color: var(--text-sub); line-height: 1.5;">話題を呼んだ竹内まりやの名曲カバーを7インチ・アナログ盤で先行リリース[cite: 2]。本アルバムにはBonus TrackとしてAKAKAGE's Remixも収録[cite: 11]。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 5. 詳細情報・プロファイルタブ -->
+        <div id="info" class="tab-panel">
+            <section>
+                <h2>Release Spec</h2>
+                <table class="spec-table">
+                    <tr><th>発売日</th><td>2026年11月18日[cite: 13]</td></tr>
+                    <tr><th>タイトル</th><td>A Delicadeza do Instante 瞬間の繊細さ[cite: 13]</td></tr>
+                    <tr><th>アーティスト</th><td>TOYONO[cite: 13]</td></tr>
+                    <tr><th>品番</th><td>MDRN-2026[cite: 13]</td></tr>
+                    <tr><th>価格</th><td>定価 ¥3,000（税抜価格 ¥2,727）[cite: 13]</td></tr>
+                    <tr><th>仕様</th><td>CD / J-POP、ブラジル（全11曲 / ポルトガル語歌詞・対訳付）[cite: 13]</td></tr>
+                    <tr><th>発売元</th><td>modelo MODERNO / (株)ファイルレコード[cite: 13]</td></tr>
+                </table>
+            </section>
+
+            <section>
+                <h2>Artist Profile</h2>
+                <p style="font-size: 0.88rem; line-height: 1.8;">
+                    <strong>TOYONO (ブラジル音楽シンガーソングライター)</strong><br>
+                    大阪出身[cite: 13]。OL時代にジョイス・モレーノに憧れて単身リオデジャネイロへ渡る[cite: 13]。2016年ビクターエンタテインメントよりメジャーデビュー[cite: 13]。代表曲「トレス・マリアス」はJAL国際線機内放送に採用[cite: 13]。FM番組「TOYONO moda brasil」パーソナリティを務める[cite: 13]。2026年にソロデビュー25周年を迎えた[cite: 13]。
+                </p>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 TOYONO / modelo MODERNO. All Rights Reserved.[cite: 13]</p>
+        </footer>
+
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            var panels = document.querySelectorAll('.tab-panel');
+            var buttons = document.querySelectorAll('.tab-btn');
+            
+            panels.forEach(function(panel) {
+                panel.classList.remove('active');
+            });
+            buttons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
