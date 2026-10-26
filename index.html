@@ -65,7 +65,7 @@
             display: block;
         }
 
-        /* 枠線をなくし、洗練されたシャドウのみで立体感を演出 */
+        /* 枠線をなくし、洗練されたシャドウのみで立体感を演出したジャケット写真 */
         .jacket-container {
             margin: 0 auto 24px;
             width: 100%;
@@ -308,24 +308,30 @@
 
     <div class="page-wrapper">
 
+        <!-- ヘッダー：右上ロゴ ＋ 中央タイトル画像 -->
         <header>
-            <div class="jacket-container">
-            <img src="MDRN2026A.png" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
-        </div>
             <img src="TOYONO25thLogo.png" alt="TOYONO 25th Logo" class="top-logo" onerror="this.style.display='none';">
             <div class="title-image-container">
                 <img src="titleletter.png" alt="A Delicadeza do Instante 瞬間の繊細さ TOYONO" onerror="this.style.display='none';">
             </div>
         </header>
+
+        <!-- ジャケット写真（1枚のみ美しく配置） -->
+        <div class="jacket-container">
+            <img src="MDRN2026A.png" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
+        </div>
+
+        <!-- タブメニュー -->
         <div class="nav-tabs">
             <button class="tab-btn active" onclick="showTab(event, 'home')">Home</button>
             <button class="tab-btn" onclick="showTab(event, 'press')">recomendo</button>
-            <button class="tab-btn" onclick="showTab(event, 'press')">production note</button>
+            <button class="tab-btn" onclick="showTab(event, 'notes')">production note</button>
             <button class="tab-btn" onclick="showTab(event, 'mv')">Music Video</button>
             <button class="tab-btn" onclick="showTab(event, 'tracks')">Tracklist</button>
             <button class="tab-btn" onclick="showTab(event, 'info')">Information</button>
         </div>
 
+        <!-- Home パネル -->
         <div id="home" class="tab-panel active">
             <div class="link-tree">
                 <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）</a>
@@ -341,6 +347,7 @@
             </section>
         </div>
 
+        <!-- recomendo パネル -->
         <div id="press" class="tab-panel">
             <section>
                 <h2>Recommendations & Praise</h2>
@@ -349,4 +356,63 @@
                     <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)</cite>
                 </blockquote>
                 <blockquote>
-                    「TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。ステレオタイプの“日本のシンガーが歌
+                    「TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。ステレオタイプの“日本のシンガーが歌うブラジル音楽”という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた作品。」
+                    <cite>—— マルコス・スザーノ Marcos Suzano (パーカッショニスト)</cite>
+                </blockquote>
+            </section>
+        </div>
+
+        <!-- production note パネル -->
+        <div id="notes" class="tab-panel">
+            <section>
+                <h2>Producer's Note (Guilherme Gê)</h2>
+                <p style="font-size: 0.88rem; line-height: 1.95; margin-bottom: 16px;">
+                    <strong>「TOYONOと A Delicadeza do Instante」</strong><br>
+                    TOYONOがポルトガル語で歌うのを聞くとき、そこには格別の魅力が宿っています。彼女は単に外国のレパートリーをなぞるのではなく、異国の言語の中に自分ならではの歌声を見出した表現者です。
+                </p>
+                <p style="font-size: 0.88rem; line-height: 1.95;">
+                    <strong>「アルバムタイトルに込められた想い」</strong><br>
+                    フェルナンド・ペソアの詩より：「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」
+                </p>
+            </section>
+
+            <section>
+                <h2>Production Notes</h2>
+                <p style="font-size: 0.88rem; line-height: 1.95;">
+                    「4. Por Toda A Sua Vida」の日本語歌詞バージョン「10. 幾星霜」は、青山プラッサオンゼの二代目オーナー浅田クラウヂアさんに捧げられた楽曲です。
+                </p>
+            </section>
+        </div>
+
+        <!-- Music Video パネル -->
+        <div id="mv" class="tab-panel">
+            <section>
+                <h2>Music Video</h2>
+                <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">Carta a um Irmão レター・トゥ・ア・ブラザー</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="Carta a um Irmão MV" allowfullscreen></iframe>
+                </div>
+
+                <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 12px; text-align: center;">Coisas da Paixão feat. Leila Pinheiro</p>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=PL" title="Coisas da Paixão MV" allowfullscreen></iframe>
+                </div>
+            </section>
+        </div>
+
+        <!-- Tracklist パネル -->
+        <div id="tracks" class="tab-panel">
+            <section>
+                <h2>Tracklist</h2>
+                <ul class="track-list">
+                    <li><span class="num">01</span> Se Tiver Que Ser 予感</li>
+                    <li><span class="num">02</span> Carta a um Irmão レター・トゥ・ア・ブラザー</li>
+                    <li><span class="num">03</span> Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱</li>
+                    <li><span class="num">04</span> Por Toda A Sua Vida その人生のすべてに</li>
+                    <li><span class="num">05</span> Paraglider パラグライダー</li>
+                    <li><span class="num">06</span> 卒業写真 feat. Roberto Menescal (jazz guitar) ※カヴァー</li>
+                    <li><span class="num">07</span> 夢の続き ※カヴァー</li>
+                    <li><span class="num">08</span> Foi Demais 最愛</li>
+                    <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー</li>
+                    <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês</li>
+                    <li><span class="num">11</span> 夢の
