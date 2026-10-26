@@ -6,12 +6,13 @@
     <title>TOYONO 25th Anniversary Album 『A Delicadeza do Instante』</title>
     <style>
         :root {
-            --bg-color: #F8F7F5;
+            --bg-color: #F4F1EA;
             --card-bg: #FFFFFF;
-            --text-main: #1A1918;
-            --text-sub: #55524E;
-            --accent-gold: #B8860B;
-            --border-color: #E2DDD5;
+            --text-main: #1C1B19;
+            --text-sub: #66615B;
+            --accent-gold: #C59B27;
+            --accent-gold-light: #DFBE5D;
+            --border-color: #E6E1DA;
             --max-width: 760px;
         }
 
@@ -22,12 +23,12 @@
         }
 
         body {
-            font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+            font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 2.0;
-            letter-spacing: 0.06em;
-            padding: 24px 12px 100px;
+            line-height: 2.1;
+            letter-spacing: 0.08em;
+            padding: 36px 16px 120px;
             display: flex;
             justify-content: center;
         }
@@ -41,7 +42,7 @@
         /* HEADER AREA (p.1) */
         header {
             position: relative;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
             padding: 10px 4px 0;
         }
 
@@ -49,15 +50,16 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 110px;
+            width: 100px;
             height: auto;
+            opacity: 0.9;
         }
 
         .title-image-container {
             width: 100%;
-            max-width: 520px;
+            max-width: 480px;
             margin: 0 auto;
-            padding: 6px 0;
+            padding: 12px 0;
         }
 
         .title-image-container img {
@@ -68,17 +70,20 @@
 
         /* MAIN JACKET PICTURE */
         .jacket-container {
-            margin: 0 auto 32px;
+            margin: 0 auto 36px;
             width: 100%;
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
-            border-radius: 6px;
+            background: #fff;
+            padding: 12px;
+            box-shadow: 0 20px 50px rgba(28, 27, 25, 0.08);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
         .jacket-container img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 6px;
+            border-radius: 4px;
         }
 
         /* ACTION BUTTONS */
@@ -86,8 +91,8 @@
             display: flex;
             flex-direction: column;
             gap: 14px;
-            margin-bottom: 40px;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin-bottom: 48px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .btn {
@@ -95,12 +100,12 @@
             align-items: center;
             justify-content: center;
             padding: 18px 24px;
-            border-radius: 4px;
+            border-radius: 6px;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
             text-align: center;
             letter-spacing: 0.08em;
         }
@@ -112,6 +117,8 @@
 
         .btn-primary:hover {
             background-color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(197, 155, 39, 0.25);
         }
 
         .btn-secondary {
@@ -123,78 +130,94 @@
         .btn-secondary:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.04);
         }
 
         /* CONTENT SECTIONS */
         section {
             background: var(--card-bg);
-            padding: 42px 36px;
-            border-radius: 8px;
-            margin-bottom: 32px;
+            padding: 52px 42px;
+            border-radius: 12px;
+            margin-bottom: 36px;
             border: 1px solid var(--border-color);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 30px rgba(28, 27, 25, 0.03);
             text-align: left;
         }
 
         section h2 {
-            font-size: 1.15rem;
-            font-weight: 600;
+            font-size: 1.1rem;
+            font-weight: 500;
             color: var(--text-main);
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 14px;
-            margin-bottom: 24px;
-            letter-spacing: 0.12em;
+            padding-bottom: 16px;
+            margin-bottom: 32px;
+            letter-spacing: 0.16em;
             text-align: center;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: var(--accent-gold);
         }
 
         section h3 {
-            font-size: 0.98rem;
+            font-size: 0.96rem;
             font-weight: 600;
             color: var(--accent-gold);
-            margin: 28px 0 12px;
-            letter-spacing: 0.08em;
-            border-left: 3px solid var(--accent-gold);
-            padding-left: 10px;
+            margin: 36px 0 16px;
+            letter-spacing: 0.06em;
+            border-left: 2px solid var(--accent-gold);
+            padding-left: 12px;
+            line-height: 1.6;
         }
 
         p {
-            font-size: 0.9rem;
-            line-height: 2.0;
-            margin-bottom: 18px;
-            color: #2C2B2A;
+            font-size: 0.91rem;
+            line-height: 2.1;
+            margin-bottom: 20px;
+            color: #2E2C29;
         }
 
         blockquote {
-            margin: 20px 0;
-            padding: 22px 24px;
-            background: #F9F8F6;
+            margin: 24px 0;
+            padding: 26px 28px;
+            background: #FAF8F5;
             border-left: 3px solid var(--accent-gold);
-            border-radius: 0 4px 4px 0;
+            border-radius: 0 6px 6px 0;
             font-size: 0.89rem;
-            line-height: 2.0;
+            line-height: 2.1;
+            color: #383532;
         }
 
         blockquote cite {
             display: block;
-            margin-top: 12px;
+            margin-top: 14px;
             font-size: 0.82rem;
             color: var(--text-sub);
             font-style: normal;
             font-weight: 600;
             letter-spacing: 0.06em;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         /* TABLES & LISTS */
         .spec-table, .credits-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-top: 12px;
         }
 
         .spec-table th, .spec-table td, .credits-table th, .credits-table td {
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px dashed var(--border-color);
             font-size: 0.88rem;
             vertical-align: top;
@@ -204,7 +227,12 @@
             width: 32%;
             color: var(--text-sub);
             font-weight: normal;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            letter-spacing: 0.04em;
+        }
+
+        .spec-table td, .credits-table td {
+            color: var(--text-main);
         }
 
         .track-list, .schedule-list {
@@ -212,31 +240,40 @@
         }
 
         .track-list li {
-            padding: 13px 0;
-            border-bottom: 1px solid #F8F7F5;
+            padding: 14px 0;
+            border-bottom: 1px solid #F4F1EA;
             font-size: 0.89rem;
             display: flex;
             align-items: baseline;
+            transition: background 0.2s ease;
+        }
+
+        .track-list li:hover {
+            background-color: #FAF8F5;
+            padding-left: 6px;
+            padding-right: 6px;
+            border-radius: 4px;
         }
 
         .track-list .num {
-            width: 36px;
+            width: 38px;
             font-size: 0.82rem;
             color: var(--accent-gold);
             font-weight: 600;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .schedule-list li {
-            padding: 10px 0;
+            padding: 12px 0;
             border-bottom: 1px dashed var(--border-color);
             font-size: 0.88rem;
         }
 
         .schedule-list strong {
             color: var(--accent-gold);
-            margin-right: 8px;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin-right: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 600;
         }
 
         .video-container {
@@ -244,9 +281,10 @@
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 6px;
-            margin: 16px 0 24px;
-            background: #000;
+            border-radius: 8px;
+            margin: 18px 0 28px;
+            background: #111;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
         }
 
         .video-container iframe {
@@ -260,50 +298,52 @@
 
         .vinyl-card {
             display: flex;
-            gap: 18px;
+            gap: 20px;
             align-items: center;
-            background: #F9F8F6;
-            padding: 18px;
-            border-radius: 6px;
-            margin-top: 16px;
+            background: #FAF8F5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 18px;
             border: 1px solid var(--border-color);
         }
 
         .vinyl-card img {
-            width: 90px;
-            height: 90px;
+            width: 96px;
+            height: 96px;
             object-fit: cover;
-            border-radius: 4px;
+            border-radius: 6px;
             flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         .mv-block {
-            margin-bottom: 32px;
-            padding-bottom: 20px;
+            margin-bottom: 36px;
+            padding-bottom: 24px;
             border-bottom: 1px dashed var(--border-color);
         }
 
         .mv-block:last-child {
             border-bottom: none;
             margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         footer {
-            margin-top: 48px;
+            margin-top: 56px;
             font-size: 0.78rem;
-            color: #888888;
-            letter-spacing: 0.08em;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #88827B;
+            letter-spacing: 0.1em;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         @media (max-width: 600px) {
-            body { padding: 16px 8px 60px; }
-            section { padding: 28px 18px; }
+            body { padding: 20px 10px 80px; }
+            section { padding: 32px 20px; }
             .top-logo {
                 position: static;
-                margin: 0 auto 12px;
+                margin: 0 auto 16px;
                 display: block;
-                width: 95px;
+                width: 90px;
             }
             .spec-table th, .credits-table th { width: 38%; }
             .vinyl-card { flex-direction: column; text-align: center; }
@@ -341,7 +381,7 @@
                 MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品。先行7インチで話題を呼んだ「夢の続き」や、ホベルト・メネスカルがジャズギターで参加した「卒業写真」に加え、日本のブラジル音楽の聖地・青山プラッサオンゼの二代目オーナー浅田クラウヂアさんを偲ぶ「幾星霜」など、TOYONOだからこそ表現可能な日本ブラジルの絆をリアルに結ぶ全11曲を収録。洋楽・邦楽の枠を越えて幅広い音楽ファンに届ける7thオリジナルアルバム。
             </p>
 
-            <h2 style="margin-top: 40px;">01 Recommendations</h2>
+            <h2 style="margin-top: 48px;">01 Recommendations</h2>
             
             <h3>沼澤尚 Takashi Numazawa (ドラマー)</h3>
             <blockquote>
@@ -426,15 +466,14 @@
         <section>
             <h2>04 Production Notes</h2>
             
-            <h3>現代リオの旗手 Guilherme Gêギリェルミ・ジェ<br>ボサノヴァの偉人 Roberto Menescalホベルト・メネスカル<br>マルコス・ヴァーリの兄、作詞家Paulo Sérgio
- Valleパウロ・セルジオ・ヴァーリ</h3>
+            <h3>現代リオの旗手 Guilherme Gê ギレェルミ・ジェ<br>ボサノヴァの偉人 Roberto Menescal ホベルト・メネスカル<br>マルコス・ヴァーリの兄、作詞家 Paulo Sérgio Valle パウロ・セルジオ・ヴァーリ</h3>
             <p>
                 Netflixドキュメンタリー『ラテン・ブラッド』(2025)で全世界的に再評価されるネイ・マトグロッソとのコラボレーションでも注目を集める、リオ発ロックバンドHectoのヴォーカリスト・ギタリストのギリェルミ・ジェをプロデューサーに迎えて制作されたTOYONO25周年記念アルバム。<br>
                 本作の核となるのは「現代リオの旗手ギリェルミ・ジェ」「ボサノヴァの偉人ホベルト・メネスカル」「マルコス・ヴァーリの兄として知られる作詞家パウロ・セルジオ・ヴァーリ」という、世代とスタイルを越えてブラジル音楽を象徴する3人によって共作されながら、これまで発表されることのなかった楽曲群である。<br>
                 その歌い手として選ばれたのは日本のTOYONO。3人の創作が、TOYONOの歌声によって、いま初めて作品として結実する。
             </p>
 
-            <h3>Leila Pinheiroレイラ・ピニェイロと奇跡のディエット<br>&amp; 浅田クラウヂアさんに捧ぐ「幾星霜」</h3>
+            <h3>Leila Pinheiro レイラ・ピニェイロと奇跡のデュエット<br>&amp; 浅田クラウヂアさんに捧ぐ「幾星霜」</h3>
             <p>
                 さらに日本を代表するポップソング「6. 卒業写真 (荒井由実)」「7. 夢の続き (竹内まりや)」をブラジルミュージシャン達による演奏でカヴァー。ボサノヴァレジェンドのホベルト・メネスカルが「6. 卒業写真」にジャズ・ギターで録音にも参加している。<br>
                 パーカッションには本作のスーパーバイザーでもあるマルコス・スザーノが全面参加し、リズムの奥行きと躍動感を加える。加えて、ブラジル音楽界を代表するレジェンド・シンガーのレイラ・ピニェイロが「3. Coisas da Paixão ブラジルの情熱」にてTOYONOとのデュエットヴォーカルで参加。<br>
@@ -475,7 +514,7 @@
                 <li><span class="num">08</span> Foi Demais 最愛 (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)</li>
                 <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー (Lô Borges / Ronaldo Bastos)</li>
                 <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</li>
-                <li><span class="num">11</span>  (Bonus Track)夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
+                <li><span class="num">11</span> (Bonus Track) 夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
             </ul>
         </section>
 
@@ -536,7 +575,7 @@
         <!-- PAGE 9: SPEC & ARTIST PROFILE -->
         <section>
             <h2>07 Release Spec &amp; Profile</h2>
-            <table class="spec-table" style="margin-bottom: 28px;">
+            <table class="spec-table" style="margin-bottom: 32px;">
                 <tr><th>Release Date</th><td>2026年11月18日</td></tr>
                 <tr><th>Title</th><td>A Delicadeza do Instante 瞬間の繊細さ (アデリカデーザドインスタンチ)</td></tr>
                 <tr><th>Artist</th><td>TOYONO</td></tr>
@@ -547,23 +586,14 @@
                 <tr><th>Label</th><td>Manufactured by modelo MODERNO / Distributed by File Records inc.</td></tr>
             </table>
 
-            <h3 style="margin-top: 20px; border-left: none; padding-left: 0; text-align: center; font-size: 1.05rem;">【アーティスト・プロフィール】</h3>
+            <h3 style="margin-top: 24px; border-left: none; padding-left: 0; text-align: center; font-size: 1.05rem; color: var(--text-main);">【アーティスト・プロフィール】</h3>
             <p>
                 <strong>TOYONO (ブラジル音楽シンガーソングライター)</strong><br>
-                大阪出身。OL 時代に耳にしたジョイス・モレーノに憧れてブラジル音楽への想いが高まり、
-歌い手の道を志して単身でリオデジャネイロへ渡る。帰国後、東京を拠点に本格的な音楽活動を開始。
-著名DJ やブラジルを代表するアーティストとの作品を多数発表し、2016年ビクターエンタテイン
-メントよりメジャーデビュー
-。代表曲「トレス・マリアス」は JAL国際線機内放送に採用され話題に。
-FM番組「TOYONO
-moda
- brasil」パーソナリティを務め、語学力を生かし現地アーティストへ
-通訳なしでポルトガル語インタビューを行うほか、ナレーションや執筆など多方面で活躍。
-2026 年にソロデビュー25周年を迎え、本作を携え開催した5月のTOKYO
- FM
- ホール公演には、
-長年の共演者であり世界的パーカッショニストのマルコス・スザーノが来日参加し大成功を収めた。</p>
-            
+                大阪出身。OL時代に耳にしたジョイス・モレーノに憧れてブラジル音楽への想いが高まり、歌い手の道を志して単身でリオデジャネイロへ渡る。帰国後、東京を拠点に本格的な音楽活動を開始。著名DJやブラジルを代表するアーティストとの作品を多数発表し、2016年ビクターエンタテインメントよりメジャーデビュー。代表曲「トレス・マリアス」はJAL国際線機内放送に採用され話題に。
+            </p>
+            <p>
+                FM番組「TOYONO moda brasil」パーソナリティを務め、語学力を生かし現地アーティストへ通訳なしでポルトガル語インタビューを行うほか、ナレーションや執筆など多方面で活躍。2026年にソロデビュー25周年を迎え、本作を携え開催した5月のTOKYO FM ホール公演には、長年の共演者であり世界的パーカッショニストのマルコス・スザーノが来日参加し大成功を収めた。
+            </p>
         </section>
 
         <!-- PAGE 10: RELATED RELEASE, SCHEDULE & MUSIC VIDEOS -->
@@ -574,7 +604,7 @@ moda
             <div class="vinyl-card">
                 <img src="YUME1.jpeg" alt="夢の続き 7インチアナログジャケット" onerror="this.style.display='none';">
                 <div style="text-align: left;">
-                    <strong style="display:block; font-size: 0.92rem; margin-bottom: 4px;">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)</strong>
+                    <strong style="display:block; font-size: 0.92rem; margin-bottom: 4px; color: var(--text-main);">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)</strong>
                     <p style="font-size: 0.82rem; color: var(--text-sub); line-height: 1.7;">
                         • <strong>発売日</strong>：2026年5月23日 会場先行発売 / 5月27日 全国一般発売<br>
                         • <strong>Side A</strong>：「夢の続き」（竹内まりや） AKAKAGE's Back to 90's remix<br>
@@ -583,23 +613,23 @@ moda
                 </div>
             </div>
 
-            <h3 style="margin-top: 36px;">プロモーション・スケジュール</h3>
+            <h3 style="margin-top: 40px;">プロモーション・スケジュール</h3>
             <ul class="schedule-list">
                 <li><strong>2026年10月4日(日)</strong>：発売日情報解禁（ラジオ番組「TOYONO moda brasil」にて）</li>
                 <li><strong>2026年10月21日(水)</strong>：アルバムリード曲先行配信開始 &amp; MV一般公開<br>
-                    <span style="font-size: 0.82rem; color: var(--text-sub); display: block; padding-left: 12px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー</span>
+                    <span style="font-size: 0.82rem; color: var(--text-sub); display: block; padding-left: 14px; margin-top: 4px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー</span>
                 </li>
                 <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開</li>
                 <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売</li>
             </ul>
 
-            <h3 style="margin-top: 36px;">Music Video &amp; ライブ映像</h3>
+            <h3 style="margin-top: 40px;">Music Video &amp; ライブ映像</h3>
             
             <div class="mv-block">
                 <p style="font-weight: 600; font-size: 0.92rem; color: var(--text-main); margin-bottom: 6px;">
                     M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱
                 </p>
-                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 10px;">
+                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 12px;">
                     リオデジャネイロにて制作。TOYONO、レイラ・ピニェイロ、ギリェルミ・ジェ出演<br>
                     Direção: Guilherme Gê / Edição: João Oliveira / Assistente de Edição: Márcio Belao
                 </p>
@@ -612,7 +642,7 @@ moda
                 <p style="font-weight: 600; font-size: 0.92rem; color: var(--text-main); margin-bottom: 6px;">
                     M2. Carta a um Irmão レター・トゥ・ア・ブラザー
                 </p>
-                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 10px;">
+                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 12px;">
                     ニューヨークにて制作。新進気鋭の映像作家・パルクール選手であり、TOYONOの従姉妹の娘でもあるSeneca Schwartz (セネカ・シュワルツ)が出演・制作。
                 </p>
                 <div class="video-container">
@@ -624,7 +654,7 @@ moda
                 <p style="font-weight: 600; font-size: 0.92rem; color: var(--text-main); margin-bottom: 6px;">
                     M4. &amp; M10. Por Toda A Sua Vida / 幾星霜（ライブ映像）
                 </p>
-                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 10px;">
+                <p style="font-size: 0.82rem; color: var(--text-sub); margin-bottom: 12px;">
                     2026.05.23 TOYONO 25周年記念公演 feat.マルコス・スザーノ@TOKYO FM Hall ライブ映像
                 </p>
                 <div class="video-container">
