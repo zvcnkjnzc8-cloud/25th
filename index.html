@@ -11,11 +11,11 @@
             --card-bg: #FFFFFF;
             --text-main: #1A1918;
             --text-sub: #55524E;
-            --accent-gold: #A37619;
+            --accent-gold: #B8860B;
+            --accent-gold-light: #FDFBF7;
             --border-color: #E2DDD5;
-            --shadow-soft: 0 16px 40px rgba(0, 0, 0, 0.04);
-            --shadow-jacket: 0 24px 60px rgba(0, 0, 0, 0.1);
-            --max-width: 680px;
+            --shadow-jacket: 0 24px 60px rgba(0, 0, 0, 0.08);
+            --max-width: 720px;
         }
 
         * {
@@ -30,7 +30,7 @@
             color: var(--text-main);
             line-height: 1.9;
             letter-spacing: 0.06em;
-            padding: 40px 16px 90px;
+            padding: 16px 12px 80px; /* 上部の余白を極限まで削減 */
             display: flex;
             justify-content: center;
         }
@@ -41,25 +41,25 @@
             text-align: center;
         }
 
-        /* Header / Title & Logo Area */
+        /* Header / Title & Logo Area (余白を最小化) */
         header {
             position: relative;
-            margin-bottom: 24px;
-            padding: 35px 10px 10px;
+            margin-bottom: 16px;
+            padding: 10px 10px 0;
         }
 
         .top-logo {
             position: absolute;
-            top: 0;
+            top: 5px;
             right: 0;
-            max-width: 120px;
+            max-width: 110px;
             height: auto;
         }
 
         .title-image-container {
-            max-width: 520px;
+            max-width: 500px;
             margin: 0 auto;
-            padding: 10px 0;
+            padding: 5px 0;
         }
 
         .title-image-container img {
@@ -68,15 +68,15 @@
             display: block;
         }
 
-        /* Jacket Card (Immersive & Extra Large) */
+        /* Jacket Card (画面いっぱいのインパクト) */
         .jacket-card {
             background: var(--card-bg);
-            padding: 24px;
-            border-radius: 12px;
+            padding: 16px;
+            border-radius: 10px;
             box-shadow: var(--shadow-jacket);
             border: 1px solid var(--border-color);
-            margin: 0 auto 24px;
-            max-width: 620px;
+            margin: 0 auto 20px;
+            max-width: 100%; /* 画面幅いっぱいに拡大 */
             text-align: center;
         }
 
@@ -87,84 +87,29 @@
             display: block;
         }
 
-        /* Navigation Tabs (Right below the jacket) */
+        /* Navigation Tabs (地味さを解消し、洗練されたリッチなデザインに) */
         .nav-tabs {
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             margin: 0 auto 32px;
             flex-wrap: wrap;
             font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-            max-width: 620px;
+            max-width: 100%;
         }
 
         .tab-btn {
             background: #FFFFFF;
             border: 1px solid var(--border-color);
-            padding: 10px 20px;
-            border-radius: 40px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
             color: var(--text-sub);
             cursor: pointer;
             transition: all 0.3s ease;
-            letter-spacing: 0.06em;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-        }
-
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--text-main);
-            color: #FFFFFF;
-            border-color: var(--text-main);
-        }
-
-        .tab-panel {
-            display: none;
-            text-align: left;
-        }
-
-        .tab-panel.active {
-            display: block;
-        }
-
-        /* Buttons & Link Tree */
-        .link-tree {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            margin-bottom: 40px;
-            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 17px 24px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.02);
-            text-align: center;
             letter-spacing: 0.08em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
         }
 
-        .btn-primary {
-            background-color: var(--text-main);
-            color: #FFFFFF;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-gold);
-        }
-
-        .btn-secondary {
-            background-color: var(--card-bg);
-            color: var(--text-main);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            border-color
+        .tab-
