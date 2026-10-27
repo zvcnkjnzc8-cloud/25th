@@ -567,7 +567,7 @@
                     それはそれは嬉しい驚きでいっぱいになった。
                 </strong>
                 プロデュースがギリェルミ・ジェ、スーパーバイザーがマルコス・スザーノ、さらにホベルト・メネスカルにレイラ・ピニェイロ、そしてそして我々が大好きなシンガーTOYONO…<br><br>
-                このキャスティングを見ただけで、確実にルーツをベースにオーセンティック&amp;コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンドを想像しつつワクワクが止まらなかったが…一聴してその予想を遥かに上回る傑作が産まれていたことにそれはそれは嬉しい驚きでいっぱいになった。「今」こんなカッコいいサウンドを発信しているこのチームワークはひとえに一人一人のその愛に溢れた人間性の集まりがその要因であることは間違いない。つまり「人間性＝音楽性」は音楽を表現する上で決して嘘をつけないからだ。<br><br>
+                このキャスティングを見ただけで、確実にルーツをベースにオーセンティック&amp;コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンドを想像しつつワクワクが止マらなかったが…一聴してその予想を遥かに上回る傑作が産まれていたことにそれはそれは嬉しい驚きでいっぱいになった。「今」こんなカッコいいサウンドを発信しているこのチームワークはひとえに一人一人のその愛に溢れた人間性の集まりがその要因であることは間違いない。つまり「人間性＝音楽性」は音楽を表現する上で決して嘘をつけないからだ。<br><br>
                 1970年代、中学生だった自分が初めてアントニオ・カルロス・ジョビン、ジョアン・ジルベルトを知ってからブラジル音楽をとどまることなく追いかけてきて、特に90年代当時世界を席巻していたMPBブームのあの素晴らしい時代のサウンドを彷彿とさせるのはもちろん、初めてブラジルサウンドに魅せられたセンセーションをも思い起こさせてくれる2026年リリースのこの傑作が世界中のより多くの人々に届きますように。
                 <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)</cite>
             </blockquote>
@@ -982,10 +982,10 @@
                     O álbum "A Delicadeza do Instante" da TOYONO, produzido pelo Guilherme Gê, está realmente incrível. Um trabalho super caprichado, com uma sonoridade linda e com uma visão muito moderna da MPB. As músicas são ótimas, os arranjos de muito bom gosto e a performance de todos os músicos envolvidos é de primeiríssima qualidade.
                 </p>
                 <p>
-                    A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é un enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
+                    A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
                 </p>
                 <p>
-                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É un disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
+                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
                 </p>
             </div>
 
@@ -1006,5 +1006,20 @@
 
     </div>
 
+    <!-- iOS / タブレット・スマートフォンでのページ内ジャンプ不具合を確実に解消するスクリプト -->
+    <script>
+        document.addEventListener('click', function(e) {
+            let target = e.target.closest('a[href^="#"]');
+            if (target) {
+                let id = target.getAttribute('href');
+                if (id === '#') return;
+                let element = document.querySelector(id);
+                if (element) {
+                    e.preventDefault();
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
