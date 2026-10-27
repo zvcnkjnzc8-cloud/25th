@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOYONO 25th Anniversary Album 『A Delicadeza do Instante』</title>
+    <!-- Google Fonts: Shippori Mincho の太めウェイト（500, 600）を読み込んでくっきり表示 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-color: #F4F1EA;
             --card-bg: #FFFFFF;
-            --text-main: #1C1B19;
-            --text-sub: #66615B;
+            --text-main: #1A1918;    /* ← わずかに濃くして視認性をアップ */
+            --text-sub: #5E5953;
             --accent-gold: #C59B27;
             --accent-gold-light: #DFBE5D;
             --border-color: #E6E1DA;
@@ -29,12 +34,13 @@
 
         body {
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+            font-weight: 500;        /* ← 全体の明朝体を標準よりワンランク太くして細さを解消 */
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;
+            line-height: 1.75;       /* ← 読みやすい行間 */
             letter-spacing: 0.05em;
-            font-size: 16px;
-            padding: 20px 16px 120px; /* 上部余白をスリムにして見切れを防止 */
+            font-size: 17px;         /* ← 本文サイズを17pxに引き上げて大きく見せる */
+            padding: 20px 16px 120px;
             display: flex;
             justify-content: center;
             -webkit-font-smoothing: antialiased;
@@ -46,7 +52,7 @@
             text-align: center;
         }
 
-        /* HEADER AREA (ロゴとタイトルを少し大きく調整) */
+        /* HEADER AREA */
         header {
             position: relative;
             margin-bottom: 24px;
@@ -57,14 +63,14 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 120px; /* ← 少し大きく調整 */
+            width: 120px;
             height: auto;
             opacity: 0.95;
         }
 
         .title-image-container {
             width: 100%;
-            max-width: 620px; /* ← タイトル画像を少し大きく調整 */
+            max-width: 620px;
             margin: 0 auto;
             padding: 12px 0;
         }
@@ -75,11 +81,11 @@
             display: block;
         }
 
-        /* MAIN JACKET PICTURE (1枚目の画像の美しいサイズ感に調整) */
+        /* MAIN JACKET PICTURE */
         .jacket-container {
             margin: 0 auto 28px;
             width: 100%;
-            max-width: 680px; /* ← 添付画像1枚目のバランスの良い大きさに調整 */
+            max-width: 680px;
             background: transparent;
             padding: 0;
             box-shadow: 0 20px 50px rgba(28, 27, 25, 0.12);
@@ -95,7 +101,7 @@
             border-radius: 8px;
         }
 
-        /* NAVIGATOR (PAGE JUMP BUTTONS) - ジャケットのすぐ下に配置 */
+        /* PAGE NAVIGATION BUTTONS (目次ナビゲーション) */
         .page-nav {
             display: flex;
             flex-wrap: wrap;
@@ -125,7 +131,7 @@
             border-color: var(--text-main);
         }
 
-        /* ACTION BUTTONS (プレス資料ボタンを削除し2つに) */
+        /* ACTION BUTTONS */
         .link-tree {
             display: flex;
             flex-direction: column;
@@ -186,8 +192,8 @@
         }
 
         section h2 {
-            font-size: 1.15rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: var(--text-main);
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 16px;
@@ -210,7 +216,7 @@
         }
 
         section h3 {
-            font-size: 1.0rem;
+            font-size: 1.05rem;
             font-weight: 600;
             color: var(--accent-gold);
             margin: 36px 0 16px;
@@ -221,10 +227,11 @@
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.72;
-            margin-bottom: 18px;
-            color: #2E2C29;
+            font-size: 17px;           /* ← 本文の視認性をしっかり確保 */
+            font-weight: 500;          /* ← 文字の太さを保つ */
+            line-height: 1.78;         /* ← 読みやすい行間 */
+            margin-bottom: 20px;
+            color: var(--text-main);
         }
 
         blockquote {
@@ -233,15 +240,16 @@
             background: #FAF8F5;
             border-left: 3px solid var(--accent-gold);
             border-radius: 0 6px 6px 0;
-            font-size: 15px;
-            line-height: 1.75;
-            color: #383532;
+            font-size: 16px;           /* ← 引用文も少し大きく太く */
+            font-weight: 500;
+            line-height: 1.8;
+            color: #262422;
         }
 
         blockquote cite {
             display: block;
             margin-top: 14px;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             color: var(--text-sub);
             font-style: normal;
             font-weight: 600;
@@ -259,7 +267,7 @@
         .spec-table th, .spec-table td, .credits-table th, .credits-table td {
             padding: 14px 0;
             border-bottom: 1px dashed var(--border-color);
-            font-size: 0.93rem;
+            font-size: 0.95rem;
             vertical-align: top;
         }
 
@@ -282,7 +290,7 @@
         .track-list li {
             padding: 14px 0;
             border-bottom: 1px solid #F4F1EA;
-            font-size: 0.94rem;
+            font-size: 0.96rem;
             display: flex;
             align-items: baseline;
             transition: background 0.2s ease;
@@ -297,7 +305,7 @@
 
         .track-list .num {
             width: 38px;
-            font-size: 0.86rem;
+            font-size: 0.88rem;
             color: var(--accent-gold);
             font-weight: 600;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -306,7 +314,7 @@
         .schedule-list li {
             padding: 12px 0;
             border-bottom: 1px dashed var(--border-color);
-            font-size: 0.93rem;
+            font-size: 0.95rem;
         }
 
         .schedule-list strong {
@@ -370,20 +378,20 @@
 
         footer {
             margin-top: 56px;
-            font-size: 0.82rem;
-            color: #88827B;
+            font-size: 0.85rem;
+            color: #756F68;
             letter-spacing: 0.1em;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         /* スマホ表示時の微調整 */
         @media (max-width: 600px) {
-            body { padding: 10px 10px 80px; font-size: 15px; }
+            body { padding: 10px 10px 80px; font-size: 16px; }
             section { padding: 32px 20px; }
             
             p {
-                font-size: 15px;
-                line-height: 1.7;
+                font-size: 16px;
+                line-height: 1.75;
             }
 
             .top-logo {
@@ -416,7 +424,7 @@
             <img src="MDRN2026A.jpeg?v=2" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
         </div>
 
-        <!-- PAGE NAVIGATION BUTTONS (目次ナビゲーション：ジャケットのすぐ下に配置) -->
+        <!-- PAGE NAVIGATION BUTTONS (目次ナビゲーション) -->
         <nav class="page-nav">
             <a href="#recommendations" class="nav-btn">01 Recommendations</a>
             <a href="#producer1" class="nav-btn">02 Producer Note 1</a>
@@ -428,7 +436,7 @@
             <a href="#related" class="nav-btn">08 関連リリース & MV</a>
         </nav>
 
-        <!-- ACTION BUTTONS (2つの購入・配信ボタン) -->
+        <!-- ACTION BUTTONS -->
         <div class="link-tree">
             <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）</a>
             <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener">各配信サイトで聴く</a>
@@ -445,7 +453,7 @@
             
             <h3>沼澤尚 Takashi Numazawa (ドラマー)</h3>
             <blockquote>
-                <strong style="display: block; font-size: 1.0rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.6;">
+                <strong style="display: block; font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.6;">
                     一聴してその予想を遥かに上回る傑作が産まれていたことに<br>
                     それはそれは嬉しい驚きでいっぱいになった。
                 </strong>
@@ -457,7 +465,7 @@
 
             <h3>マルコス・スザーノ Marcos Suzano (パーカッショニスト)</h3>
             <blockquote>
-                <strong style="display: block; font-size: 1.0rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.6;">
+                <strong style="display: block; font-size: 1.05rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.6;">
                     このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り実に心地よい場所に響いている。感情豊かな表現力で歌い上げられておりその多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている！！！！
                 </strong>
                 ギリェルミ・ジェがプロデュースしたTOYONOのアルバム『A Delicadeza do Instante』は、本当に素晴らしい作品だ。丁寧に作り込まれたサウンドによってアルバム全曲通しての調和が見事で、ステレオタイプの”日本のシンガーが歌うブラジル音楽"という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた、力強いブラジリダーヂ溢れる作品に仕上がっている。歌詞も非常に素晴らしく、参加しているミュージシャンたちの演奏も極上だ。<br><br>
@@ -471,7 +479,7 @@
         <!-- PAGE 3: PRODUCER NOTE 1 -->
         <section id="producer1">
             <h2>02 プロデューサー Guilherme Gê ギレェルミ・ジェより part1</h2>
-            <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.0rem; margin-bottom: 12px;">
+            <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.05rem; margin-bottom: 12px;">
                 TOYONOと「A Delicadeza do Instante 瞬間の繊細さ」
             </p>
             <p>
@@ -504,7 +512,7 @@
         <!-- PAGE 4: PRODUCER NOTE 2 -->
         <section id="producer2">
             <h2>03 プロデューサー Guilherme Gê ギレェルミ・ジェより part2</h2>
-            <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.0rem; margin-bottom: 12px;">
+            <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.05rem; margin-bottom: 12px;">
                 私と「A Delicadeza do Instante 瞬間の繊細さ」
             </p>
             <p>
@@ -512,228 +520,4 @@
                 サウンドプロデューサー兼アーティスティック・ディレクターとしての私の役割は、歌い手としてのTOYONOの個性を引き立てるサウンド・アイデンティティを構築し、彼女の歌声とブラジル音楽のさまざまな要素との間に対話を成立させることでした。
             </p>
             <p>
-                全9曲で構成されたこのアルバムには、レイラ・ピニェイロ、ホベルト・メネスカル、マルコス・スザーノ、カルロス・マルタ、クラウヂオ・インファンチ、マリオ・ファブリ、ハファエル・ペロといったブラジルの第一線で活躍するミュージシャンやアーティストが参加しています。
-            </p>
-            <p>
-                また収録楽曲についても私自身の作品世界と深くリンクしています。全9曲中6曲が私の作曲によるもので、そのうちのいくつかはパウロ・セルジオ・ヴァーリやホベルト・メネスカルといった作曲家との共作です。また、ガブリエル・ジャックとの共作によるもう一つの楽曲は、TOYONOが歌うために特別に日本語のバージョンが作られました。
-            </p>
-            <p>
-                サウンドプロダクションにおいては、TOYONOの解釈・表現力を常に中心に置き、呼吸や流れを大切にしたオーガニックなアレンジ・音色・演奏者のパフォーマンスをひとつひとつ丁寧に織り上げていくことで、各楽曲がもつ真髄を追求していきました。その結果、楽曲という普遍的な言語を通じて二つの文化を引き寄せるようなアルバムが完成しました。
-            </p>
-            <p>
-                アルバムのサウンドプロデュースとアーティスティック・ディレクションに加えて、『Coisas da Paixão ブラジルの情熱』のMVのアーティスティック・ディレクションも私が行い、このプロジェクトの持つ世界観を映像表現へと広げました。
-            </p>
-            <p>
-                『A Delicadeza do Instante』は私にとって、作曲、歌唱表現、 そしてサウンドプロデュースを通じて出来上がった、ブラジルと日本の芸術的出会いを意味する作品です。ブラジルで生まれた楽曲が、日本人であるTOYONOの歌声と繊細な感性により新たな魅力が引き出される、素晴らしい体験となりました。
-            </p>
-        </section>
-
-        <!-- PAGE 5 & 6: PRODUCTION NOTES & ALBUM TITLE -->
-        <section id="prod-notes">
-            <h2>04 Production Notes</h2>
-            
-            <h3>現代リオの旗手 Guilherme Gê ギレェルミ・ジェ<br>ボサノヴァの偉人 Roberto Menescal ホベルト・メネスカル<br>マルコス・ヴァーリの兄、作詞家 Paulo Sérgio Valle パウロ・セルジオ・ヴァーリ</h3>
-            <p>
-                Netflixドキュメンタリー『ラテン・ブラッド』(2025)で全世界的に再評価されるネイ・マトグロッソとのコラボレーションでも注目を集める、リオ発ロックバンドHectoのヴォーカリスト・ギタリストのギリェルミ・ジェをプロデューサーに迎えて制作されたTOYONO25周年記念アルバム。<br>
-                本作の核となるのは「現代リオの旗手ギリェルミ・ジェ」「ボサノヴァの偉人ホベルト・メネスカル」「マルコス・ヴァーリの兄として知られる作詞家パウロ・セルジオ・ヴァーリ」という、世代とスタイルを越えてブラジル音楽を象徴する3人によって共作されながら、これまで発表されることのなかった楽曲群である。<br>
-                その歌い手として選ばれたのは日本のTOYONO。3人の創作が、TOYONOの歌声によって、いま初めて作品として結実する。
-            </p>
-
-            <h3>Leila Pinheiro レイラ・ピニェイロと奇跡のデュエット<br>そして、浅田クラウヂアさんに捧ぐ「幾星霜」</h3>
-            <p>
-                さらに日本を代表するポップソング「6. 卒業写真 (荒井由実)」「7. 夢の続き (竹内まりや)」をブラジルミュージシャン達による演奏でカヴァー。ボサノヴァレジェンドのホベルト・メネスカルが「6. 卒業写真」にジャズ・ギターで録音にも参加している。<br>
-                パーカッションには本作のスーパーバイザーでもあるマルコス・スザーノが全面参加し、リズムの奥行きと躍動感を加える。加えて、ブラジル音楽界を代表するレジェンド・シンガーのレイラ・ピニェイロが「3. Coisas da Paixão ブラジルの情熱」にてTOYONOとのデュエットヴォーカルで参加。<br>
-                また、TOYONOのアルバム『pelicano heaven』のプロデューサーでシンガーソングライターの片岡大志が「4. Por Toda A Sua Vida その人生のすべてに」に「幾星霜」というタイトルで日本語歌詞を書き下ろしている。この日本語歌詞は、”日本のブラジル音楽の聖地”として38年に渡り愛され続けた青山プラッサオンゼの、そのチャーミングな人柄が皆から愛され続けた二代目オーナー浅田クラウヂアさんに捧げられたものである。
-            </p>
-
-            <h3>アルバムタイトル「瞬間の繊細さ」に込められた想い</h3>
-            <p>
-                本作のタイトル『A Delicadeza do Instante 瞬間の繊細さ』はギリェルミ・ジェからの贈り物である。マルコス・スザーノの大推薦により実現したTOYONOとジェとの共同制作は、約1年という歳月をかけ、時に二人きりでの密なプロダクションとして、東京とリオでキャッチボール形式で進められた。実際には会った事のない者同士でありながら、制作の過程で響き合う音楽的相性の良さを確信した彼が、その幸福な調和を表現したのがこの言葉である。
-            </p>
-            <p>
-                現代リオ音楽シーンを牽引するジェは、父が画家、伯父にブラジル現代美術の巨匠グラウコ・ロドリゲスという、幼少期から豊かな芸術に囲まれて育つ。彼がこのフレーズをより強く確信したのは、伊藤陽一郎のアートワークに深く心を動かされた瞬間でもあった。伊藤陽一郎はDJとして「夢の続き」をダンスフロア仕様にリミックスし、ボーナストラック「11. 夢の続き AKAKAGE's Back to 90's remix」として収録されている。
-            </p>
-            <p>
-                アルバムタイトル「瞬間の繊細さ」に寄り添うように、ポルトガルの詩人フェルナンド・ペソアの一節が添えられている。
-            </p>
-            <blockquote>
-                "O valor das coisas não está no tempo em que elas duram, mas na intensidade com que acontecem. Por isso, existem momentos inesquecíveis, coisas inexplicáveis e pessoas incomparáveis."<br>
-                (Fernando Pessoa)
-                <cite>—— フェルナンド・ペソア</cite>
-            </blockquote>
-            <p style="font-style: italic; color: var(--text-sub);">
-                「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」
-            </p>
-        </section>
-
-        <!-- PAGE 7: TRACKLIST -->
-        <section id="tracklist">
-            <h2>05 Tracklist</h2>
-            <ul class="track-list">
-                <li><span class="num">01</span> Se Tiver Que Ser 予感 (Guilherme Gê / Paulo Sérgio Valle)</li>
-                <li><span class="num">02</span> Carta a um Irmão レター・トゥ・ア・ブラザー (Paulo Sérgio Valle / Guilherme Gê / Roberto Menescal)</li>
-                <li><span class="num">03</span> Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱 feat. レイラ・ピニェイロ (Roberto Menescal / Guilherme Gê / Paulo Sérgio Valle)</li>
-                <li><span class="num">04</span> Por Toda A Sua Vida その人生のすべてに (Guilherme Gê / Gabriel)</li>
-                <li><span class="num">05</span> Paraglider パラグライダー (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)</li>
-                <li><span class="num">06</span> 卒業写真 feat. Roberto Menescal (jazz guitar) ※カヴァー (荒井由実)</li>
-                <li><span class="num">07</span> 夢の続き ※カヴァー (竹内まりや)</li>
-                <li><span class="num">08</span> Foi Demais 最愛 (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)</li>
-                <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー (Lô Borges / Ronaldo Bastos)</li>
-                <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</li>
-                <li><span class="num">11</span> (Bonus Track) 夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
-            </ul>
-        </section>
-
-        <!-- PAGE 8: CREDITS -->
-        <section id="credits">
-            <h2>06 Credits</h2>
-            <table class="credits-table">
-                <tr>
-                    <th>Total Produced by</th>
-                    <td>TOYONO</td>
-                </tr>
-                <tr>
-                    <th>All Sound Produced &amp; Arranged by</th>
-                    <td>Guilherme Gê (Rio de Janeiro)</td>
-                </tr>
-                <tr>
-                    <th>Musicians</th>
-                    <td>
-                        <strong>Guilherme Gê</strong>: acoustic guitar, electric guitar, piano, organ, keyboards, electric bass, synth bass, electronic drum, programming and samples. (Recorded instruments in Udu Music Rio @guilhermege.hecto)<br>
-                        <strong>Marcos Suzano</strong>: pandeiro, shaker, brush drums, wave drum and electronic percussion<br>
-                        <strong>Roberto Menescal</strong>: jazz guitar (6)<br>
-                        <strong>Leila Pinheiro</strong>: vocal (3)<br>
-                        <strong>Carlos Malta</strong>: flute (2)<br>
-                        <strong>Rafael Dias Belo</strong>: violin &amp; viola (3, 10)<br>
-                        <strong>Mario Fabre</strong>: drums (9)<br>
-                        <strong>Claudio Infante</strong>: drums (6, 7)<br>
-                        <strong>Marcelo Rezende</strong>: chorus (7)
-                    </td>
-                </tr>
-                <tr>
-                    <th>Vocal Recording</th>
-                    <td>
-                        Leila Pinheiro vocal recorded by Renato Alscher<br>
-                        TOYONO vocals recorded by Ryo Sakai @ NK SOUND TOKYO
-                    </td>
-                </tr>
-                <tr>
-                    <th>Mixed &amp; Mastered by</th>
-                    <td>Neeraj Khajanchi @ NK SOUND TOKYO</td>
-                </tr>
-                <tr>
-                    <th>Lyrics Translation</th>
-                    <td>translated from Portuguese into Japanese by TOYONO</td>
-                </tr>
-                <tr>
-                    <th>Staff &amp; Production</th>
-                    <td>
-                        Promotion Director: Tatsuya Maezawa<br>
-                        Executive Producer: Akitoshi Takeda<br>
-                        Supervisor: Marcos Suzano<br>
-                        Art Direction, Designer &amp; All Art Works: Yoichiro Ito<br>
-                        Special Thanks to: Déa Moura (photos) in Studio Corredor 5
-                    </td>
-                </tr>
-            </table>
-        </section>
-
-        <!-- PAGE 9: SPEC & ARTIST PROFILE -->
-        <section id="spec">
-            <h2>07 Release Spec &amp; Profile</h2>
-            <table class="spec-table" style="margin-bottom: 32px;">
-                <tr><th>Release Date</th><td>2026年11月18日</td></tr>
-                <tr><th>Title</th><td>A Delicadeza do Instante 瞬間の繊細さ (アデリカデーザドインスタンチ)</td></tr>
-                <tr><th>Artist</th><td>TOYONO</td></tr>
-                <tr><th>Catalog No.</th><td>MDRN-2026</td></tr>
-                <tr><th>Price</th><td>定価 ¥3,000（税抜価格 ¥2,727）</td></tr>
-                <tr><th>JAN Code</th><td>4589518615082</td></tr>
-                <tr><th>Format</th><td>CD / J-POP、ブラジル (11曲収録 / ポルトガル語歌詞・TOYONOによる対訳付)</td></tr>
-                <tr><th>Label</th><td>Manufactured by modelo MODERNO / Distributed by File Records inc.</td></tr>
-            </table>
-
-            <h3 style="margin-top: 24px; border-left: none; padding-left: 0; text-align: center; font-size: 1.05rem; color: var(--text-main);">【アーティスト・プロフィール】</h3>
-            <p>
-                <strong>TOYONO (ブラジル音楽シンガーソングライター)</strong><br>
-                大阪出身。OL時代に耳にしたジョイス・モレーノに憧れてブラジル音楽への想いが高まり、歌い手の道を志して単身でリオデジャネイロへ渡る。帰国後、東京を拠点に本格的な音楽活動を開始。著名DJやブラジルを代表するアーティストとの作品を多数発表し、2016年ビクターエンタテインメントよりメジャーデビュー。代表曲「トレス・マリアス」はJAL国際線機内放送に採用され話題に。
-            </p>
-            <p>
-                FM番組「TOYONO moda brasil」パーソナリティを務め、語学力を生かし現地アーティストへ通訳なしでポルトガル語インタビューを行うほか、ナレーションや執筆など多方面で活躍。2026年にソロデビュー25周年を迎え、本作を携え開催した5月のTOKYO FM ホール公演には、長年の共演者であり世界的パーカッショニストのマルコス・スザーノが来日参加し大成功を収めた。
-            </p>
-        </section>
-
-        <!-- PAGE 10: RELATED RELEASE, SCHEDULE & MUSIC VIDEOS -->
-        <section id="related">
-            <h2>08 関連リリース &amp; プロモーション情報</h2>
-            
-            <h3>7インチアナログ盤 『夢の続き / TOYONO』</h3>
-            <div class="vinyl-card">
-                <img src="YUME1.jpeg" alt="夢の続き 7インチアナログジャケット" onerror="this.style.display='none';">
-                <div style="text-align: left;">
-                    <strong style="display:block; font-size: 0.95rem; margin-bottom: 4px; color: var(--text-main);">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)</strong>
-                    <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.7;">
-                        • <strong>発売日</strong>：2026年5月23日 会場先行発売 / 5月27日 全国一般発売<br>
-                        • <strong>Side A</strong>：「夢の続き」（竹内まりや） AKAKAGE's Back to 90's remix<br>
-                        • <strong>Side AA</strong>：「夢の続き」（竹内まりや） TOYONOアルバムバージョン
-                    </p>
-                </div>
-            </div>
-
-            <h3 style="margin-top: 40px;">プロモーション・スケジュール</h3>
-            <ul class="schedule-list">
-                <li><strong>2026年10月4日(日)</strong>：発売日情報解禁（ラジオ番組「TOYONO moda brasil」にて）</li>
-                <li><strong>2026年10月21日(水)</strong>：アルバムリード曲先行配信開始 &amp; MV一般公開<br>
-                    <span style="font-size: 0.86rem; color: var(--text-sub); display: block; padding-left: 14px; margin-top: 4px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー</span>
-                </li>
-                <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開</li>
-                <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売</li>
-            </ul>
-
-            <h3 style="margin-top: 40px;">Music Video &amp; ライブ映像</h3>
-            
-            <div class="mv-block">
-                <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
-                    M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱
-                </p>
-                <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
-                    リオデジャネイロにて制作。TOYONO、レイラ・ピニェイロ、ギリェルミ・ジェ出演<br>
-                    Direção: Guilherme Gê / Edição: João Oliveira / Assistente de Edição: Márcio Belao
-                </p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/i_aT8U4ADgY" title="Coisas da Paixão MV" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="mv-block">
-                <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
-                    M2. Carta a um Irmão レター・トゥ・ア・ブラザー
-                </p>
-                <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
-                    ニューヨークにて制作。新進気鋭の映像作家・パルクール選手であり、TOYONOの従姉妹の娘でもあるSeneca Schwartz (セネカ・シュワルツ)が出演・制作。
-                </p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/7beemsGzppQ" title="Carta a um Irmão MV" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <div class="mv-block">
-                <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
-                    M4. &amp; M10. Por Toda A Sua Vida / 幾星霜（ライブ映像）
-                </p>
-                <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
-                    2026.05.23 TOYONO 25周年記念公演 feat.マルコス・スザーノ@TOKYO FM Hall ライブ映像
-                </p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/4b4dXKnEmgU" title="Por Toda A Sua Vida / 幾星霜 Live" allowfullscreen></iframe>
-                </div>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 TOYONO / modelo MODERNO. All Rights Reserved.</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+                全9曲で構成されたこのアルバムには、レイラ・ピニェイロ
