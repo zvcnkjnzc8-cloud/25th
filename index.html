@@ -131,7 +131,30 @@
             border-color: var(--text-main);
         }
 
-        /* TOP BACK BUTTON */
+        /* BACK TO NAV / TOP BUTTONS */
+        .back-to-nav-container {
+            margin-top: 28px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border-color);
+            text-align: right;
+        }
+
+        .back-to-nav-btn {
+            display: inline-block;
+            font-size: 0.84rem;
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            transition: opacity 0.2s ease;
+        }
+
+        .back-to-nav-btn:hover {
+            opacity: 0.75;
+            text-decoration: underline;
+        }
+
         .back-to-top-container {
             margin: 40px 0 20px;
             text-align: center;
@@ -297,9 +320,11 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
-        /* 感嘆符（！！！！）等のイタリックを強制解除 */
-        i, em, .no-italic {
+        /* 感嘆符（！！！！）等のイタリックを強制完全に解除するクラス */
+        .no-italic {
             font-style: normal !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: inline-block;
         }
 
         /* TABLES & LISTS */
@@ -492,7 +517,7 @@
         </div>
 
         <!-- PAGE NAVIGATION BUTTONS -->
-        <nav class="page-nav">
+        <nav class="page-nav" id="page-nav">
             <a href="#recommendations" class="nav-btn">01 Recommendations</a>
             <a href="#producer1" class="nav-btn">02 Guilherme Gê ギレェルミ・ジェより1</a>
             <a href="#producer2" class="nav-btn">03 Guilherme Gê ギレェルミ・ジェより2</a>
@@ -534,14 +559,19 @@
             <h3>マルコス・スザーノ Marcos Suzano (パーカッショニスト)</h3>
             <blockquote>
                 <strong style="display: block; font-size: 1.05rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 12px; line-height: 1.6;">
-                    このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り実に心地よい場所に響いている。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている！！！！
+                    このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り実に心地よい場所に響いている。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている<span class="no-italic">！！！！</span>
                 </strong>
                 ギリェルミ・ジェがプロデュースしたTOYONOのアルバム『A Delicadeza do Instante』は、本当に素晴らしい作品だ。丁寧に作り込まれたサウンドによってアルバム全曲通しての調和が見事で、ステレオタイプの”日本のシンガーが歌うブラジル音楽"という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた、力強いブラジリダーヂ溢れる作品に仕上がっている。歌詞も非常に素晴らしく、参加しているミュージシャンたちの演奏も極上だ。<br><br>
-                このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている！！！！<br><br>
-                選曲も秀逸で、オリジナル楽曲に加え、名曲「O Trem Azul」の非常に新しく新鮮なカバーも収録されており、実に素晴らしい仕上がりだ。僕もパーカッションでこのプロジェクトに参加し、コラボレーションできたことを本当に嬉しく思っている！！！ 様々なシチュエーションで心地よく聴けるアルバムであり、誰もがこの作品を楽しんでくれると信じているし、心からそう願っている！！！<br>
+                このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている<span class="no-italic">！！！！</span><br><br>
+                選曲も秀逸で、オリジナル楽曲に加え、名曲「O Trem Azul」の非常に新しく新鮮なカバーも収録されており、実に素晴らしい仕上がりだ。僕もパーカッションでこのプロジェクトに参加し、コラボレーションできたことを本当に嬉しく思っている<span class="no-italic">！！！</span> 様々なシチュエーションで心地よく聴けるアルバムであり、誰もがこの作品を楽しんでくれると信じているし、心からそう願っている<span class="no-italic">！！！</span><br>
                 Parabéns, TOYONO !
                 <cite>—— マルコス・スザーノ Marcos Suzano (パーカッショニスト)</cite>
             </blockquote>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 3: PRODUCER NOTE 1 -->
@@ -575,6 +605,11 @@
             <p>
                 そしてこれこそが、本作の持つ最大の美しさなのかもしれません。彼女がポルトガル語で歌うのを聴いていても、借り物の言語で歌っているような違和感は一切ありません。時間をかけて少しずつ少しずつ、ポルトガル語が彼女の声の中に自らの居場所を見出していったんだと思う。「TOYONOの声」と「ポルトガル語」二つが溶け合ったその奇跡的な出会いがあったからこそ、このアルバムの唯一無二の世界観が生まれているのだと思います。
             </p>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 4: PRODUCER NOTE 2 -->
@@ -602,9 +637,14 @@
             <p>
                 『A Delicadeza do Instante』は私にとって、作曲、歌唱表現、 そしてサウンドプロデュースを通じて出来上がった、ブラジルと日本の芸術的出会いを意味する作品です。ブラジルで生まれた楽曲が、日本人であるTOYONOの歌声と繊細な感性により新たな魅力が引き出される、素晴らしい体験となりました。
             </p>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
-        <!-- PAGE 5 & 6: PRODUCTION NOTES & ALBUM TITLE -->
+        <!-- PAGE 5 & 6: PRODUCTION NOTES & ALBUM TITLE (プレスリリース p5-p6 完全反映) -->
         <section id="prod-notes">
             <h2>04 Production Notes</h2>
             
@@ -635,8 +675,13 @@
             <blockquote>
                 "O valor das coisas não está no tempo em que elas duram, mas na intensidade com que acontecem. Por isso, existem momentos inesquecíveis, coisas inexplicáveis e pessoas incomparáveis."<br>—— Fernando Pessoa<br>
                 「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」
-                <cite>—— フェルナンド・ペソア </cite>
+                <cite>—— フェルナンド・ペソア</cite>
             </blockquote>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 7: TRACKLIST -->
@@ -655,6 +700,11 @@
                 <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</li>
                 <li><span class="num">11</span> (Bonus Track) 夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
             </ul>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 8: CREDITS -->
@@ -709,6 +759,11 @@
                     </td>
                 </tr>
             </table>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 9: SPEC & ARTIST PROFILE -->
@@ -733,6 +788,11 @@
             <p>
                 FM番組「TOYONO moda brasil」パーソナリティを務め、語学力を生かし現地アーティストへ通訳なしでポルトガル語インタビューを行うほか、ナレーションや執筆など多方面で活躍。2026年にソロデビュー25周年を迎え、本作を携え開催した5月のTOKYO FM ホール公演には、長年の共演者であり世界的パーカッショニストのマルコス・スザーノが来日参加し大成功を収めた。
             </p>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 10: RELATED RELEASES -->
@@ -764,6 +824,11 @@
                 <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開</li>
                 <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売</li>
             </ul>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 11: MUSIC VIDEO & LIVE -->
@@ -806,6 +871,11 @@
                     <iframe src="https://www.youtube.com/embed/4b4dXKnEmgU" title="Por Toda A Sua Vida / 幾星霜 Live" allowfullscreen></iframe>
                 </div>
             </div>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
+            </div>
         </section>
 
         <!-- PAGE 12: PORTUGUÊS -->
@@ -832,7 +902,7 @@
                     Sua voz tem uma leveza que não significa falta de força, mas sim uma delicadeza consciente. Ela não busca o drama explícito, mas constrói a emoção através de nuances, de pequenas variações de dinâmica e timbres que criam uma atmosfera intimista. Essa contenção expressiva permite que as melodias respirem com elegância.
                 </p>
                 <p>
-                    Na música brasileira, em que texto, ritmo e melodia se entrelaçam de forma tão íntima, esse tipo de abordagem faz toda a diferença. TOYONO demonstra compreender que cantar em português não é apenas pronunciar corretamente as palavras, mas perceber como o som da língua afeta o balanço da música. Ela encontra o balanço certo para a colocação das palavras na melodia.
+                    Na música brasileira, em que texto, ritmo e melodia se entrelaçam de forma tão íntima, esse tipo de abordagem faz toda a diferença. TOYONO demonstra compreender que cantar em português não é apenas pronunciar corretamente as palavras,但 perceber como o som da língua afeta o balanço da música. Ela encontra o balanço certo para a colocação das palavras na melodia.
                 </p>
                 <p>
                     Ao longo do álbum, a cantora passeia por diferentes atmosferas mantendo sempre uma coerência estética refinada. Há momentos mais sussurrados e outros em que a voz ganha maior projeção, mas a atitude em relação à música permanece a mesma: de profundo respeito e entrega.
@@ -855,7 +925,7 @@
                     O repertório também está fortemente ligado ao meu universo de composição: das nove faixas, seis são de minha autoria, algumas em parceria com compositores como Paulo Sérgio Valle e Roberto Menescal. Há também uma composição minha em parceria com Gabriel, que ganhou uma versão especial em japonês escrita para TOYONO.
                 </p>
                 <p>
-                    Na produção musical, busquei ressaltar a intenção e a sensibilidade de TOYONO, construindo arranjos orgânicos que valorizam a respiração, a dinâmica e a sonoridade dos instrumentos gravados no Rio de Janeiro. O resultado é um álbum que une duas culturas através da linguagem universal da música.
+                    Na produção musical, busquei ressaltar asetIntensão e a sensibilidade de TOYONO, construindo arranjos orgânicos que valorizam a respiração, a dinâmica e a sonoridade dos instrumentos gravados no Rio de Janeiro. O resultado é um álbum que une duas culturas através da linguagem universal da música.
                 </p>
                 <p>
                     Além da produção musical e direção artística do álbum, também assino a direção artística do videoclipe da faixa "Coisas da Paixão", estendendo a identidade visual e conceitual do projeto para a linguagem audiovisual.
@@ -869,11 +939,16 @@
                     O álbum "A Delicadeza do Instante" da TOYONO, produzido pelo Guilherme Gê, está realmente incrível. Um trabalho super caprichado, com uma sonoridade linda e com uma visão muito moderna da MPB. As músicas são ótimas, os arranjos de muito bom gosto e a performance de todos os músicos envolvidos é de primeiríssima qualidade.
                 </p>
                 <p>
-                    A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show!
+                    A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
                 </p>
                 <p>
-                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto! É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar! Parabéns, TOYONO!
+                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É un disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
                 </p>
+            </div>
+
+            <!-- ナビゲーションに戻るリンク -->
+            <div class="back-to-nav-container">
+                <a href="#page-nav" class="back-to-nav-btn">▲ メニュー（ナビゲーション）に戻る</a>
             </div>
         </section>
 
