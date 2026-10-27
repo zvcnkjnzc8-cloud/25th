@@ -113,7 +113,7 @@
         }
 
         .nav-btn {
-            padding: 9px 16px;
+            padding: 12px 18px;
             background-color: var(--card-bg);
             color: var(--text-sub);
             border: 1px solid var(--border-color);
@@ -123,9 +123,11 @@
             letter-spacing: 0.04em;
             transition: all 0.2s ease;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .nav-btn:hover {
+        .nav-btn:hover, .nav-btn:active {
             background-color: var(--text-main);
             color: #FFFFFF;
             border-color: var(--text-main);
@@ -141,6 +143,7 @@
 
         .back-to-nav-btn {
             display: inline-block;
+            padding: 8px 12px;
             font-size: 0.84rem;
             color: var(--accent-gold);
             text-decoration: none;
@@ -148,9 +151,11 @@
             font-weight: 500;
             letter-spacing: 0.04em;
             transition: opacity 0.2s ease;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .back-to-nav-btn:hover {
+        .back-to-nav-btn:hover, .back-to-nav-btn:active {
             opacity: 0.75;
             text-decoration: underline;
         }
@@ -162,7 +167,7 @@
 
         .back-to-top-btn {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 14px 32px;
             background-color: var(--card-bg);
             color: var(--text-main);
             border: 1px solid var(--border-color);
@@ -174,9 +179,11 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             transition: all 0.25s ease;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .back-to-top-btn:hover {
+        .back-to-top-btn:hover, .back-to-top-btn:active {
             background-color: var(--text-main);
             color: #FFFFFF;
             border-color: var(--text-main);
@@ -379,6 +386,21 @@
             color: var(--accent-gold);
             font-weight: 600;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            flex-shrink: 0;
+        }
+
+        .track-info-block {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .track-sub-credits {
+            font-size: 0.76rem;
+            color: var(--text-sub);
+            margin-top: 4px;
+            line-height: 1.5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .schedule-list li {
@@ -495,7 +517,7 @@
             .spec-table th, .credits-table th { width: 38%; }
             .vinyl-card { flex-direction: column; text-align: center; }
             .page-nav { gap: 6px; }
-            .nav-btn { font-size: 0.78rem; padding: 6px 10px; }
+            .nav-btn { font-size: 0.78rem; padding: 10px 14px; }
         }
     </style>
 </head>
@@ -539,7 +561,7 @@
         <!-- PAGE 2: ALBUM OVERVIEW & RECOMMENDATIONS -->
         <section id="recommendations">
             <div class="lead-text">
-                MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品。先行7インチで話題を呼んだ「夢の続き」や、ホベルト・メネスカルがジャズギターで参加した「卒業写真」に加え、日本のブラジル音楽の聖地・青山プラッサオンゼの二代目オーナー浅田クラウヂアさんを偲ぶ「幾星霜」など、TOYONOだからこそ表現可能な日本ブラジルの絆をリアルに結ぶ全11曲を収録。洋楽・邦楽の枠を越えて幅広い音楽ファンに届ける7thオリジナルアルバム。
+                MPB黄金期を彷彿とさせるリオ制作による本場モダンブラジリアンサウンドと、TOYONOが誇るポルトガル語歌唱の艶やかな歌声と豊かなリズム感、日本語歌唱の繊細な美しさが極上の融合を果たした25周年アニバーサリー作品。先行7インチで話題を呼んだ「夢の続き」や、ホベルト・メネスカルがジャズギターで参加した「卒業写真」に加え、日本のブラジル音楽の聖地・青山プラッサオンゼの二代目オーナー浅田クラウヂアさんを偲ぶ「幾星霜」など、TOYONOだからこそ表現可能な日本ブラジルの絆をリアルに結ぶ全11曲を収録[cite: 5]。洋楽・邦楽の枠を越えて幅広い音楽ファンに届ける7thオリジナルアルバム[cite: 5]。
             </div>
 
             <h2>01 Recommendations</h2>
@@ -550,10 +572,10 @@
                     一聴してその予想を遥かに上回る傑作が産まれていたことに<br>
                     それはそれは嬉しい驚きでいっぱいになった。
                 </strong>
-                プロデュースがギリェルミ・ジェ、スーパーバイザーがマルコス・スザーノ、さらにホベルト・メネスカルにレイラ・ピニェイロ、そしてそして我々が大好きなシンガーTOYONO…<br><br>
-                このキャスティングを見ただけで、確実にルーツをベースにオーセンティック&amp;コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンドを想像しつつワクワクが止まらなかったが…一聴してその予想を遥かに上回る傑作が産まれていたことにそれはそれは嬉しい驚きでいっぱいになった。「今」こんなカッコいいサウンドを発信しているこのチームワークはひとえに一人一人のその愛に溢れた人間性の集まりがその要因であることは間違いない。つまり「人間性＝音楽性」は音楽を表現する上で決して嘘をつけないからだ。<br><br>
-                1970年代、中学生だった自分が初めてアントニオ・カルロス・ジョビン、ジョアン・ジルベルトを知ってからブラジル音楽をとどまることなく追いかけてきて、特に90年代当時世界を席巻していたMPBブームのあの素晴らしい時代のサウンドを彷彿とさせるのはもちろん、初めてブラジルサウンドに魅せられたセンセーションをも思い起こさせてくれる2026年リリースのこの傑作が世界中のより多くの人々に届きますように。
-                <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)</cite>
+                プロデュースがギリェルミ・ジェ、スーパーバイザーがマルコス・スザーノ、さらにホベルト・メネスカルにレイラ・ピニェイロ、そしてそして我々が大好きなシンガーTOYONO…[cite: 5]<br><br>
+                このキャスティングを見ただけで、確実にルーツをベースにオーセンティック&amp;コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンドを想像しつつワクワクが止まらなかったが…一聴してその予想を遥かに上回る傑作が産まれていたことにそれはそれは嬉しい驚きでいっぱいになった。「今」こんなカッコいいサウンドを発信しているこのチームワークはひとえに一人一人のその愛に溢れた人間性の集まりがその要因であることは間違いない。つまり「人間性＝音楽性」は音楽を表現する上で決して嘘をつけないからだ[cite: 5]。<br><br>
+                1970年代、中学生だった自分が初めてアントニオ・カルロス・ジョビン、ジョアン・ジルベルトを知ってからブラジル音楽をとどまることなく追いかけてきて、特に90年代当時世界を席巻していたMPBブームのあの素晴らしい時代のサウンドを彷彿とさせるのはもちろん、初めてブラジルサウンドに魅せられたセンセーションをも思い起こさせてくれる2026年リリースのこの傑作が世界中のより多くの人々に届きますように[cite: 5]。
+                <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)[cite: 5]</cite>
             </blockquote>
 
             <h3>マルコス・スザーノ Marcos Suzano (パーカッショニスト)</h3>
@@ -561,11 +583,11 @@
                 <strong style="display: block; font-size: 1.05rem; font-weight: 600; color: var(--accent-gold); margin-bottom: 12px; line-height: 1.6;">
                     このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り実に心地よい場所に響いている。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている<span class="no-italic">！！！！</span>
                 </strong>
-                ギリェルミ・ジェがプロデュースしたTOYONOのアルバム『A Delicadeza do Instante』は、本当に素晴らしい作品だ。丁寧に作り込まれたサウンドによってアルバム全曲通しての調和が見事で、ステレオタイプの”日本のシンガーが歌うブラジル音楽"という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた、力強いブラジリダーヂ溢れる作品に仕上がっている。歌詞も非常に素晴らしく、参加しているミュージシャンたちの演奏も極上だ。<br><br>
-                このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている<span class="no-italic">！！！！</span><br><br>
-                選曲も秀逸で、オリジナル楽曲に加え、名曲「O Trem Azul」の非常に新しく新鮮なカバーも収録されており、実に素晴らしい仕上がりだ。僕もパーカッションでこのプロジェクトに参加し、コラボレーションできたことを本当に嬉しく思っている<span class="no-italic">！！！</span> 様々なシチュエーションで心地よく聴けるアルバムであり、誰もがこの作品を楽しんでくれると信じているし、心からそう願っている<span class="no-italic">！！！</span><br>
-                Parabéns, TOYONO !
-                <cite>—— マルコス・スザーノ Marcos Suzano (パーカッショニスト)</cite>
+                ギリェルミ・ジェがプロデュースしたTOYONOのアルバム『A Delicadeza do Instante』は、本当に素晴らしい作品だ[cite: 5]。丁寧に作り込まれたサウンドによってアルバム全曲通しての調和が見事で、ステレオタイプの”日本のシンガーが歌うブラジル音楽"という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた、力強いブラジリダーヂ溢れる作品に仕上がっている[cite: 5]。歌詞も非常に素晴らしく、参加しているミュージシャンたちの演奏も極上だ[cite: 5]。<br><br>
+                このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り、実に心地よい場所に響いている[cite: 5]。感情豊かな表現力で歌い上げられており、その多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ[cite: 5]。しかし、彼女は見事に歌い切っている<span class="no-italic">！！！！</span>[cite: 5]<br><br>
+                選曲も秀逸で、オリジナル楽曲に加え、名曲「O Trem Azul」の非常に新しく新鮮なカバーも収録されており、実に素晴らしい仕上がりだ[cite: 5]。僕もパーカッションでこのプロジェクトに参加し、コラボレーションできたことを本当に嬉しく思っている<span class="no-italic">！！！</span>[cite: 5] 様々なシチュエーションで心地よく聴けるアルバムであり、誰もがこの作品を楽しんでくれると信じているし、心からそう願っている<span class="no-italic">！！！</span>[cite: 5]<br>
+                Parabéns, TOYONO ![cite: 5]
+                <cite>—— マルコス・スザーノ Marcos Suzano (パーカッショニスト)[cite: 5]</cite>
             </blockquote>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -578,32 +600,32 @@
         <section id="producer1">
             <h2>02 Guilherme Gê ギレェルミ・ジェより1</h2>
             <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.05rem; margin-bottom: 12px;">
-                TOYONOと「A Delicadeza do Instante 瞬間の繊細さ」
+                TOYONOと「A Delicadeza do Instante 瞬間の繊細さ」[cite: 6]
             </p>
             <p>
-                TOYONOがポルトガル語で歌うのを聴くとき、そこには格別の魅力が宿っています。<br>
-                『A Delicadeza do Instante』において、この日本人シンガーは単に外国のレパートリーをなぞるのではなく、異国の言語の中に自分ならではの歌声を見出した表現者として、ブラジルの楽曲へと向かい合っています。ここではポルトガル語は単なる歌詞を超え、彼女の芸術的アイデンティティそのものとなっています。
+                TOYONOがポルトガル語で歌うのを聴くとき、そこには格別の魅力が宿っています[cite: 6]。<br>
+                『A Delicadeza do Instante』において、この日本人シンガーは単に外国のレパートリーをなぞるのではなく、異国の言語の中に自分ならではの歌声を見出した表現者として、ブラジルの楽曲へと向かい合っています[cite: 6]。ここではポルトガル語は単なる歌詞を超え、彼女の芸術的アイデンティティそのものとなっています[cite: 6]。
             </p>
             <p>
-                これこそが、本作を象徴する最も大きな特徴と言えるでしょう。TOYONOは言葉の響きや母音、抑揚、そしてそれぞれのフレーズのメロディラインへ細やかに気を配りながら歌い上げていきます。ひとつひとつの言葉を丁寧に発音しながらも、日本人であることを無理に隠す様子はありません。むしろ逆で、日本人であることが隠されずに存在しているからこそ、彼女の歌唱は唯一無二の輝きを放つのです。
+                これこそが、本作を象徴する最も大きな特徴と言えるでしょう。TOYONOは言葉の響きや母音、抑揚、そしてそれぞれのフレーズのメロディラインへ細やかに気を配りながら歌い上げていきます[cite: 6]。ひとつひとつの言葉を丁寧に発音しながらも、日本人であることを無理に隠す様子はありません[cite: 6]。むしろ逆で、日本人であることが隠されずに存在しているからこそ、彼女の歌唱は唯一無二の輝きを放つのです[cite: 6]。
             </p>
             <p>
-                彼女の歌声は繊細でありながら、凛とした芯の強さを感じさせます。過剰な演出でドラマティックに仕立てるのではなく、声の強弱や音色、言葉の端々に込める微細なニュアンスの積み重ねによって、密やかで濃密な空気感を生み出していく。表現を巧みにコントロールすることで、メロディ自体がのびのびと息づく豊かな余白が生み出されています。
+                彼女の歌声は繊細でありながら、凛とした芯の強さを感じさせます[cite: 6]。過剰な演出でドラマティックに仕立てるのではなく、声の強弱や音色、言葉の端々に込める微細なニュアンスの積み重ねによって、密やかで濃密な空気感を生み出していく[cite: 6]。表現を巧みにコントロールすることで、メロディ自体がのびのびと息づく豊かな余白が生み出されています[cite: 6]。
             </p>
             <p>
-                このアプローチはブラジル音楽と向き合う上で大きな意味を持ちます。ブラジルの楽曲は、ポルトガル語の言葉とリズムとメロディが密接に絡み合って成立することが多いためです。TOYONOは言葉を正しく発音するだけでなく、その響きやニュアンスが音楽全体をどう活かすかを深く理解しているのがわかります。歌の中に言葉を溶け込ませ、命を吹き込むアクセントや間(ま)を見出しているのです。
+                このアプローチはブラジル音楽と向き合う上で大きな意味を持ちます[cite: 6]。ブラジルの楽曲は、ポルトガル語の言葉とリズムとメロディが密接に絡み合って成立することが多いためです[cite: 6]。TOYONOは言葉を正しく発音するだけでなく、その響きやニュアンスが音楽全体をどう活かすかを深く理解しているのがわかります[cite: 6]。歌の中に言葉を溶け込ませ、命を吹き込むアクセントや間(ま)を見出しているのです[cite: 6]。
             </p>
             <p>
-                アルバムを通じて、彼女は自身の個性を保ちながら多彩な表情を見せてくれます。語りかけるような親密な瞬間もあれば、歌声が存在感を増す場面もありますが、楽曲に対する姿勢にはブレない一貫した美学が存在します。
+                アルバムを通じて、彼女は自身の個性を保ちながら多彩な表情を見せてくれます[cite: 6]。語りかけるような親密な瞬間もあれば、歌声が存在感を増す場面もありますが、楽曲に対する姿勢にはブレない一貫した美学が存在します[cite: 6]。
             </p>
             <p>
-                その結実として生まれたのが、いわば「第三の領域」です。それは単なる日本人が歌うブラジル音楽でもなければ、彼女をブラジル人歌手に仕立て上げる試みでもありません。「TOYONOというアーティストのありのまま」から紡ぎ出された、真のブラジル音楽なのです。伝統の中で育まれてきた楽曲たちが、彼女の歌声や発音、感性を通すことで、まったく新しい光を帯びて立ち現れます。
+                その結実として生まれたのが、いわば「第三の領域」です[cite: 6]。それは単なる日本人が歌うブラジル音楽でもなければ、彼女をブラジル人歌手に仕立て上げる試みでもありません[cite: 6]。「TOYONOというアーティストのありのまま」から紡ぎ出された、真のブラジル音楽なのです[cite: 6]。伝統の中で育まれてきた楽曲たちが、彼女の歌声や発音、感性を通すことで、まったく新しい光を帯びて立ち現れます[cite: 6]。
             </p>
             <p>
-                その意味で『A Delicadeza do Instante』は「出会い」のアルバムです。ブラジルと日本、異なる言語と文化、そして作曲家と歌い手の出会い。しかし何より、ポルトガル語の中に新たな表現の可能性を見出した一人のシンガーの姿を収めた、かけがえのない記録なのです。
+                その意味で『A Delicadeza do Instante』は「出会い」のアルバムです[cite: 6]。ブラジルと日本、異なる言語と文化、そして作曲家と歌い手の出会い[cite: 6]。しかし何より、ポルトガル語の中に新たな表現の可能性を見出した一人のシンガーの姿を収めた、かけがえのない記録なのです[cite: 6]。
             </p>
             <p>
-                そしてこれこそが、本作の持つ最大の美しさなのかもしれません。彼女がポルトガル語で歌うのを聴いていても、借り物の言語で歌っているような違和感は一切ありません。時間をかけて少しずつ少しずつ、ポルトガル語が彼女の声の中に自らの居場所を見出していったんだと思う。「TOYONOの声」と「ポルトガル語」二つが溶け合ったその奇跡的な出会いがあったからこそ、このアルバムの唯一無二の世界観が生まれているのだと思います。
+                そしてこれこそが、本作の持つ最大の美しさなのかもしれません[cite: 6]。彼女がポルトガル語で歌うのを聴いていても、借り物の言語で歌っているような違和感は一切ありません[cite: 6]。時間をかけて少しずつ少しずつ、ポルトガル語が彼女の声の中に自らの居場所を見出していったんだと思う[cite: 6]。「TOYONOの声」と「ポルトガル語」二つが溶け合ったその奇跡的な出会いがあったからこそ、このアルバムの唯一無二の世界観が生まれているのだと思います[cite: 6]。
             </p>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -616,26 +638,26 @@
         <section id="producer2">
             <h2>03 Guilherme Gê ギレェルミ・ジェより2</h2>
             <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.05rem; margin-bottom: 12px;">
-                私と「A Delicadeza do Instante 瞬間の繊細さ」
+                私と「A Delicadeza do Instante 瞬間の繊細さ」[cite: 7]
             </p>
             <p>
-                『A Delicadeza do Instante』は、ブラジル音楽とTOYONOの持つ日本的な芸術的感性が出会うことで生まれたアルバムです。<br>
-                サウンドプロデューサー兼アーティスティック・ディレクターとしての私の役割は、歌い手としてのTOYONOの個性を引き立てるサウンド・アイデンティティを構築し、彼女の歌声とブラジル音楽のさまざまな要素との間に対話を成立させることでした。
+                『A Delicadeza do Instante』は、ブラジル音楽とTOYONOの持つ日本的な芸術的感性が出会うことで生まれたアルバムです[cite: 7]。<br>
+                サウンドプロデューサー兼アーティスティック・ディレクターとしての私の役割は、歌い手としてのTOYONOの個性を引き立てるサウンド・アイデンティティを構築し、彼女の歌声とブラジル音楽のさまざまな要素との間に対話を成立させることでした[cite: 7]。
             </p>
             <p>
-                全9曲で構成されたこのアルバムには、レイラ・ピニェイロ、ホベルト・メネスカル、マルコス・スザーノ、カルロス・マルタ、クラウヂオ・インファンチ、マリオ・ファブリ、ハファエル・ベロといったブラジルの第一線で活躍するミュージシャンやアーティストが参加しています。
+                全9曲で構成されたこのアルバムには、レイラ・ピニェイロ、ホベルト・メネスカル、マルコス・スザーノ、カルロス・マルタ、クラウヂオ・インファンチ、マリオ・ファブリ、ハファエル・ベロといったブラジルの第一線で活躍するミュージシャンやアーティストが参加しています[cite: 7]。
             </p>
             <p>
-                また収録楽曲についても私自身の作品世界と深くリンクしています。全9曲中6曲が私の作曲によるもので、そのうちのいくつかはパウロ・セルジオ・ヴァーリやホベルト・メネスカルといった作曲家との共作です。また、ガブリエル・ジャックとの共作によるもう一つの楽曲は、TOYONOが歌うために特別に日本語のバージョンが作られました。
+                また収録楽曲についても私自身の作品世界と深くリンクしています[cite: 7]。全9曲中6曲が私の作曲によるもので、そのうちのいくつかはパウロ・セルジオ・ヴァーリやホベルト・メネスカルといった作曲家との共作です[cite: 7]。また、ガブリエル・ジャックとの共作によるもう一つの楽曲は、TOYONOが歌うために特別に日本語のバージョンが作られました[cite: 7]。
             </p>
             <p>
-                サウンドプロダクションにおいては、TOYONOの解釈・表現力を常に中心に置き、呼吸や流れを大切にしたオーガニックなアレンジ・音色・演奏者のパフォーマンスをひとつひとつ丁寧に織り上げていくことで、各楽曲がもつ真髄を追求していきました。その結果、楽曲という普遍的な言語を通じて二つの文化を引き寄せるようなアルバムが完成しました。
+                サウンドプロダクションにおいては、TOYONOの解釈・表現力を常に中心に置き、呼吸や流れを大切にしたオーガニックなアレンジ・音色・演奏者のパフォーマンスをひとつひとつ丁寧に織り上げていくことで、各楽曲がもつ真髄を追求していきました[cite: 7]。その結果、楽曲という普遍的な言語を通じて二つの文化を引き寄せるようなアルバムが完成しました[cite: 7]。
             </p>
             <p>
-                アルバムのサウンドプロデュースとアーティスティック・ディレクションに加えて、『Coisas da Paixão ブラジルの情熱』のMVのアーティスティック・ディレクションも私が行い、このプロジェクトの持つ世界観を映像表現へと広げました。
+                アルバムのサウンドプロデュースとアーティスティック・ディレクションに加えて、『Coisas da Paixão ブラジルの情熱』のMVのアーティスティック・ディレクションも私が行い、このプロジェクトの持つ世界観を映像表現へと広げました[cite: 7]。
             </p>
             <p>
-                『A Delicadeza do Instante』は私にとって、作曲、歌唱表現、 そしてサウンドプロデュースを通じて出来上がった、ブラジルと日本の芸術的出会いを意味する作品です。ブラジルで生まれた楽曲が、日本人であるTOYONOの歌声と繊細な感性により新たな魅力が引き出される、素晴らしい体験となりました。
+                『A Delicadeza do Instante』は私にとって、作曲、歌唱表現、 そしてサウンドプロデュースを通じて出来上がった、ブラジルと日本の芸術的出会いを意味する作品です[cite: 7]。ブラジルで生まれた楽曲が、日本人であるTOYONOの歌声と繊細な感性により新たな魅力が引き出される、素晴らしい体験となりました[cite: 7]。
             </p>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -650,40 +672,40 @@
             
             <h3>現代リオの旗手 Guilherme Gê ギレェルミ・ジェ<br>ボサノヴァの偉人 Roberto Menescal ホベルト・メネスカル<br>マルコス・ヴァーリの兄、作詞家 Paulo Sérgio Valle パウロ・セルジオ・ヴァーリ</h3>
             <p>
-                Netflix ドキュメンタリー 『ラテン・ブラッド』 (2025)で全世界的に再評価されるネイ・マトグロッソとのコラボレーションでも注目を集める、リオ発ロックバンドHectoのヴォーカリスト・ギタリストのギリェルミ・ジェをプロデューサーに迎えて制作されたTOYONO25周年記念アルバム。<br>
+                Netflix ドキュメンタリー 『ラテン・ブラッド』 (2025)で全世界的に再評価されるネイ・マトグロッソとのコラボレーションでも注目を集める、リオ発ロックバンドHectoのヴォーカリスト・ギタリストのギリェルミ・ジェをプロデューサーに迎えて制作されたTOYONO25周年記念アルバム[cite: 8]。<br>
                 本作の核となるのは<br>
-                「現代リオの旗手ギリェルミ・ジェ」<br>
-                「ボサノヴァの偉人ホベルト・メネスカル」<br>
-                そして「マルコス・ヴァーリの兄として知られる作詞家パウロ・セルジオ・ヴァーリ」<br>
-                という、世代とスタイルを越えてブラジル音楽を象徴する3人によって共作されながら、これまで発表されることのなかった楽曲群である。<br>
-                その歌い手として選ばれたのは日本のTOYONO。<br>
-                3人の創作が、TOYONOの歌声によって、いま初めて作品として結実する。
+                「現代リオの旗手ギリェルミ・ジェ」[cite: 8]<br>
+                「ボサノヴァの偉人ホベルト・メネスカル」[cite: 8]<br>
+                そして「マルコス・ヴァーリの兄として知られる作詞家パウロ・セルジオ・ヴァーリ」[cite: 8]<br>
+                という、世代とスタイルを越えてブラジル音楽を象徴する3人によって共作されながら、これまで発表されることのなかった楽曲群である[cite: 8]。<br>
+                その歌い手として選ばれたのは日本のTOYONO[cite: 8]。<br>
+                3人の創作が、TOYONOの歌声によって、いま初めて作品として結実する[cite: 8]。
             </p>
 
             <h3>Leila Pinheiro レイラ・ピニェイロと奇跡のデュエット<br>そして、浅田クラウヂアさんに捧ぐ「幾星霜」</h3>
             <p>
-                さらに日本を代表するポップソング 「6. 卒業写真 (荒井由実)」「7. 夢の続き (竹内まりや)」をブラジルミュージシャン達による演奏でカヴァー。ボサノヴァレジェンドのホベルト・メネスカルが、自作楽曲の提供だけに終わらず 「6. 卒業写真」にジャズ・ギターで録音にも参加している。<br>
-                パーカッションには本作のスーパーバイザーでもあるMarcos Suzanoマルコス・スザーノが全面参加し、リズムの奥行きと躍動感を加える。加えて、ブラジル音楽界を代表するレジェンド・シンガーLeila Pinheiroレイラ・ピニェイロが 「3. Coisas da Paixão ブラジルの情熱」にてTOYONOとのデュエットヴォーカルで参加。<br>
-                ボサノヴァ以降の豊かな系譜を体現し続けてきたその歌声は、渡辺貞夫の作品や来日公演でも親しまれており、本作における重要なハイライトのひとつとなっている。<br>
-                TOYONOらしさのひとつであるポルトガル語歌詞と日本語歌詞での同曲収録は今作でも行われている。TOYONOのアルバム 『pelicano heaven』のプロデューサーでシンガーソングライターの片岡大志が「4. Por Toda A Sua Vida その人生のすべてに」に「幾星霜」 というタイトルで日本語歌詞を書き下ろしている。この日本語歌詞は日本のミュージックシーン、とりわけ”日本のブラジル音楽の聖地”として38年に渡り愛され続けた青山プラッサオンゼ (2018年閉店)の、そのチャーミングな人柄が同じく皆から愛され続けた、そしてTOYONOと片岡大志にとってもかけがえのない大切な友人であった二代目オーナー浅田クラウヂアさんに捧げられたものである。(浅田クラウヂアさんは2022年に旅立たれた。)
+                さらに日本を代表するポップソング 「6. 卒業写真 (荒井由実)」「7. 夢の続き (竹内まりや)」をブラジルミュージシャン達による演奏でカヴァー[cite: 8]。ボサノヴァレジェンドのホベルト・メネスカルが、自作楽曲の提供だけに終わらず 「6. 卒業写真」にジャズ・ギターで録音にも参加している[cite: 8]。<br>
+                パーカッションには本作のスーパーバイザーでもあるMarcos Suzanoマルコス・スザーノが全面参加し、リズムの奥行きと躍動感を加える[cite: 8]。加えて、ブラジル音楽界を代表するレジェンド・シンガーLeila Pinheiroレイラ・ピニェイロが 「3. Coisas da Paixão ブラジルの情熱」にてTOYONOとのデュエットヴォーカルで参加[cite: 8]。<br>
+                ボサノヴァ以降の豊かな系譜を体現し続けてきたその歌声は、渡辺貞夫の作品や来日公演でも親しまれており、本作における重要なハイライトのひとつとなっている[cite: 8]。<br>
+                TOYONOらしさのひとつであるポルトガル語歌詞と日本語歌詞での同曲収録は今作でも行われている[cite: 8]。TOYONOのアルバム 『pelicano heaven』のプロデューサーでシンガーソングライターの片岡大志が「4. Por Toda A Sua Vida その人生のすべてに」に「幾星霜」 というタイトルで日本語歌詞を書き下ろしている[cite: 8]。この日本語歌詞は日本のミュージックシーン、とりわけ”日本のブラジル音楽の聖地”として38年に渡り愛され続けた青山プラッサオンゼ (2018年閉店)の、そのチャーミングな人柄が同じく皆から愛され続けた、そしてTOYONOと片岡大志にとってもかけがえのない大切な友人であった二代目オーナー浅田クラウヂアさんに捧げられたものである。(浅田クラウヂアさんは2022年に旅立たれた。)[cite: 8]
             </p>
 
             <h3>アルバムタイトル「瞬間の繊細さ」に込められた想い</h3>
             <p>
-                本作のタイトル 「A Delicadeza do Instante 瞬間の繊細さ」はギリェルミ・ジェからの贈り物である。マルコス・スザーノの大推薦により実現したTOYONOとジェとの共同制作は、約1年という歳月をかけ、時に二人きりでの密なプロダクションとして、東京とリオでキャッチボール形式で進められた。実際には会った事のない者同士でありながら、制作の過程で響き合う音楽的相性の良さを確信した彼が、その幸福な調和を表現したのがこの言葉である。
+                本作のタイトル 「A Delicadeza do Instante 瞬間の繊細さ」はギリェルミ・ジェからの贈り物である[cite: 9]。マルコス・スザーノの大推薦により実現したTOYONOとジェとの共同制作は、約1年という歳月をかけ、時に二人きりでの密なプロダクションとして、東京とリオでキャッチボール形式で進められた[cite: 9]。実際には会った事のない者同士でありながら、制作の過程で響き合う音楽的相性の良さを確信した彼が、その幸福な調和を表現したのがこの言葉である[cite: 9]。
             </p>
             <p>
-                現代リオ音楽シーンを牽引するジェは、父が画家、伯父にブラジル現代美術の巨匠Glauco Rodrigues グラウコ・ロドリゲス (サウヴァドール空港の巨大なモザイク画が有名。彼の作品のひとつである映画 『イパネマの娘』のポスターは日本でも多く目にする。ほか、ジョアン・ボスコ名盤3作品など。)という、幼少期から豊かな芸術に囲まれて育つ。<br>
-                彼がこのフレーズをより強く確信したのは、伊藤陽一郎のアートワークに深く心を動かされた瞬間でもあった。伊藤陽一郎は、DJとして「夢の続き」をダンスフロア仕様にリミックスし、これがこのアルバムの先行シングルとなるなど、音とヴィジュアルの両面からこの作品世界を彩る。(ボーナストラック 「11. 夢の続き AKAKAGE's Back to 90's remix」 として収録)
+                現代リオ音楽シーンを牽引するジェは、父が画家、伯父にブラジル現代美術の巨匠Glauco Rodrigues グラウコ・ロドリゲス (サウヴァドール空港の巨大なモザイク画が有名。彼の作品のひとつである映画 『イパネマの娘』のポスターは日本でも多く目にする。ほか、ジョアン・ボスコ名盤3作品など。)という、幼少期から豊かな芸術に囲まれて育つ[cite: 9]。<br>
+                彼がこのフレーズをより強く確信したのは、伊藤陽一郎のアートワークに深く心を動かされた瞬間でもあった[cite: 9]。伊藤陽一郎は、DJとして「夢の続き」をダンスフロア仕様にリミックスし、これがこのアルバムの先行シングルとなるなど、音とヴィジュアルの両面からこの作品世界を彩る。(ボーナストラック 「11. 夢の続き AKAKAGE's Back to 90's remix」 として収録)[cite: 9]
             </p>
             <p>
-                アルバムタイトル 「瞬間の繊細さ」に寄り添うように、ポルトガルの詩人フェルナンド・ペソアの一節が添えられている。これはギリェルミ・ジェの音楽哲学のうちのひとつであり、今回のプロジェクトにより強く感じたゆえとのことだ。
+                アルバムタイトル 「瞬間の繊細さ」に寄り添うように、ポルトガルの詩人フェルナンド・ペソアの一節が添えられている[cite: 9]。これはギリェルミ・ジェの音楽哲学のうちのひとつであり、今回のプロジェクトにより強く感じたゆえとのことだ[cite: 9]。
             </p>
             <blockquote>
                 "O valor das coisas não está no tempo em que elas duram, mas na intensidade com que acontecem. Por isso, existem momentos inesquecíveis, coisas inexplicáveis e pessoas incomparáveis."<br>
-                (Fernando Pessoa)<br>
+                (Fernando Pessoa)[cite: 9]<br>
                 「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」<br>
-                (フェルナンド・ペソア)
+                (フェルナンド・ペソア)[cite: 9]
                 <cite>—— フェルナンド・ペソア</cite>
             </blockquote>
 
@@ -697,17 +719,35 @@
         <section id="tracklist">
             <h2>05 Tracklist</h2>
             <ul class="track-list">
-                <li><span class="num">01</span> Se Tiver Que Ser 予感 (Guilherme Gê / Paulo Sérgio Valle)</li>
-                <li><span class="num">02</span> Carta a um Irmão レター・トゥ・ア・ブラザー (Paulo Sérgio Valle / Guilherme Gê / Roberto Menescal)</li>
-                <li><span class="num">03</span> Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱 feat. レイラ・ピニェイロ (Roberto Menescal / Guilherme Gê / Paulo Sérgio Valle)</li>
-                <li><span class="num">04</span> Por Toda A Sua Vida その人生のすべてに (Guilherme Gê / Gabriel)</li>
-                <li><span class="num">05</span> Paraglider パラグライダー (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)</li>
-                <li><span class="num">06</span> 卒業写真 feat. Roberto Menescal (jazz guitar) ※カヴァー (荒井由実)</li>
-                <li><span class="num">07</span> 夢の続き ※カヴァー (竹内まりや)</li>
-                <li><span class="num">08</span> Foi Demais 最愛 (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)</li>
-                <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー (Lô Borges / Ronaldo Bastos)</li>
-                <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</li>
-                <li><span class="num">11</span> (Bonus Track) 夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
+                <li><span class="num">01</span> <div class="track-info-block">Se Tiver Que Ser 予感 (Guilherme Gê / Paulo Sérgio Valle)[cite: 10]</div></li>
+                <li><span class="num">02</span> <div class="track-info-block">Carta a um Irmão レター・トゥ・ア・ブラザー (Paulo Sérgio Valle / Guilherme Gê / Roberto Menescal)[cite: 10]</div></li>
+                <li><span class="num">03</span> <div class="track-info-block">Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱 feat. レイラ・ピニェイロ (Roberto Menescal / Guilherme Gê / Paulo Sérgio Valle)[cite: 10]</div></li>
+                <li><span class="num">04</span> <div class="track-info-block">Por Toda A Sua Vida その人生のすべてに (Guilherme Gê / Gabriel)[cite: 10]</div></li>
+                <li><span class="num">05</span> <div class="track-info-block">Paraglider パラグライダー (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)[cite: 10]</div></li>
+                <li>
+                    <span class="num">06</span>
+                    <div class="track-info-block">
+                        <span>卒業写真 feat. Roberto Menescal (jazz guitar) ※カヴァー (荒井由実)[cite: 10]</span>
+                        <div class="track-sub-credits">
+                            作詞者：荒井 由実 ／ 作曲者：荒井 由実[cite: 10]<br>
+                            ©1974 by ALFA MUSIC, INC.[cite: 10]
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span class="num">07</span>
+                    <div class="track-info-block">
+                        <span>夢の続き ※カヴァー (竹内まりや)[cite: 10]</span>
+                        <div class="track-sub-credits">
+                            作詞：竹内 まりや ／ 作曲：竹内 まりや[cite: 10]<br>
+                            (C)1987 by FUJIPACIFIC MUSIC INC. &amp; SMILE PUBLISHERS INC.[cite: 10]
+                        </div>
+                    </div>
+                </li>
+                <li><span class="num">08</span> <div class="track-info-block">Foi Demais 最愛 (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)[cite: 10]</div></li>
+                <li><span class="num">09</span> <div class="track-info-block">O Trem Azul 青い列車 ※カヴァー (Lô Borges / Ronaldo Bastos)[cite: 10]</div></li>
+                <li><span class="num">10</span> <div class="track-info-block">幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)[cite: 10]</div></li>
+                <li><span class="num">11</span> <div class="track-info-block">(Bonus Track) 夢の続き AKAKAGE's Back to 90's remix (竹内まりや)[cite: 10]</div></li>
             </ul>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -722,49 +762,49 @@
             <table class="credits-table">
                 <tr>
                     <th>Total Produced by</th>
-                    <td>TOYONO</td>
+                    <td>TOYONO[cite: 11]</td>
                 </tr>
                 <tr>
                     <th>All Sound Produced &amp; Arranged by</th>
-                    <td>Guilherme Gê (Rio de Janeiro)</td>
+                    <td>Guilherme Gê (Rio de Janeiro)[cite: 11]</td>
                 </tr>
                 <tr>
                     <th>Musicians</th>
                     <td>
-                        <strong>Guilherme Gê</strong>: acoustic guitar, electric guitar, piano, organ, keyboards, electric bass, synth bass, electronic drum, programming and samples. (Recorded instruments in Udu Music Rio @guilhermege.hecto)<br>
-                        <strong>Marcos Suzano</strong>: pandeiro, shaker, brush drums, wave drum and electronic percussion<br>
-                        <strong>Roberto Menescal</strong>: jazz guitar (6)<br>
-                        <strong>Leila Pinheiro</strong>: vocal (3)<br>
-                        <strong>Carlos Malta</strong>: flute (2)<br>
-                        <strong>Rafael Dias Belo</strong>: violin &amp; viola (3, 10)<br>
-                        <strong>Mario Fabre</strong>: drums (9)<br>
-                        <strong>Claudio Infante</strong>: drums (6, 7)<br>
-                        <strong>Marcelo Rezende</strong>: chorus (7)
+                        <strong>Guilherme Gê</strong>: acoustic guitar, electric guitar, piano, organ, keyboards, electric bass, synth bass, electronic drum, programming and samples. (Recorded instruments in Udu Music Rio @guilhermege.hecto)[cite: 11]<br>
+                        <strong>Marcos Suzano</strong>: pandeiro, shaker, brush drums, wave drum and electronic percussion[cite: 11]<br>
+                        <strong>Roberto Menescal</strong>: jazz guitar (6)[cite: 11]<br>
+                        <strong>Leila Pinheiro</strong>: vocal (3)[cite: 11]<br>
+                        <strong>Carlos Malta</strong>: flute (2)[cite: 11]<br>
+                        <strong>Rafael Dias Belo</strong>: violin &amp; viola (3, 10)[cite: 11]<br>
+                        <strong>Mario Fabre</strong>: drums (9)[cite: 11]<br>
+                        <strong>Claudio Infante</strong>: drums (6, 7)[cite: 11]<br>
+                        <strong>Marcelo Rezende</strong>: chorus (7)[cite: 11]
                     </td>
                 </tr>
                 <tr>
                     <th>Vocal Recording</th>
                     <td>
-                        Leila Pinheiro vocal recorded by Renato Alscher<br>
-                        TOYONO vocals recorded by Ryo Sakai @ NK SOUND TOKYO
+                        Leila Pinheiro vocal recorded by Renato Alscher[cite: 11]<br>
+                        TOYONO vocals recorded by Ryo Sakai @ NK SOUND TOKYO[cite: 11]
                     </td>
                 </tr>
                 <tr>
                     <th>Mixed &amp; Mastered by</th>
-                    <td>Neeraj Khajanchi @ NK SOUND TOKYO</td>
+                    <td>Neeraj Khajanchi @ NK SOUND TOKYO[cite: 11]</td>
                 </tr>
                 <tr>
                     <th>Lyrics Translation</th>
-                    <td>translated from Portuguese into Japanese by TOYONO</td>
+                    <td>translated from Portuguese into Japanese by TOYONO[cite: 11]</td>
                 </tr>
                 <tr>
                     <th>Staff &amp; Production</th>
                     <td>
-                        Promotion Director: Tatsuya Maezawa<br>
-                        Executive Producer: Akitoshi Takeda<br>
-                        Supervisor: Marcos Suzano<br>
-                        Art Direction, Designer &amp; All Art Works: Yoichiro Ito<br>
-                        Special Thanks to: Déa Moura (photos) in Studio Corredor 5
+                        Promotion Director: Tatsuya Maezawa[cite: 11]<br>
+                        Executive Producer: Akitoshi Takeda[cite: 11]<br>
+                        Supervisor: Marcos Suzano[cite: 11]<br>
+                        Art Direction, Designer &amp; All Art Works: Yoichiro Ito[cite: 11]<br>
+                        Special Thanks to: Déa Moura (photos) in Studio Corredor 5[cite: 11]
                     </td>
                 </tr>
             </table>
@@ -779,23 +819,23 @@
         <section id="spec">
             <h2>07 商品情報</h2>
             <table class="spec-table" style="margin-bottom: 32px;">
-                <tr><th>Release Date</th><td>2026年11月18日</td></tr>
-                <tr><th>Title</th><td>A Delicadeza do Instante 瞬間の繊細さ (アデリカデーザドインスタンチ)</td></tr>
-                <tr><th>Artist</th><td>TOYONO</td></tr>
-                <tr><th>Catalog No.</th><td>MDRN-2026</td></tr>
-                <tr><th>Price</th><td>定価 ¥3,000（税抜価格 ¥2,727）</td></tr>
-                <tr><th>JAN Code</th><td>4589518615082</td></tr>
-                <tr><th>Format</th><td>CD / J-POP、ブラジル (11曲収録 / ポルトガル語歌詞・TOYONOによる対訳付)</td></tr>
-                <tr><th>Label</th><td>Manufactured by modelo MODERNO / Distributed by File Records inc.</td></tr>
+                <tr><th>Release Date</th><td>2026年11月18日[cite: 12]</td></tr>
+                <tr><th>Title</th><td>A Delicadeza do Instante 瞬間の繊細さ (アデリカデーザドインスタンチ)[cite: 12]</td></tr>
+                <tr><th>Artist</th><td>TOYONO[cite: 12]</td></tr>
+                <tr><th>Catalog No.</th><td>MDRN-2026[cite: 12]</td></tr>
+                <tr><th>Price</th><td>定価 ¥3,000（税抜価格 ¥2,727）[cite: 12]</td></tr>
+                <tr><th>JAN Code</th><td>4589518615082[cite: 12]</td></tr>
+                <tr><th>Format</th><td>CD / J-POP、ブラジル (11曲収録 / ポルトガル語歌詞・TOYONOによる対訳付)[cite: 12]</td></tr>
+                <tr><th>Label</th><td>Manufactured by modelo MODERNO / Distributed by File Records inc.[cite: 12]</td></tr>
             </table>
 
             <h3 style="margin-top: 24px; border-left: none; padding-left: 0; text-align: center; font-size: 1.05rem; color: var(--text-main);">【アーティスト・プロフィール】</h3>
             <p>
-                <strong>TOYONO (ブラジル音楽シンガーソングライター)</strong><br>
-                大阪出身。OL時代に耳にしたジョイス・モレーノに憧れてブラジル音楽への想いが高まり、歌い手の道を志して単身でリオデジャネイロへ渡る。帰国後、東京を拠点に本格的な音楽活動を開始。著名DJやブラジルを代表するアーティストとの作品を多数発表し、2016年ビクターエンタテインメントよりメジャーデビュー。代表曲「トレス・マリアス」はJAL国際線機内放送に採用され話題に。
+                <strong>TOYONO (ブラジル音楽シンガーソングライター)</strong>[cite: 12]<br>
+                大阪出身。OL時代に耳にしたジョイス・モレーノに憧れてブラジル音楽への想いが高まり、歌い手の道を志して単身でリオデジャネイロへ渡る。帰国後、東京を拠点に本格的な音楽活動を開始。著名DJやブラジルを代表するアーティストとの作品を多数発表し、2016年ビクターエンタテインメントよりメジャーデビュー。代表曲「トレス・マリアス」はJAL国際線機内放送に採用され話題に[cite: 12]。
             </p>
             <p>
-                FM番組「TOYONO moda brasil」パーソナリティを務め、語学力を生かし現地アーティストへ通訳なしでポルトガル語インタビューを行うほか、ナレーションや執筆など多方面で活躍。2026年にソロデビュー25周年を迎え、本作を携え開催した5月のTOKYO FM ホール公演には、長年の共演者であり世界的パーカッショニストのマルコス・スザーノが来日参加し大成功を収めた。
+                FM番組「TOYONO moda brasil」パーソナリティを務め、語学力を生かし現地アーティストへ通訳なしでポルトガル語インタビューを行うほか、ナレーションや執筆など多方面で活躍。2026年にソロデビュー25周年を迎え、本作を携え開催した5月のTOKYO FM ホール公演には、長年の共演者であり世界的パーカッショニストのマルコス・スザーノが来日参加し大成功を収めた[cite: 12]。
             </p>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -813,11 +853,11 @@
                 <div class="vinyl-card">
                     <img src="YUME1.jpeg" alt="夢の続き 7インチアナログジャケット" onerror="this.style.display='none';">
                     <div style="text-align: left;">
-                        <strong style="display:block; font-size: 0.95rem; margin-bottom: 4px; color: var(--text-main);">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)</strong>
+                        <strong style="display:block; font-size: 0.95rem; margin-bottom: 4px; color: var(--text-main);">7インチアナログ盤 『夢の続き / TOYONO』(unchantable records)[cite: 13]</strong>
                         <p style="font-size: 0.88rem; color: var(--text-sub); line-height: 1.7;">
-                            • <strong>発売日</strong>：2026年5月23日 会場先行発売 / 5月27日 全国一般発売<br>
-                            • <strong>Side A</strong>：「夢の続き」（竹内まりや） AKAKAGE's Back to 90's remix<br>
-                            • <strong>Side AA</strong>：「夢の続き」（竹内まりや） TOYONOアルバムバージョン<br>
+                            • <strong>発売日</strong>：2026年5月23日 会場先行発売 / 5月27日 全国一般発売[cite: 13]<br>
+                            • <strong>Side A</strong>：「夢の続き」（竹内まりや） AKAKAGE's Back to 90's remix[cite: 13]<br>
+                            • <strong>Side AA</strong>：「夢の続き」（竹内まりや） TOYONOアルバムバージョン[cite: 13]<br>
                             <span style="display: inline-block; margin-top: 6px; color: var(--accent-gold); font-weight: 600; font-size: 0.82rem;">▶ unchantable records</span>
                         </p>
                     </div>
@@ -826,12 +866,12 @@
 
             <h3 style="margin-top: 40px;">プロモーション・スケジュール</h3>
             <ul class="schedule-list">
-                <li><strong>2026年10月4日(日)</strong>：発売日情報解禁（ラジオ番組「TOYONO moda brasil」にて）</li>
+                <li><strong>2026年10月4日(日)</strong>：発売日情報解禁（ラジオ番組「TOYONO moda brasil」にて）[cite: 13]</li>
                 <li><strong>2026年10月21日(水)</strong>：アルバムリード曲先行配信開始 &amp; MV一般公開<br>
-                    <span style="font-size: 0.86rem; color: var(--text-sub); display: block; padding-left: 14px; margin-top: 4px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー</span>
+                    <span style="font-size: 0.86rem; color: var(--text-sub); display: block; padding-left: 14px; margin-top: 4px;">• M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱[cite: 13]<br>• M2. Carta a um Irmão レター・トゥ・ア・ブラザー[cite: 13]</span>
                 </li>
-                <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開</li>
-                <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売</li>
+                <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開[cite: 13]</li>
+                <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売[cite: 13]</li>
             </ul>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -846,11 +886,11 @@
             
             <div class="mv-block">
                 <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
-                    M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱
+                    M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱[cite: 13]
                 </p>
                 <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
-                    リオデジャネイロにて制作。TOYONO、レイラ・ピニェイロ、ギリェルミ・ジェ出演<br>
-                    Direção: Guilherme Gê / Edição: João Oliveira / Assistente de Edição: Márcio Belao
+                    リオデジャネイロにて制作。TOYONO、レイラ・ピニェイロ、ギリェルミ・ジェ出演[cite: 13]<br>
+                    Direção: Guilherme Gê / Edição: João Oliveira / Assistente de Edição: Márcio Belao[cite: 13]
                 </p>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/i_aT8U4ADgY" title="Coisas da Paixão MV" allowfullscreen></iframe>
@@ -859,10 +899,10 @@
 
             <div class="mv-block">
                 <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
-                    M2. Carta a um Irmão レター・トゥ・ア・ブラザー
+                    M2. Carta a um Irmão レター・トゥ・ア・ブラザー[cite: 13]
                 </p>
                 <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
-                    ニューヨークにて制作。新進気鋭の映像作家・パルクール選手であり、TOYONOの従姉妹の娘でもあるSeneca Schwartz (セネカ・シュワルツ)が出演・制作。
+                    ニューヨークにて制作。新進気鋭の映像作家・パルクール選手であり、TOYONOの従姉妹の娘でもあるSeneca Schwartz (セネカ・シュワルツ)が出演・制作[cite: 13]。
                 </p>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/7beemsGzppQ" title="Carta a um Irmão MV" allowfullscreen></iframe>
@@ -871,10 +911,10 @@
 
             <div class="mv-block">
                 <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
-                    M4. &amp; M10. Por Toda A Sua Vida / 幾星霜（ライブ映像）
+                    M4. &amp; M10. Por Toda A Sua Vida / 幾星霜（ライブ映像）[cite: 13]
                 </p>
                 <p style="font-size: 0.86rem; color: var(--text-sub); margin-bottom: 12px;">
-                    2026.05.23 TOYONO 25周年記念公演 feat.マルコス・スザーノ@TOKYO FM Hall ライブ映像
+                    2026.05.23 TOYONO 25周年記念公演 feat.マルコス・スザーノ@TOKYO FM Hall ライブ映像[cite: 13]
                 </p>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/4b4dXKnEmgU" title="Por Toda A Sua Vida / 幾星霜 Live" allowfullscreen></iframe>
@@ -894,64 +934,64 @@
             <div class="pt-text">
                 <h3 style="margin-top: 10px;">RELEASE / SOBRE O ÁLBUM</h3>
                 <p>
-                    Celebrando os 25 anos de carreira solo de TOYONO, cantora e compositora japonesa reconhecida como uma das principais intérpretes da MPB moderna no Japão. O álbum "A Delicadeza do Instante" traz uma fusão sublime entre a sofisticação da música produzida no Rio de Janeiro e a sensibilidade única da artista em interpretações em português e japonês.
+                    Celebrando os 25 anos de carreira solo de TOYONO, cantora e compositora japonesa reconhecida como uma das principais intérpretes da MPB moderna no Japão[cite: 14]. O álbum "A Delicadeza do Instante" traz uma fusão sublime entre a sofisticação da música produzida no Rio de Janeiro e a sensibilidade única da artista em interpretações em português e japonês[cite: 14].
                 </p>
                 <p>
-                    Produzido por Guilherme Gê e sob a supervisão rítmica de Marcos Suzano, o projeto conta com participações históricas de lendas da música brasileira como Roberto Menescal e Leila Pinheiro, além de canções inéditas escritas por Paulo Sérgio Valle em parceria com Guilherme Gê e Menescal.
+                    Produzido por Guilherme Gê e sob a supervisão rítmica de Marcos Suzano, o projeto conta com participações históricas de lendas da música brasileira como Roberto Menescal e Leila Pinheiro, além de canções inéditas escritas por Paulo Sérgio Valle em parceria com Guilherme Gê e Menescal[cite: 14].
                 </p>
 
                 <h3>TOYONO e "A Delicadeza do Instante" — por Guilherme Gê (Part 1)</h3>
                 <p>
-                    Ouvir TOYONO cantar em português tem um fascínio muito especial. Em "A Delicadeza do Instante", a cantora japonesa não apenas interpreta um repertório estrangeiro, mas se posiciona como uma artista que encontrou na língua portuguesa uma extensão de sua própria voz e de sua identidade artística.
+                    Ouvir TOYONO cantar em português tem um fascínio muito especial[cite: 14]. Em "A Delicadeza do Instante", a cantora japonesa não apenas interpreta um repertório estrangeiro, mas se posiciona como uma artista que encontrou na língua portuguesa uma extensão de sua própria voz e de sua identidade artística[cite: 14].
                 </p>
                 <p>
-                    Esse é, talvez, o aspecto mais marcante do trabalho. TOYONO canta com uma atenção minuciosa à sonoridade das palavras, às vogais, à acentuação e ao desenho melódico de cada frase. Há un cuidado evidente na pronúncia, mas em momento algum se percebe o desejo de esconder sua origem. Pelo contrário: é justamente a presença de sua brasilidade aprendida e vivida a partir do olhar e da sensibilidade japonesa que torna a interpretação tão singular.
+                    Esse é, talvez, o aspecto mais marcante do trabalho[cite: 14]. TOYONO canta com uma atenção minuciosa à sonoridade das palavras, às vogais, à acentuação e ao desenho melódico de cada frase[cite: 14]. Há um cuidado evidente na pronúncia, mas em momento algum se percebe o desejo de esconder sua origem[cite: 14]. Pelo contrário: é justamente a presença de sua brasilidade aprendida e vivida a partir do olhar e da sensibilidade japonesa que torna a interpretação tão singular[cite: 14].
                 </p>
                 <p>
-                    Sua voz tem uma leveza que não significa falta de força, mas sim uma delicadeza consciente. Ela não busca o drama explícito, mas constrói a emoção através de nuances, de pequenas variações de dinâmica e timbres que criam uma atmosfera intimista. Essa contenção expressiva permite que as melodias respirem com elegância.
+                    Sua voz tem uma leveza que não significa falta de força, mas sim uma delicadeza consciente[cite: 14]. Ela não busca o drama explícito, mas constrói a emoção através de nuances, de pequenas variações de dinâmica e timbres que criam uma atmosfera intimista[cite: 14]. Essa contenção expressiva permite que as melodias respirem com elegância[cite: 14].
                 </p>
                 <p>
-                    Na música brasileira, em que texto, ritmo e melodia se entrelaçam de forma tão íntima, esse tipo de abordagem faz toda a diferença. TOYONO demonstra compreender que cantar em português não é apenas pronunciar corretamente as palavras, mas perceber como o som da língua afeta o balanço da música. Ela encontra o balanço certo para a colocação das palavras na melodia.
+                    Na música brasileira, em que texto, ritmo e melodia se entrelaçam de forma tão íntima, esse tipo de abordagem faz toda a diferença[cite: 14]. TOYONO demonstra compreender que cantar em português não é apenas pronunciar corretamente as palavras, mas perceber como o som da língua afeta o balanço da música[cite: 14]. Ela encontra o balanço certo para a colocação das palavras na melodia[cite: 14].
                 </p>
                 <p>
-                    Ao longo do álbum, a cantora passeia por diferentes atmosferas mantendo sempre uma coerência estética refinada. Há momentos mais sussurrados e outros em que a voz ganha maior projeção, mas a atitude em relação à música permanece a mesma: de profundo respeito e entrega.
+                    Ao longo do álbum, a cantora passeia por diferentes atmosferas mantendo sempre uma coerência estética refinada[cite: 14]. Há momentos mais sussurrados e outros em que a voz ganha maior projeção, mas a atitude em relação à música permanece a mesma: de profundo respeito e entrega[cite: 14].
                 </p>
                 <p>
-                    O resultado é o que poderíamos chamar de um "terceiro território": não é a música brasileira feita por uma japonesa, nem a tentativa de transformá-la em uma cantora brasileira, mas a música brasileira existindo através de quem TOYONO é. As canções, pertencentes a uma tradição rica e consolidada, ganham contornos novos quando atravessadas pela sua voz e pela sua sensibilidade cultural.
+                    O resultado é o que poderíamos chamar de um "terceiro território": não é a música brasileira feita por uma japonesa, nem a tentativa de transformá-la em uma cantora brasileira, mas a música brasileira existindo através de quem TOYONO é[cite: 14]. As canções, pertencentes a uma tradição rica e consolidada, ganham contornos novos quando atravessadas pela sua voz e pela sua sensibilidade cultural[cite: 14].
                 </p>
                 <p>
-                    "A Delicadeza do Instante" é, assim, um álbum de encontros. Do Brasil com o Japão, de compositores históricos com uma cantora dedicada, de culturas distantes que se aproximam pela arte. Mas é, acima de tudo, o registro de uma intérprete que habita a língua portuguesa com verdade, delicadeza e beleza singular.
+                    "A Delicadeza do Instante" é, assim, um álbum de encontros[cite: 14]. Do Brasil com o Japão, de compositores históricos com uma cantora dedicada, de culturas distantes que se aproximam pela arte[cite: 14]. Mas é, acima de tudo, o registro de uma intérprete que habita a língua portuguesa com verdade, delicadeza e beleza singular[cite: 14].
                 </p>
 
                 <h3>Eu e "A Delicadeza do Instante" — por Guilherme Gê (Part 2)</h3>
                 <p>
-                    "A Delicadeza do Instante" é um álbum que nasce do encontro entre a música brasileira e la sensibilidade artística de TOYONO. Como produtor musical e diretor artístico do projeto, meu papel foi construir uma identidade sonora que valorizasse a singularidade de TOYONO como intérprete, criando um diálogo entre sua voz e os diferentes elementos da música brasileira.
+                    "A Delicadeza do Instante" é um álbum que nasce do encontro entre a música brasileira e a sensibilidade artística de TOYONO[cite: 15]. Como produtor musical e diretor artístico do projeto, meu papel foi construir uma identidade sonora que valorizasse a singularidade de TOYONO como intérprete, criando um diálogo entre sua voz e os diferentes elementos da música brasileira[cite: 15].
                 </p>
                 <p>
-                    O álbum reúne nove faixas gravadas com a participação de grandes nomes da música brasileira, como Leila Pinheiro, Roberto Menescal, Marcos Suzano, Carlos Malta, Claudio Infante, Mario Fabre e <strong>ハファエル・ベロ</strong>（Rafael Belo）.
+                    O álbum reúne nove faixas gravadas com a participação de grandes nomes da música brasileira, como Leila Pinheiro, Roberto Menescal, Marcos Suzano, Carlos Malta, Claudio Infante, Mario Fabre e <strong>ハファエル・ベロ</strong>（Rafael Belo）[cite: 15]。
                 </p>
                 <p>
-                    O repertório também está fortemente ligado ao meu universo de composição: das nove faixas, seis são de minha autoria, algumas em parceria com compositores como Paulo Sérgio Valle e Roberto Menescal. Há também uma composição minha em parceria com Gabriel, que ganhou uma versão especial em japonês escrita para TOYONO.
+                    O repertório também está fortemente ligado ao meu universo de composição: das nove faixas, seis são de minha autoria, algumas em parceria com compositores como Paulo Sérgio Valle e Roberto Menescal[cite: 15]. Há também uma composição minha em parceria com Gabriel, que ganhou uma versão especial em japonês escrita para TOYONO[cite: 15].
                 </p>
                 <p>
-                    Na produção musical, busquei ressaltar a intenção e a sensibilidade de TOYONO, construindo arranjos orgânicos que valorizam a respiração, a dinâmica e a sonoridade dos instrumentos gravados no Rio de Janeiro. O resultado é um álbum que une duas culturas através da linguagem universal da música.
+                    Na produção musical, busquei ressaltar a intenção e a sensibilidade de TOYONO, construindo arranjos orgânicos que valorizam a respiração, a dinâmica e a sonoridade dos instrumentos gravados no Rio de Janeiro[cite: 15]. O resultado é um álbum que une duas culturas através da linguagem universal da música[cite: 15].
                 </p>
                 <p>
-                    Além da produção musical e direção artística do álbum, também assino a direção artística do videoclipe da faixa "Coisas da Paixão", estendendo a identidade visual e conceitual do projeto para a linguagem audiovisual.
+                    Além da produção musical e direção artística do álbum, também assino a direção artística do videoclipe da faixa "Coisas da Paixão", estendendo a identidade visual e conceitual do projeto para a linguagem audiovisual[cite: 15].
                 </p>
                 <p>
-                    "A Delicadeza do Instante" representa, para mim, uma experiência profunda de criação, produção e encontro artístico entre o Brasil e o Japão.
+                    "A Delicadeza do Instante" representa, para mim, uma experiência profunda de criação, produção e encontro artístico entre o Brasil e o Japão[cite: 15].
                 </p>
 
                 <h3>Comentário de Marcos Suzano</h3>
                 <p>
-                    O álbum "A Delicadeza do Instante" da TOYONO, produzido pelo Guilherme Gê, está realmente incrível. Um trabalho super caprichado, com uma sonoridade linda e com uma visão muito moderna da MPB. As músicas são ótimas, os arranjos de muito bom gosto e a performance de todos os músicos envolvidos é de primeiríssima qualidade.
+                    O álbum "A Delicadeza do Instante" da TOYONO, produzido pelo Guilherme Gê, está realmente incrível[cite: 15]. Um trabalho super caprichado, com uma sonoridade linda e com uma visão muito moderna da MPB[cite: 15]. As músicas são ótimas, os arranjos de muito bom gosto e a performance de todos os músicos envolvidos é de primeiríssima qualidade[cite: 15].
                 </p>
                 <p>
-                    A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
+                    A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>[cite: 15]
                 </p>
                 <p>
-                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
+                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul"[cite: 15]. Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span>[cite: 15] É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span>[cite: 15] Parabéns, TOYONO![cite: 15]
                 </p>
             </div>
 
