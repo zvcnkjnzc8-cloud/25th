@@ -21,8 +21,10 @@
             --max-width: 1120px;
         }
 
-        /* ページ内ジャンプをなめらかにする */
-        html {
+        /* スクロールコンテキストの干渉を防ぐ標準化 */
+        html, body {
+            width: 100%;
+            height: auto;
             scroll-behavior: smooth;
         }
 
@@ -32,7 +34,6 @@
             padding: 0;
         }
 
-        /* 【プロ修正】iOS Safariのスクロールバグを引き起こす display: flex を解除し、通常フローに変更 */
         body {
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             font-weight: 500;
@@ -110,6 +111,7 @@
             max-width: 960px;
             margin: 0 auto 36px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            scroll-margin-top: 80px; /* 固定ヘッダー考慮のスクロール位置補正 */
         }
 
         .nav-btn {
@@ -242,6 +244,7 @@
             border: 1px solid var(--border-color);
             box-shadow: 0 10px 30px rgba(28, 27, 25, 0.03);
             text-align: left;
+            scroll-margin-top: 80px; /* 各セクションのスクロール位置補正 */
         }
 
         section h2 {
@@ -619,7 +622,7 @@
                 その意味で『A Delicadeza do Instante』は「出会い」のアルバムです。ブラジルと日本、異なる言語と文化、そして作曲家と歌い手の出会い。しかし何より、ポルトガル語の中に新たな表現の可能性を見出した一人のシンガーの姿を収めた、かけがえのない記録なのです。
             </p>
             <p>
-                そしてこれこそが、本作の持つ最大の美しさなのかもしれません。彼女がポルトガル語で歌うのを聴いていても、借り物の言語で歌っているような違和感は一切ありません。時間をかけて少しずつ少しずつ、ポルトガル語が彼女の声の中に自らの居場所を見出していったんだと思う。「TOYONOの声」と「ポルトガル語」二つが溶け合ったその奇跡的な出会いがあったからこそ、このアルバムの唯一無二の世界観が生まれているのだと思います。
+                書籍やインタビュー等で彼女が語るように、時間をかけて少しずつ少しずつ、ポルトガル語が彼女の声の中に自らの居場所を見出していったんだと思う。「TOYONOの声」と「ポルトガル語」二つが溶け合ったその奇跡的な出会いがあったからこそ、このアルバムの唯一無二の世界観が生まれているのだと思います。
             </p>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -681,7 +684,7 @@
                 さらに日本を代表するポップソング 「6. 卒業写真 (荒井由実)」「7. 夢の続き (竹内まりや)」をブラジルミュージシャン達による演奏でカヴァー。ボサノヴァレジェンドのホベルト・メネスカルが、自作楽曲の提供だけに終わらず 「6. 卒業写真」にジャズ・ギターで録音にも参加している。<br>
                 パーカッションには本作のスーパーバイザーでもあるMarcos Suzanoマルコス・スザーノが全面参加し、リズムの奥行きと躍動感を加える。加えて、ブラジル音楽界を代表するレジェンド・シンガーLeila Pinheiroレイラ・ピニェイロが 「3. Coisas da Paixão ブラジルの情熱」にてTOYONOとのデュエットヴォーカルで参加。<br>
                 ボサノヴァ以降の豊かな系譜を体現し続けてきたその歌声は、渡辺貞夫の作品や来日公演でも親しまれており、本作における重要なハイライトのひとつとなっている。<br>
-                TOYONOらしさのひとつであるポルトガル語歌詞と日本語歌詞での同曲収録は今作でも行われている。TOYONOのアルバム 『pelicano heaven』のプロデューサーでシンガーソングライターの片岡大志が「4. Por Toda A Sua Vida その人生のすべてに」に「幾星霜」 というタイトルで日本語歌詞を書き下ろしている。この日本語歌詞は日本のミュージックシーン、とりわけ”日本のブラジル音楽の聖地”として38年に渡り愛され続けた青山プラッサオンゼ (2018年閉店)の、そのチャーミングな人柄が同じく皆から愛され続けた、そしてTOYONOと片岡大志にとってもかけがえのない大切な友人であった二代目オーナー浅田クラウヂアさんに捧げられたものである。(浅田クラウヂアさんは2022年に旅立たれた。)
+                TOYONOらしさのひとつであるポルトガル語歌詞と日本語歌詞での同曲収録は今作でも行われている。TOYONOのアルバム 『pelicano heaven』のプロデューサーでシンガーソングライターの片岡大志が「4. Por Toda A Sua Vida その人生のすべてに」に「幾星霜」 というタイトルで日本語歌詞を書き下ろしている。この日本語歌詞は日本のミュージックシーン、とりわけ”日本のブラジル音楽の聖地”として38年に渡り愛され続けた青山プラッサオンゼ (2018年閉店)の、そのチャーミングな人柄が同じく皆から愛され続けた、アンドTOYONOと片岡大志にとってもかけがえのない大切な友人であった二代目オーナー浅田クラウヂアさんに捧げられたものである。(浅田クラウヂアさんは2022年に旅立たれた。)
             </p>
 
             <h3>アルバムタイトル「瞬間の繊細さ」に込められた想い</h3>
@@ -938,7 +941,7 @@
                     Ouvir TOYONO cantar em português tem um fascínio muito especial. Em "A Delicadeza do Instante", a cantora japonesa não apenas interpreta um repertório estrangeiro, mas se posiciona como uma artista que encontrou na língua portuguesa uma extensão de sua própria voz e de sua identidade artística.
                 </p>
                 <p>
-                    Esse é, talvez, o aspecto mais marcante do trabalho. TOYONO canta com uma atenção minuciosa à sonoridade das palavras, às vogais, à acentuação e ao desenho melódico de cada frase. Há um cuidado evidente na pronúncia, mas em momento algum se percebe o desejo de esconder sua origem. Pelo contrário: é justement a presença de sua brasilidade aprendida e vivida a partir do olhar e da sensibilidade japonesa que torna a interpretação tão singular.
+                    Esse é, talvez, o aspecto mais marcante do trabalho. TOYONO canta com uma atenção minuciosa à sonoridade das palavras, às vogais, à acentuação e ao desenho melódico de cada frase. Há um cuidado evidente na pronúncia, mas em momento algum se percebe o desejo de esconder sua origem. Pelo contrário: é justamente a presença de sua brasilidade aprendida e vivida a partir do olhar e da sensibilidade japonesa que torna a interpretação tão singular.
                 </p>
                 <p>
                     Sua voz tem uma leveza que não significa falta de força, mas sim uma delicadeza consciente. Ela não busca o drama explícito, mas constrói a emoção através de nuances, de pequenas variações de dinâmica e timbres que criam uma atmosfera intimista. Essa contenção expressiva permite que as melodias respirem com elegância.
@@ -1005,27 +1008,60 @@
 
     </div>
 
-    <!-- 【プロ対応】iOS / Safari / 各種タブレットで確実に機能するスクロール制御スクリプト -->
+    <!-- 【プロ対応】Goope等のCMS・親フレーム埋め込み・固定ヘッダー環境に対応する全端末完全互換スクリプト -->
     <script>
-        document.addEventListener('click', function(e) {
-            let target = e.target.closest('a[href^="#"]');
-            if (target) {
-                let id = target.getAttribute('href');
-                if (id === '#' || !id) return;
-                let element = document.querySelector(id);
-                if (element) {
-                    e.preventDefault();
-                    // iOS/Safariで最も確実な座標計算によるスムーズスクロール
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - 10;
-                    
+        (function() {
+            function scrollToTarget(targetId) {
+                var elem = document.querySelector(targetId);
+                if (!elem) return;
+
+                // 優先度1: scrollIntoView（ネイティブの完璧なスクロール補正）
+                try {
+                    elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } catch(err) {
+                    // 優先度2: 伝統的描画プロパティによる計算
+                    var headerOffset = 80;
+                    var elementPosition = elem.getBoundingClientRect().top;
+                    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
                     window.scrollTo({
                         top: offsetPosition,
                         behavior: 'smooth'
                     });
                 }
+
+                // 優先度3: もしグーペ等のiframe埋め込み環境の場合、親ウィンドウも連動
+                try {
+                    if (window.top !== window.self) {
+                        var topOffset = elem.getBoundingClientRect().top;
+                        window.top.scrollTo({
+                            top: topOffset,
+                            behavior: 'smooth'
+                        });
+                    }
+                } catch(e) {
+                    // クロスドメイン制限は安全にスルー
+                }
             }
-        });
+
+            document.addEventListener('click', function(e) {
+                var link = e.target.closest('a[href^="#"]');
+                if (link) {
+                    var targetId = link.getAttribute('href');
+                    if (targetId && targetId !== '#') {
+                        e.preventDefault();
+                        scrollToTarget(targetId);
+                        
+                        // ハッシュ更新（ブラウザの歴史保持）
+                        if (history.pushState) {
+                            history.pushState(null, null, targetId);
+                        } else {
+                            location.hash = targetId;
+                        }
+                    }
+                }
+            }, false);
+        })();
     </script>
 </body>
 </html>
