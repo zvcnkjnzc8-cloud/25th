@@ -31,12 +31,13 @@
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.85;
-            letter-spacing: 0.08em;
-            font-size: 1.02rem;
+            line-height: 1.7;        /* ← 一般的なオフィシャルサイトに合わせた読みやすい行間 */
+            letter-spacing: 0.05em;  /* ← 読みやすさを考慮した美しい字間 */
+            font-size: 16px;         /* ← 標準的で読みやすいサイズ */
             padding: 36px 16px 120px;
             display: flex;
             justify-content: center;
+            -webkit-font-smoothing: antialiased;
         }
 
         .page-wrapper {
@@ -74,10 +75,11 @@
             display: block;
         }
 
-        /* MAIN JACKET PICTURE */
+        /* MAIN JACKET PICTURE（サイズを適切に制限し、軽量なJPEGに対応） */
         .jacket-container {
             margin: 0 auto 36px;
             width: 100%;
+            max-width: 440px; /* ← 広げた時に大きくなりすぎない最適なサイズに制限 */
             background: transparent;
             padding: 0;
             box-shadow: 0 20px 50px rgba(28, 27, 25, 0.12);
@@ -218,20 +220,20 @@
         }
 
         p {
-            font-size: 1.0rem;
-            line-height: 1.85;
-            margin-bottom: 20px;
+            font-size: 16px;          /* ← 本文サイズを16px基準に最適化 */
+            line-height: 1.72;        /* ← 窮屈にならず、かつ間伸びしない行間 */
+            margin-bottom: 18px;
             color: #2E2C29;
         }
 
         blockquote {
             margin: 24px 0;
-            padding: 26px 28px;
+            padding: 24px 26px;
             background: #FAF8F5;
             border-left: 3px solid var(--accent-gold);
             border-radius: 0 6px 6px 0;
-            font-size: 0.95rem;
-            line-height: 1.9;
+            font-size: 15px;
+            line-height: 1.75;
             color: #383532;
         }
 
@@ -375,12 +377,12 @@
 
         /* スマホ表示時の微調整 */
         @media (max-width: 600px) {
-            body { padding: 20px 10px 80px; font-size: 0.96rem; }
+            body { padding: 20px 10px 80px; font-size: 15px; }
             section { padding: 32px 20px; }
             
             p {
-                font-size: 0.96rem;
-                line-height: 1.8;
+                font-size: 15px;
+                line-height: 1.7;
             }
 
             .top-logo {
@@ -408,9 +410,9 @@
             </div>
         </header>
 
-        <!-- MAIN JACKET (p.1) -->
+        <!-- MAIN JACKET (p.1) ※394KBの軽量JPEG画像（MDRN2026A.jpg）に対応 -->
         <div class="jacket-container">
-            <img src="MDRN2026A.png" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
+            <img src="MDRN2026A.jpg" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
         </div>
 
         <!-- ACTION BUTTONS -->
@@ -443,7 +445,7 @@
             
             <h3>沼澤尚 Takashi Numazawa (ドラマー)</h3>
             <blockquote>
-                <strong style="display: block; font-size: 1.02rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.7;">
+                <strong style="display: block; font-size: 1.0rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.6;">
                     一聴してその予想を遥かに上回る傑作が産まれていたことに<br>
                     それはそれは嬉しい驚きでいっぱいになった。
                 </strong>
@@ -455,7 +457,7 @@
 
             <h3>マルコス・スザーノ Marcos Suzano (パーカッショニスト)</h3>
             <blockquote>
-                <strong style="display: block; font-size: 1.02rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.7;">
+                <strong style="display: block; font-size: 1.0rem; font-weight: 600; color: var(--text-main); margin-bottom: 12px; line-height: 1.6;">
                     このアルバムは音楽という芸術の魅力が際立っており、TOYONOの歌声は清らかで澄み渡り実に心地よい場所に響いている。感情豊かな表現力で歌い上げられておりその多くがポルトガル語で歌われているが、これは日本人ヴォーカリストにとって間違いなく大きな挑戦であったはずだ。しかし、彼女は見事に歌い切っている！！！！
                 </strong>
                 ギリェルミ・ジェがプロデュースしたTOYONOのアルバム『A Delicadeza do Instante』は、本当に素晴らしい作品だ。丁寧に作り込まれたサウンドによってアルバム全曲通しての調和が見事で、ステレオタイプの”日本のシンガーが歌うブラジル音楽"という枠組みを完全に超越した、洗練された現代MPBの感覚がしっかり息づいた、力強いブラジリダーヂ溢れる作品に仕上がっている。歌詞も非常に素晴らしく、参加しているミュージシャンたちの演奏も極上だ。<br><br>
