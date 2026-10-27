@@ -32,6 +32,7 @@
             padding: 0;
         }
 
+        /* 【プロ修正】iOS Safariのスクロールバグを引き起こす display: flex を解除し、通常フローに変更 */
         body {
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             font-weight: 500;
@@ -41,14 +42,13 @@
             letter-spacing: 0.05em;
             font-size: 17px;
             padding: 20px 16px 120px;
-            display: flex;
-            justify-content: center;
             -webkit-font-smoothing: antialiased;
         }
 
         .page-wrapper {
             width: 100%;
             max-width: var(--max-width);
+            margin: 0 auto;
             text-align: center;
         }
 
@@ -567,7 +567,7 @@
                     それはそれは嬉しい驚きでいっぱいになった。
                 </strong>
                 プロデュースがギリェルミ・ジェ、スーパーバイザーがマルコス・スザーノ、さらにホベルト・メネスカルにレイラ・ピニェイロ、そしてそして我々が大好きなシンガーTOYONO…<br><br>
-                このキャスティングを見ただけで、確実にルーツをベースにオーセンティック&amp;コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンドを想像しつつワクワクが止マらなかったが…一聴してその予想を遥かに上回る傑作が産まれていたことにそれはそれは嬉しい驚きでいっぱいになった。「今」こんなカッコいいサウンドを発信しているこのチームワークはひとえに一人一人のその愛に溢れた人間性の集まりがその要因であることは間違いない。つまり「人間性＝音楽性」は音楽を表現する上で決して嘘をつけないからだ。<br><br>
+                このキャスティングを見ただけで、確実にルーツをベースにオーセンティック&amp;コンテンポラリー、そして間違いなくハッピーなミクスチャーブラジルサウンドを想像しつつワクワクが止まらなかったが…一聴してその予想を遥かに上回る傑作が産まれていたことにそれはそれは嬉しい驚きでいっぱいになった。「今」こんなカッコいいサウンドを発信しているこのチームワークはひとえに一人一人のその愛に溢れた人間性の集まりがその要因であることは間違いない。つまり「人間性＝音楽性」は音楽を表現する上で決して嘘をつけないからだ。<br><br>
                 1970年代、中学生だった自分が初めてアントニオ・カルロス・ジョビン、ジョアン・ジルベルトを知ってからブラジル音楽をとどまることなく追いかけてきて、特に90年代当時世界を席巻していたMPBブームのあの素晴らしい時代のサウンドを彷彿とさせるのはもちろん、初めてブラジルサウンドに魅せられたセンセーションをも思い起こさせてくれる2026年リリースのこの傑作が世界中のより多くの人々に届きますように。
                 <cite>—— 沼澤尚 Takashi Numazawa (ドラマー)</cite>
             </blockquote>
@@ -698,9 +698,8 @@
             <blockquote>
                 "O valor das coisas não está no tempo em que elas duram, mas na intensidade com que acontecem. Por isso, existem momentos inesquecíveis, coisas inexplicáveis e pessoas incomparáveis."<br>
                 (Fernando Pessoa)<br>
-                「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」<br>
-                (フェルナンド・ペソア)
-                <cite></cite>
+                「物事の価値は、どれほど長く続いたかではなく、どれほど心が躍動したかにある。だからこそ、忘れられない瞬間、理屈ではない出来事、かけがえのない人が存在する。」
+                <cite>—— フェルナンド・ペソア</cite>
             </blockquote>
 
             <!-- ナビゲーションに戻るリンク -->
@@ -939,7 +938,7 @@
                     Ouvir TOYONO cantar em português tem um fascínio muito especial. Em "A Delicadeza do Instante", a cantora japonesa não apenas interpreta um repertório estrangeiro, mas se posiciona como uma artista que encontrou na língua portuguesa uma extensão de sua própria voz e de sua identidade artística.
                 </p>
                 <p>
-                    Esse é, talvez, o aspecto mais marcante do trabalho. TOYONO canta com uma atenção minuciosa à sonoridade das palavras, às vogais, à acentuação e ao desenho melódico de cada frase. Há um cuidado evidente na pronúncia, mas em momento algum se percebe o desejo de esconder sua origem. Pelo contrário: é justamente a presença de sua brasilidade aprendida e vivida a partir do olhar e da sensibilidade japonesa que torna a interpretação tão singular.
+                    Esse é, talvez, o aspecto mais marcante do trabalho. TOYONO canta com uma atenção minuciosa à sonoridade das palavras, às vogais, à acentuação e ao desenho melódico de cada frase. Há um cuidado evidente na pronúncia, mas em momento algum se percebe o desejo de esconder sua origem. Pelo contrário: é justement a presença de sua brasilidade aprendida e vivida a partir do olhar e da sensibilidade japonesa que torna a interpretação tão singular.
                 </p>
                 <p>
                     Sua voz tem uma leveza que não significa falta de força, mas sim uma delicadeza consciente. Ela não busca o drama explícito, mas constrói a emoção através de nuances, de pequenas variações de dinâmica e timbres que criam uma atmosfera intimista. Essa contenção expressiva permite que as melodias respirem com elegância.
@@ -985,7 +984,7 @@
                     A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
                 </p>
                 <p>
-                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
+                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É un disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
                 </p>
             </div>
 
@@ -1006,17 +1005,24 @@
 
     </div>
 
-    <!-- iOS / タブレット・スマートフォンでのページ内ジャンプ不具合を確実に解消するスクリプト -->
+    <!-- 【プロ対応】iOS / Safari / 各種タブレットで確実に機能するスクロール制御スクリプト -->
     <script>
         document.addEventListener('click', function(e) {
             let target = e.target.closest('a[href^="#"]');
             if (target) {
                 let id = target.getAttribute('href');
-                if (id === '#') return;
+                if (id === '#' || !id) return;
                 let element = document.querySelector(id);
                 if (element) {
                     e.preventDefault();
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // iOS/Safariで最も確実な座標計算によるスムーズスクロール
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - 10;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             }
         });
