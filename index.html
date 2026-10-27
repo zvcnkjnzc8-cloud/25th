@@ -31,10 +31,10 @@
             font-family: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.7;        /* ← 一般的なオフィシャルサイトに合わせた読みやすい行間 */
-            letter-spacing: 0.05em;  /* ← 読みやすさを考慮した美しい字間 */
-            font-size: 16px;         /* ← 標準的で読みやすいサイズ */
-            padding: 36px 16px 120px;
+            line-height: 1.7;
+            letter-spacing: 0.05em;
+            font-size: 16px;
+            padding: 20px 16px 120px; /* 上部余白をスリムにして見切れを防止 */
             display: flex;
             justify-content: center;
             -webkit-font-smoothing: antialiased;
@@ -46,10 +46,10 @@
             text-align: center;
         }
 
-        /* HEADER AREA (p.1) */
+        /* HEADER AREA (ロゴとタイトルを少し大きく調整) */
         header {
             position: relative;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             padding: 10px 4px 0;
         }
 
@@ -57,14 +57,14 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 100px;
+            width: 120px; /* ← 少し大きく調整 */
             height: auto;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .title-image-container {
             width: 100%;
-            max-width: 520px;
+            max-width: 620px; /* ← タイトル画像を少し大きく調整 */
             margin: 0 auto;
             padding: 12px 0;
         }
@@ -75,11 +75,11 @@
             display: block;
         }
 
-        /* MAIN JACKET PICTURE（サイズを適切に制限し、軽量なJPEGに対応） */
+        /* MAIN JACKET PICTURE (1枚目の画像の美しいサイズ感に調整) */
         .jacket-container {
-            margin: 0 auto 36px;
+            margin: 0 auto 28px;
             width: 100%;
-            max-width: 440px; /* ← 広げた時に大きくなりすぎない最適なサイズに制限 */
+            max-width: 680px; /* ← 添付画像1枚目のバランスの良い大きさに調整 */
             background: transparent;
             padding: 0;
             box-shadow: 0 20px 50px rgba(28, 27, 25, 0.12);
@@ -95,13 +95,43 @@
             border-radius: 8px;
         }
 
-        /* ACTION BUTTONS */
+        /* NAVIGATOR (PAGE JUMP BUTTONS) - ジャケットのすぐ下に配置 */
+        .page-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            max-width: 900px;
+            margin: 0 auto 36px auto;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .nav-btn {
+            padding: 9px 16px;
+            background-color: var(--card-bg);
+            color: var(--text-sub);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+            border-color: var(--text-main);
+        }
+
+        /* ACTION BUTTONS (プレス資料ボタンを削除し2つに) */
         .link-tree {
             display: flex;
             flex-direction: column;
             gap: 14px;
             max-width: 760px;
-            margin: 0 auto 32px auto;
+            margin: 0 auto 48px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
@@ -142,35 +172,6 @@
             color: var(--accent-gold);
             transform: translateY(-2px);
             box-shadow: 0 6px 24px rgba(0,0,0,0.04);
-        }
-
-        /* NAVIGATOR (PAGE JUMP BUTTONS) */
-        .page-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-            max-width: 900px;
-            margin: 0 auto 50px auto;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        .nav-btn {
-            padding: 8px 14px;
-            background-color: var(--card-bg);
-            color: var(--text-sub);
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-size: 0.82rem;
-            text-decoration: none;
-            letter-spacing: 0.04em;
-            transition: all 0.2s ease;
-        }
-
-        .nav-btn:hover {
-            background-color: var(--text-main);
-            color: #FFFFFF;
-            border-color: var(--text-main);
         }
 
         /* CONTENT SECTIONS */
@@ -220,8 +221,8 @@
         }
 
         p {
-            font-size: 16px;          /* ← 本文サイズを16px基準に最適化 */
-            line-height: 1.72;        /* ← 窮屈にならず、かつ間伸びしない行間 */
+            font-size: 16px;
+            line-height: 1.72;
             margin-bottom: 18px;
             color: #2E2C29;
         }
@@ -377,7 +378,7 @@
 
         /* スマホ表示時の微調整 */
         @media (max-width: 600px) {
-            body { padding: 20px 10px 80px; font-size: 15px; }
+            body { padding: 10px 10px 80px; font-size: 15px; }
             section { padding: 32px 20px; }
             
             p {
@@ -389,7 +390,7 @@
                 position: static;
                 margin: 0 auto 16px;
                 display: block;
-                width: 90px;
+                width: 100px;
             }
             .spec-table th, .credits-table th { width: 38%; }
             .vinyl-card { flex-direction: column; text-align: center; }
@@ -409,19 +410,13 @@
                 <img src="titleletter.png" alt="A Delicadeza do Instante 瞬間の繊細さ TOYONO" onerror="this.style.display='none';">
             </div>
         </header>
+
         <!-- MAIN JACKET (p.1) -->
         <div class="jacket-container">
             <img src="MDRN2026A.jpeg?v=2" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
         </div>
 
-        <!-- ACTION BUTTONS -->
-        <div class="link-tree">
-            <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）</a>
-            <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener">各配信サイトで聴く</a>
-            <a href="https://drive.google.com/drive/folders/1TYcyUrm2aclJpacOJ-n0CULhSnlbZugF?usp=sharing" class="btn btn-secondary" target="_blank" rel="noopener">📄 プレスリリース資料一式 (Google Drive)</a>
-        </div>
-
-        <!-- PAGE NAVIGATION BUTTONS (目次ナビゲーション) -->
+        <!-- PAGE NAVIGATION BUTTONS (目次ナビゲーション：ジャケットのすぐ下に配置) -->
         <nav class="page-nav">
             <a href="#recommendations" class="nav-btn">01 Recommendations</a>
             <a href="#producer1" class="nav-btn">02 Producer Note 1</a>
@@ -432,6 +427,12 @@
             <a href="#spec" class="nav-btn">07 Spec & Profile</a>
             <a href="#related" class="nav-btn">08 関連リリース & MV</a>
         </nav>
+
+        <!-- ACTION BUTTONS (2つの購入・配信ボタン) -->
+        <div class="link-tree">
+            <a href="https://www.filerecords.com/" class="btn btn-primary" target="_blank" rel="noopener">CDを購入する（ファイルレコード）</a>
+            <a href="https://www.tunecore.co.jp/" class="btn btn-secondary" target="_blank" rel="noopener">各配信サイトで聴く</a>
+        </div>
 
         <!-- PAGE 2: ALBUM OVERVIEW & RECOMMENDATIONS -->
         <section id="recommendations">
