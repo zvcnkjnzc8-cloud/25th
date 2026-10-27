@@ -101,13 +101,13 @@
             border-radius: 8px;
         }
 
-        /* PAGE NAVIGATION BUTTONS (目次ナビゲーション) */
+        /* PAGE NAVIGATION BUTTONS */
         .page-nav {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             justify-content: center;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto 36px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
@@ -365,7 +365,6 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        /* 7インチアナログ盤カードにマウスを乗せたときの浮き上がりエフェクト */
         a:hover .vinyl-card {
             border-color: var(--accent-gold);
             transform: translateY(-2px);
@@ -382,6 +381,14 @@
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
+        }
+
+        /* PORTUGUESE SECTION STYLES */
+        .pt-text {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #2D2B28;
         }
 
         footer {
@@ -435,13 +442,15 @@
         <!-- PAGE NAVIGATION BUTTONS -->
         <nav class="page-nav">
             <a href="#recommendations" class="nav-btn">01 Recommendations</a>
-            <a href="#producer1" class="nav-btn">02 Producer Note 1</a>
-            <a href="#producer2" class="nav-btn">03 Producer Note 2</a>
+            <a href="#producer1" class="nav-btn">02 Guilherme Gê ギレェルミ・ジェより1</a>
+            <a href="#producer2" class="nav-btn">03 Guilherme Gê ギレェルミ・ジェより2</a>
             <a href="#prod-notes" class="nav-btn">04 Production Notes</a>
             <a href="#tracklist" class="nav-btn">05 Tracklist</a>
             <a href="#credits" class="nav-btn">06 Credits</a>
             <a href="#spec" class="nav-btn">07 Spec & Profile</a>
-            <a href="#related" class="nav-btn">08 関連リリース & MV</a>
+            <a href="#related" class="nav-btn">08 Related Releases</a>
+            <a href="#videos" class="nav-btn">09 Music Video & Live</a>
+            <a href="#portugues" class="nav-btn">10 português</a>
         </nav>
 
         <!-- ACTION BUTTONS -->
@@ -486,7 +495,7 @@
 
         <!-- PAGE 3: PRODUCER NOTE 1 -->
         <section id="producer1">
-            <h2>02 プロデューサー Guilherme Gê ギレェルミ・ジェより part1</h2>
+            <h2>02 Guilherme Gê ギレェルミ・ジェより1</h2>
             <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.05rem; margin-bottom: 12px;">
                 TOYONOと「A Delicadeza do Instante 瞬間の繊細さ」
             </p>
@@ -519,7 +528,7 @@
 
         <!-- PAGE 4: PRODUCER NOTE 2 -->
         <section id="producer2">
-            <h2>03 プロデューサー Guilherme Gê ギレェルミ・ジェより part2</h2>
+            <h2>03 Guilherme Gê ギレェルミ・ジェより2</h2>
             <p style="font-weight: 600; color: var(--accent-gold); font-size: 1.05rem; margin-bottom: 12px;">
                 私と「A Delicadeza do Instante 瞬間の繊細さ」
             </p>
@@ -596,7 +605,7 @@
                 <li><span class="num">08</span> Foi Demais 最愛 (Guilherme Gê / Roberto Menescal / Paulo Sérgio Valle)</li>
                 <li><span class="num">09</span> O Trem Azul 青い列車 ※カヴァー (Lô Borges / Ronaldo Bastos)</li>
                 <li><span class="num">10</span> 幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</li>
-                <li><span class="num">11</span> **［Bonus Track］夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
+                <li><span class="num">11</span> (Bonus Track) 夢の続き AKAKAGE's Back to 90's remix (竹内まりや)</li>
             </ul>
         </section>
 
@@ -656,7 +665,7 @@
 
         <!-- PAGE 9: SPEC & ARTIST PROFILE -->
         <section id="spec">
-            <h2>07 Release Spec &amp; Profile</h2>
+            <h2>07 Spec & Profile</h2>
             <table class="spec-table" style="margin-bottom: 32px;">
                 <tr><th>Release Date</th><td>2026年11月18日</td></tr>
                 <tr><th>Title</th><td>A Delicadeza do Instante 瞬間の繊細さ (アデリカデーザドインスタンチ)</td></tr>
@@ -678,9 +687,9 @@
             </p>
         </section>
 
-        <!-- PAGE 10: RELATED RELEASE, SCHEDULE & MUSIC VIDEOS -->
+        <!-- PAGE 10: RELATED RELEASES -->
         <section id="related">
-            <h2>08 関連リリース &amp; プロモーション情報</h2>
+            <h2>08 Related Releases</h2>
             
             <h3>7インチアナログ盤 『夢の続き / TOYONO』</h3>
             <a href="https://unchatable.thebase.in/items/138959184" target="_blank" rel="noopener" style="text-decoration: none; display: block;">
@@ -707,8 +716,11 @@
                 <li><strong>2026年10月28日(水)</strong>：TOYONO オフィシャルHP内特設ページ公開</li>
                 <li><strong>2026年11月18日(水)</strong>：アルバム 『A Delicadeza do Instante 瞬間の繊細さ』 全国一般発売</li>
             </ul>
+        </section>
 
-            <h3 style="margin-top: 40px;">Music Video &amp; ライブ映像</h3>
+        <!-- PAGE 11: MUSIC VIDEO & LIVE -->
+        <section id="videos">
+            <h2>09 Music Video &amp; Live</h2>
             
             <div class="mv-block">
                 <p style="font-weight: 600; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
@@ -745,6 +757,41 @@
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/4b4dXKnEmgU" title="Por Toda A Sua Vida / 幾星霜 Live" allowfullscreen></iframe>
                 </div>
+            </div>
+        </section>
+
+        <!-- PAGE 12: PORTUGUÊS (プレスリリース p11-12 ポルトガル語セクション) -->
+        <section id="portugues">
+            <h2>10 português</h2>
+
+            <div class="pt-text">
+                <h3 style="margin-top: 10px;">RELEASE / SOBRE O ÁLBUM</h3>
+                <p>
+                    Comemorando os 25 anos de carreira solo de TOYONO, artista Japonesa conhecida por sua autêntica interpretação da MPB moderna. O álbum "A Delicadeza do Instante" traz uma fusão sublime entre a sofisticação da música produzida no Rio de Janeiro e a sensibilidade única da cantora em interpretações em português e japonês. 
+                </p>
+                <p>
+                    Produzido por Guilherme Gê e sob a supervisão rítmica e artística de Marcos Suzano, o projeto conta com participações históricas de lendas da música brasileira como Roberto Menescal e Leila Pinheiro, além de canções inéditas escritas por Paulo Sérgio Valle em parceria com Guilherme Gê e Menescal.
+                </p>
+
+                <h3>TOYONO e "A Delicadeza do Instante" — por Guilherme Gê (Part 1)</h3>
+                <blockquote style="font-style: normal; font-size: 0.94rem;">
+                    "Ouvir TOYONO cantar em português tem um fascínio muito especial. Em 'A Delicadeza do Instante', a cantora japonesa não apenas interpreta um repertório estrangeiro, mas se posiciona como uma artista que encontrou na língua portuguesa uma extensão de sua própria voz..."<br><br>
+                    "Sua voz tem uma leveza que não significa falta de força, mas sim uma delicadeza consciente. Ela não busca o drama explícito, mas constrói a emoção através de nuances, de pequenas variações de dinâmica e timbres que criam uma atmosfera intimista..."<br><br>
+                    "O resultado é o que poderíamos chamar de um 'terceiro território': não é a música brasileira feita por uma japonesa, nem a tentativa de transformá-la em uma cantora brasileira, mas a música brasileira existindo através de quem TOYONO é."
+                    <cite>—— Guilherme Gê (Produtor Musical, Arranjador e Compositor)</cite>
+                </blockquote>
+
+                <h3>Eu e "A Delicadeza do Instante" — por Guilherme Gê (Part 2)</h3>
+                <p>
+                    "Como produtor musical e diretor artístico, meu papel foi construir uma identidade sonora que valorizasse a singularidade de TOYONO como intérprete, criando um diálogo entre sua voz e os arranjos orgânicos gravados no Rio de Janeiro. É um álbum que celebra o encontro artístico entre o Brasil e o Japão."
+                </p>
+
+                <h3>Comentário de Marcos Suzano</h3>
+                <blockquote style="font-style: normal; font-size: 0.94rem;">
+                    "O álbum 'A Delicadeza do Instante' da TOYONO, produzido pelo Guilherme Gê, está realmente incrível. Um trabalho super caprichado, com uma sonoridade linda e com uma visão muito moderna da MPB..."<br><br>
+                    "A voz da TOYONO está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show! Parabéns, TOYONO!"
+                    <cite>—— Marcos Suzano (Supervisão Rítmica e Percussão)</cite>
+                </blockquote>
             </div>
         </section>
 
