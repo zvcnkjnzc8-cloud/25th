@@ -39,7 +39,6 @@
             line-height: 1.8;
             letter-spacing: 0.05em;
             font-size: 17px;
-            /* タブレットのファーストビュー効率化のため上部パディングをタイトに設定 */
             padding: 10px 16px 120px;
             -webkit-font-smoothing: antialiased;
         }
@@ -51,10 +50,10 @@
             text-align: center;
         }
 
-        /* HEADER AREA - 縦幅をスリムに圧縮 */
+        /* HEADER AREA */
         header {
             position: relative;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             padding: 4px 4px 0;
         }
 
@@ -62,7 +61,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 100px;
+            width: 110px;
             height: auto;
             opacity: 0.95;
         }
@@ -70,11 +69,11 @@
         /* ALBUM INTRO BADGE */
         .album-intro-badge {
             display: inline-block;
-            margin: 0 auto 6px;
+            margin: 0 auto 8px;
             padding: 5px 14px;
             background-color: var(--text-main);
             color: var(--accent-gold-light);
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             letter-spacing: 0.1em;
             border-radius: 20px;
@@ -83,7 +82,7 @@
 
         .title-image-container {
             width: 100%;
-            max-width: 520px;
+            max-width: 580px;
             margin: 0 auto;
             padding: 4px 0;
         }
@@ -94,14 +93,14 @@
             display: block;
         }
 
-        /* PAGE NAVIGATION BUTTONS (コンテンツの豊富さに気づかせるためジャケット直上に配置) */
+        /* PAGE NAVIGATION BUTTONS */
         .page-nav {
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
             justify-content: center;
             max-width: 980px;
-            margin: 0 auto 16px auto;
+            margin: 0 auto 20px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             scroll-margin-top: 40px;
             z-index: 10;
@@ -130,14 +129,14 @@
             border-color: var(--text-main);
         }
 
-        /* MAIN JACKET PICTURE (タブレットのファーストビューに収まるようサイズ最適化) */
+        /* MAIN JACKET PICTURE (サイズをしっかり見せる仕様に戻します) */
         .jacket-container {
-            margin: 0 auto 16px;
+            margin: 0 auto 24px;
             width: 100%;
-            max-width: 520px;
+            max-width: 620px;
             background: transparent;
             padding: 0;
-            box-shadow: 0 16px 40px rgba(28, 27, 25, 0.1);
+            box-shadow: 0 20px 50px rgba(28, 27, 25, 0.12);
             border-radius: 8px;
             overflow: hidden;
             border: none;
@@ -148,22 +147,6 @@
             height: auto;
             display: block;
             border-radius: 8px;
-        }
-
-        /* スクロールを促すエレガントなインジケーター */
-        .scroll-indicator {
-            margin: 10px auto 20px;
-            font-size: 0.75rem;
-            color: var(--text-sub);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            letter-spacing: 0.15em;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(4px);}
-            60% {transform: translateY(2px);}
         }
 
         /* BACK TO NAV / TOP BUTTONS */
@@ -231,7 +214,7 @@
             flex-direction: column;
             gap: 14px;
             max-width: 760px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 48px auto;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
@@ -597,7 +580,7 @@
             </div>
         </header>
 
-        <!-- PAGE NAVIGATION BUTTONS (ジャケットの直上に配置し、豊富なコンテンツへの誘導を最大化) -->
+        <!-- PAGE NAVIGATION BUTTONS -->
         <nav class="page-nav" id="page-nav">
             <a href="#recommendations" class="nav-btn">01 Recommendations</a>
             <a href="#producer1" class="nav-btn">02 Gê 1</a>
@@ -615,9 +598,6 @@
         <div class="jacket-container">
             <img src="MDRN2026A.jpeg?v=2" alt="A Delicadeza do Instante ジャケット" onerror="this.style.display='none';">
         </div>
-
-        <!-- 豊富なコンテンツへの気づきを促すスクロールガイド -->
-        <div class="scroll-indicator">▼ Scroll to read special contents &amp; liner notes ▼</div>
 
         <!-- ACTION BUTTONS -->
         <div class="link-tree">
@@ -1079,7 +1059,7 @@
                     O álbum reúne nove faixas gravadas com a participação de grandes nomes da música brasileira, como Leila Pinheiro, Roberto Menescal, Marcos Suzano, Carlos Malta, Claudio Infante, Mario Fabre e Rafael Belo.
                 </p>
                 <p>
-                    O repertório também está fortemente ligado ao meu universo de composição: das nove faixas, seis são de minha autoria, algumas em parceria com compositores como Paulo Sérgio Valle e Roberto Menescal. Há também uma composição minha em parceria com Gabriel, que ganhou uma versão especial em japonês escrita para TOYONO.
+                    O repertório também está fortemente ligado ao meu universo de composição: das nove faixas, seis são de minha autoria, algumas em parceria com compositores como Paulo Sérgio Valle e Roberto Menescal. Há também uma composition minha em parceria com Gabriel, que ganhou uma versão especial em japonês escrita para TOYONO.
                 </p>
                 <p>
                     Na produção musical, busquei ressaltar a intenção e a sensibilidade de TOYONO, construindo arranjos orgânicos que valorizam a respiração, a dinâmica e a sonoridade dos instrumentos gravados no Rio de Janeiro. O resultado é um álbum que une duas culturas através da linguagem universal da música.
@@ -1099,7 +1079,7 @@
                     A voz da Toyono está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é un enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
                 </p>
                 <p>
-                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
+                    O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É un disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
                 </p>
             </div>
 
