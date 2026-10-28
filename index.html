@@ -67,6 +67,20 @@
             opacity: 0.95;
         }
 
+        /* ALBUM INTRO SUBTITLE & HIGHLIGHT BADGE (titleletter.pngよりも最上部に配置) */
+        .album-intro-badge {
+            display: inline-block;
+            margin: 0 auto 12px;
+            padding: 6px 16px;
+            background-color: var(--text-main);
+            color: var(--accent-gold-light);
+            font-size: 0.85rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            letter-spacing: 0.1em;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
         .title-image-container {
             width: 100%;
             max-width: 620px;
@@ -78,20 +92,6 @@
             width: 100%;
             height: auto;
             display: block;
-        }
-
-        /* ALBUM INTRO SUBTITLE & HIGHLIGHT BADGE (情報量の高さを伝える演出) */
-        .album-intro-badge {
-            display: inline-block;
-            margin: 4px auto 16px;
-            padding: 6px 16px;
-            background-color: var(--text-main);
-            color: var(--accent-gold-light);
-            font-size: 0.85rem;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            letter-spacing: 0.1em;
-            border-radius: 20px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         /* PAGE NAVIGATION BUTTONS (ジャケットの上に配置・スリム化) */
@@ -121,7 +121,7 @@
             box-shadow: 0 2px 6px rgba(0,0,0,0.02);
             cursor: pointer;
             -webkit-tap-highlight-color: transparent;
-            touch-action: manipulation; /* タブレットでのタップ遅延・誤作動防止 */
+            touch-action: manipulation;
         }
 
         .nav-btn:hover, .nav-btn:active {
@@ -516,6 +516,7 @@
             margin-bottom: 36px;
             padding-bottom: 24px;
             border-bottom: 1px dashed var(--border-color);
+            scroll-margin-top: 50px; /* 各MVブロックへのジャンプ位置調整 */
         }
 
         .mv-block:last-child {
@@ -575,14 +576,14 @@
         <!-- HEADER AREA -->
         <header>
             <img src="TOYONO25thLogo.png" alt="TOYONO 25th Logo" class="top-logo" onerror="this.style.display='none';">
+            <!-- 情報量と充実度がひと目で伝わるインフォメーションバッジをtitleletter.pngよりも最上部に配置 -->
+            <div class="album-intro-badge">25th Anniversary Special Contents &amp; Liner Notes</div>
             <div class="title-image-container">
                 <img src="titleletter.png" alt="A Delicadeza do Instante 瞬間の繊細さ TOYONO" onerror="this.style.display='none';">
             </div>
-            <!-- 情報量と充実度がひと目で伝わるインフォメーションバッジ -->
-            <div class="album-intro-badge">25th Anniversary Special Contents &amp; Liner Notes</div>
         </header>
 
-        <!-- PAGE NAVIGATION BUTTONS (ジャケットの上に移動・スリム化・タブレット対応) -->
+        <!-- PAGE NAVIGATION BUTTONS (「09 MV」へと名称修正) -->
         <nav class="page-nav" id="page-nav">
             <a href="#recommendations" class="nav-btn">01 Recommendations</a>
             <a href="#producer1" class="nav-btn">02 Gê 1</a>
@@ -592,7 +593,7 @@
             <a href="#credits" class="nav-btn">06 Credits</a>
             <a href="#spec" class="nav-btn">07 商品情報</a>
             <a href="#related" class="nav-btn">08 関連商品＆メディア</a>
-            <a href="#videos" class="nav-btn">09 MV &amp; Live</a>
+            <a href="#videos" class="nav-btn">09 MV</a>
             <a href="#portugues" class="nav-btn">10 Português</a>
         </nav>
 
@@ -759,7 +760,7 @@
             </div>
         </section>
 
-        <!-- PAGE 7: TRACKLIST -->
+        <!-- PAGE 7: TRACKLIST (各曲ごとの個別MVブロックへピンポイントジャンプ) -->
         <section id="tracklist">
             <h2>05 Tracklist</h2>
             <ul class="track-list">
@@ -770,7 +771,7 @@
                         <span>Carta a um Irmão レター・トゥ・ア・ブラザー (Paulo Sérgio Valle / Guilherme Gê / Roberto Menescal)</span>
                         <div>
                             <a href="https://open.spotify.com/intl-ja/track/5I1tBTHNZ6kOKKnDrcss51?si=d14a2b7581b34f9d" target="_blank" rel="noopener" class="spotify-link">▶ Spotifyで聴く</a>
-                            <a href="#videos" class="mv-jump-link">▶ MVを見る</a>
+                            <a href="#mv-carta" class="mv-jump-link">▶ MVを見る</a>
                         </div>
                     </div>
                 </li>
@@ -780,7 +781,7 @@
                         <span>Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱 feat. レイラ・ピニェイロ (Roberto Menescal / Guilherme Gê / Paulo Sérgio Valle)</span>
                         <div>
                             <a href="https://open.spotify.com/intl-ja/track/2VYSlwtZNTQa6pGLulbWwZ?si=e3eb24f941804e9f" target="_blank" rel="noopener" class="spotify-link">▶ Spotifyで聴く</a>
-                            <a href="#videos" class="mv-jump-link">▶ MVを見る</a>
+                            <a href="#mv-coisas" class="mv-jump-link">▶ MVを見る</a>
                         </div>
                     </div>
                 </li>
@@ -789,7 +790,7 @@
                     <div class="track-info-block">
                         <span>Por Toda A Sua Vida その人生のすべてに (Guilherme Gê / Gabriel)</span>
                         <div>
-                            <a href="#videos" class="mv-jump-link">▶ MVを見る</a>
+                            <a href="#mv-por" class="mv-jump-link">▶ MVを見る</a>
                         </div>
                     </div>
                 </li>
@@ -822,9 +823,9 @@
                 <li>
                     <span class="num">10</span>
                     <div class="track-info-block">
-                        <span>幾星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</span>
+                        <span>几星霜 “Por Toda A Sua Vida" versão em japonês Dedicado a Cláudia (Guilherme Gê / Gabriel / 片岡大志)</span>
                         <div>
-                            <a href="#videos" class="mv-jump-link">▶ MVを見る</a>
+                            <a href="#mv-por" class="mv-jump-link">▶ MVを見る</a>
                         </div>
                     </div>
                 </li>
@@ -971,11 +972,11 @@
             </div>
         </section>
 
-        <!-- PAGE 11: MUSIC VIDEO & LIVE -->
+        <!-- PAGE 11: MUSIC VIDEO & LIVE (各曲に対応する固有ID id="mv-..." を付与) -->
         <section id="videos">
-            <h2>09 Music Video &amp; Live Video</h2>
+            <h2>09 MV</h2>
             
-            <div class="mv-block">
+            <div class="mv-block" id="mv-coisas">
                 <p style="font-weight: 700; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
                     M3. Coisas da Paixão feat. Leila Pinheiro ブラジルの情熱
                 </p>
@@ -988,7 +989,7 @@
                 </div>
             </div>
 
-            <div class="mv-block">
+            <div class="mv-block" id="mv-carta">
                 <p style="font-weight: 700; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
                     M2. Carta a um Irmão レター・トゥ・ア・ブラザー
                 </p>
@@ -1000,7 +1001,7 @@
                 </div>
             </div>
 
-            <div class="mv-block">
+            <div class="mv-block" id="mv-por">
                 <p style="font-weight: 700; font-size: 0.96rem; color: var(--text-main); margin-bottom: 6px;">
                     M4. &amp; M10. Por Toda A Sua Vida / 幾星霜（ライブ映像）
                 </p>
@@ -1067,7 +1068,7 @@
                     Na produção musical, busquei ressaltar a intenção e a sensibilidade de TOYONO, construindo arranjos orgânicos que valorizam a respiração, a dinâmica e a sonoridade dos instrumentos gravados no Rio de Janeiro. O resultado é um álbum que une duas culturas através da linguagem universal da música.
                 </p>
                 <p>
-                    Além da produção musical e direção artística do álbum, a assino a direção artística do videoclipe da faixa "Coisas da Paixão", estendendo a identidade visual e conceitual do projeto para a linguagem audiovisual.
+                    Além da produção musical e direção artística do álbum, também assino a direção artística do videoclipe da faixa "Coisas da Paixão", estendendo a identidade visual e conceitual do projeto para a linguagem audiovisual.
                 </p>
                 <p>
                     "A Delicadeza do Instante" representa, para mim, uma experiência profunda de criação, produção e encontro artístico entre o Brasil e o Japão.
@@ -1078,7 +1079,7 @@
                     O álbum "A Delicadeza do Instante" da TOYONO, produzido pelo Guilherme Gê, está realmente incrível. Um trabalho super caprichado, com uma sonoridade linda e com uma visão muito moderna da MPB. As músicas são ótimas, os arranjos de muito bom gosto e a performance de todos os músicos envolvidos é de primeiríssima qualidade.
                 </p>
                 <p>
-                    A voz da Toyono está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é um enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
+                    A voz da Toyono está linda, afinadíssima e muito expressiva, cantando a maioria das músicas em português — o que é un enorme desafio para uma cantora japonesa, mas ela deu um show<span class="no-italic">！！！！</span>
                 </p>
                 <p>
                     O repertório é ótimo, misturando músicas inéditas de grandes compositores com uma versão super nova e renovada de "O Trem Azul". Fico muito feliz em ter participado tocando percussão e colaborado nesse projeto<span class="no-italic">！！！</span> É um disco ótimo de ouvir em qualquer momento, e tenho certeza de que todo mundo vai amar<span class="no-italic">！！！</span> Parabéns, TOYONO!
@@ -1101,7 +1102,7 @@
 
     </div>
 
-    <!-- 【プロ対応】タブレット・スマホ対応およびGoope等CMS埋め込み環境での確実なスクリプト -->
+    <!-- スムーズスクロール & タブレット対応スクリプト -->
     <script>
         (function() {
             function scrollToTarget(targetId) {
@@ -1131,7 +1132,6 @@
                 } catch(e) {}
             }
 
-            // タブレットやスマホでのタッチ操作の確実な捕捉
             document.addEventListener('click', function(e) {
                 var link = e.target.closest('a[href^="#"]');
                 if (link) {
