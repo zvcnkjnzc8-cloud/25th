@@ -66,6 +66,36 @@
             opacity: 0.95;
         }
 
+        /* HOMEに戻る固定ボタン（左上） */
+        .back-to-home-btn {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            z-index: 99999;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--text-main);
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 0.78rem;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.06em;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border-color);
+            transition: all 0.25s ease;
+            backdrop-filter: blur(4px);
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        .back-to-home-btn:hover, .back-to-home-btn:active {
+            background-color: var(--text-main);
+            color: #FFFFFF;
+            border-color: var(--text-main);
+            transform: translateY(-1px);
+        }
+
         /* ALBUM INTRO BADGE */
         .album-intro-badge {
             display: inline-block;
@@ -558,6 +588,7 @@
             section { padding: 32px 20px; }
             p { font-size: 16px; line-height: 1.8; }
             .top-logo { position: static; margin: 0 auto 12px; display: block; width: 90px; }
+            .back-to-home-btn { top: 10px; left: 10px; padding: 5px 10px; font-size: 0.72rem; }
             .spec-table th, .credits-table th { width: 38%; }
             .vinyl-card { flex-direction: column; text-align: center; }
             .page-nav { gap: 3px; }
@@ -566,6 +597,9 @@
     </style>
 </head>
 <body>
+
+    <!-- メインHPに戻る固定ボタン -->
+    <a href="https://toyonomoderno.jp/" class="back-to-home-btn">&larr; TOYONO MODERNO HOME</a>
 
     <div class="page-wrapper" id="top">
 
